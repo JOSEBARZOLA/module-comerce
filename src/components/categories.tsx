@@ -9,7 +9,7 @@ function Categories() {
         <div className="fancy-title-view1 fancy-title-view1-color">
           <h2>Categorias</h2>
           <p>
-            Explora todo nuestro catalogo.
+            Explora todo nuestro catalogo
           </p>
         </div>
         <span className="light-transparent"></span>
