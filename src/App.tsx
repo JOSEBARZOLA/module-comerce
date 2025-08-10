@@ -1,11 +1,12 @@
 import { ToastContainer } from 'react-toastify';
-import Categories from './components/categories';
-
+import BodySections from './components/bodySections';
 function App() {
   return (
     <>
+    
       <ToastContainer position="top-right" autoClose={3000}/>
-      <Categories/>
+      
+      <BodySections/>
     </>
   )
 }
