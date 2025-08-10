@@ -1,8 +1,6 @@
-
 body {
   padding: 0;
   margin: 0;
-  
 }
 
 h1 {
@@ -21,38 +19,71 @@ p {
   align-items: center;
   text-align: center;
   position: relative;
-  text-align: center;
   font-family: proxima nova, arial, sans-serif;
-  color: #2d3352;
+  color: #000000;
 
   .section-content {
     width: 100%;
     position: relative;
     z-index: 2;
   }
-  
+
   .section-mask {
     position: absolute;
-    top: -50px;
-    bottom: -50px;
+    top: 0;
+    bottom: 0;
     right: 0;
     left: 0;
     z-index: 1;
-    background: url(https://production.cdn.vaypol.com/ifut5ljujim1hogl3avb01zihnwg);
-    background-size: cover !important;
-    transform: skewY(10deg);
+    overflow: hidden; // importante para recortar la diagonal
+    background-color: transparent; // fondo para los bordes fuera del diagonal
+
+    .mask-bg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: url(https://www.experta.com.ar/blogg/wp-content/uploads/sites/2/2021/08/oferta-01.jpg)
+        center/cover no-repeat;
+      background-attachment: fixed; // aquí funciona el parallax
+      will-change: background-position;
+
+      // Recorte diagonal con clip-path para mostrar solo en esa forma
+
+      clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+    }
+
+    // Ojo: eliminamos la máscara negra con skew para evitar sobreposición
+    // .mask-diagonal {
+    //   position: absolute;
+    //   top: -50px;
+    //   bottom: -50px;
+    //   right: 0;
+    //   left: 0;
+    //   background-color: rgb(0, 0, 0);
+    //   transform: skewY(10deg);
+    //   z-index: 2;
+    // }
+
+    &.bg-option-2 {
+      .mask-bg {
+        background: url(https://tribekaretail.com/wp-content/uploads/2017/07/tribe_portada-1.jpg)
+          center/cover no-repeat;
+        background-attachment: fixed;
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+      }
+    }
+
+    &.has-parallax {
+      .mask-bg {
+        background-position: center calc(50% + var(--scroll, 0px));
+      }
+    }
   }
-  .has-parallax {
-  background-attachment: fixed !important;
-}
 }
 
 .has-padding {
   padding-top: 250px !important;
   padding-bottom: 250px !important;
-}
-
-.bg-option-2 {
-  background: url(https://megasports.vteximg.com.br/arquivos/ENTRENA.jpg?v=637619761572670000) !important;
-  background-attachment: fixed !important;
 }
