@@ -1,0 +1,21 @@
+@use "variables" as *;
+@use "sass:color";
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+  background-color: black;
+  place-items: center;
+}
+
+#root {
+  width: 100%;
+  background-color: aqua;
+}

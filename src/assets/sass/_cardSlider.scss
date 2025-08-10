@@ -1,0 +1,26 @@
+@use 'swiper/css';
+@use 'swiper/css/navigation';
+@use 'swiper/css/pagination';
+
+.section{ 
+background-color: rgb(255, 255, 255);
+
+.card-wrapper {
+  max-width: 1400px;
+  margin: 0 60px  0;
+  overflow: hidden;
+
+  .swiper-slide{
+    margin: 0px 0px; //este tiene las card
+  }
+  
+
+  @media (max-width: 768px) {
+    
+    .swiper-button-prev, .swiper-button-next {
+      display: none;
+    }
+  }
+}
+
+}
