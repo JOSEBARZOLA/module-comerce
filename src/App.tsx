@@ -1,13 +1,11 @@
 import { ToastContainer } from 'react-toastify';
-import Categories from './components/categories';
-import CardSlider from './components/cardSlider';
+import CartSidebar from './components/cartSidebar';
 import BodySections from './components/bodySections';
 function App() {
   return (
     <>
-    <CardSlider/>
-      <Categories/>
-      <BodySections/>
+    <CartSidebar/>
+    <BodySections/>
       <ToastContainer position="top-right" autoClose={3000}/>
     </>
   )

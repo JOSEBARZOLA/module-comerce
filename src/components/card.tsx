@@ -29,7 +29,8 @@ function Card() {
             <span className="old">$2,499</span>
             <span className="new">$1,999</span>
           </div>
-          <button className="btn">
+       {/*  
+        <button className="btn">
             <span>Add to Cart</span>
             <svg
               className="icon"
@@ -44,7 +45,7 @@ function Card() {
               <line x1="3" y1="6" x2="21" y2="6" />
               <path d="M16 10a4 4 0 01-8 0" />
             </svg>
-          </button>
+          </button> */}
         </div>
         <div className="meta">
           <div className="rating">
