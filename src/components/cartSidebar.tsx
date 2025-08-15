@@ -1,19 +1,22 @@
 import "../assets/sass/_cartSidebar.scss";
+import { useRef } from "react";
 
-import { useRef } from 'react';
-
-function CartSidebar  ()  {
+function CartSidebar() {
   const sidebarRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const handleToggle = () => {
-    sidebarRef.current?.classList.toggle('active-nav');
-    containerRef.current?.classList.toggle('active-cont');
+    sidebarRef.current?.classList.toggle("active-nav");
+    containerRef.current?.classList.toggle("active-cont");
   };
 
   return (
     <>
-      <div ref={sidebarRef} className="side-navbar active-nav d-flex justify-content-between flex-wrap flex-column" id="sidebar">
+      <div
+        ref={sidebarRef}
+        className="side-navbar d-flex justify-content-between flex-wrap flex-column"
+        id="sidebar"
+      >
         <ul className="nav flex-column text-white w-100">
           <a href="#" className="nav-link h3 my-2">
             Usuario
@@ -23,8 +26,9 @@ function CartSidebar  ()  {
           </li>
         </ul>
       </div>
-      <div ref={containerRef} className="p-1 my-container active-cont">
-        <nav className="navbar top-navbar navbar-light bg-light px-5">
+
+      <div ref={containerRef} className="p-1 my-container">
+        <nav className="navbar top-navbar">
           <button onClick={handleToggle} className="btn border-0" id="menu-btn">
             <i className="bx bxs-cart"></i>
           </button>
@@ -32,7 +36,6 @@ function CartSidebar  ()  {
       </div>
     </>
   );
-};
-  
+}
 
 export default CartSidebar;
