@@ -1,4 +1,4 @@
-import "../assets/sass/__productCards.scss";
+import "../assets/sass/_productCards.scss";
 import {
   MDBBtn,
   MDBCard,

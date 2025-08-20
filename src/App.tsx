@@ -1,10 +1,11 @@
 import { ToastContainer } from 'react-toastify';
-import ProductCard from './components/productCards.tsx';
+
+import  ModalOpen  from './components/modal'
 function App() {
   return (
     <>
-    <ProductCard/>
-      <ToastContainer position="top-right" autoClose={3000}/>
+    <ModalOpen/>
+      <ToastContainer position="top-left" autoClose={3000}/>
     </>
   )
 }
