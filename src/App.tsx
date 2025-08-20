@@ -1,11 +1,9 @@
 import { ToastContainer } from 'react-toastify';
-import CartSidebar from './components/cartSidebar';
-import BodySections from './components/bodySections';
+import ProductCard from './components/productCards.tsx';
 function App() {
   return (
     <>
-    <CartSidebar/>
-    <BodySections/>
+    <ProductCard/>
       <ToastContainer position="top-right" autoClose={3000}/>
     </>
   )

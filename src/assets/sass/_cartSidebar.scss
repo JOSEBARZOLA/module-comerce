@@ -1,16 +1,23 @@
 .side-navbar {
-  width: 250px;
+  width: 280px;
   height: 100%;
   position: fixed;
-  right: -300px;           // antes era margin-left para izquierda
-  background-color: #ecacde;
+  right: -280px;           // antes era margin-left para izquierda
+  background-color: #ecacde91;
   transition: 0.5s;
   z-index: 3;
-
   &.active-nav {
     right: 0;              // se hace visible desde la derecha
   }
-
+  .title {
+      font-size: 20px;
+      font-weight: 500;
+      color: #b766be;
+      margin: 10px 0 0;
+      margin-left: 35%;
+      letter-spacing: -0.2px;
+      cursor: default;
+    }
   .nav-link {
     font-weight: 600;
     padding: 10px 25px;
@@ -18,8 +25,7 @@
     letter-spacing: 2px;
     transition: opacity 0.3s;
     opacity: 0.5;
-    color: #ffffff;
-
+    color: #b766be;
     &:active,
     &:focus,
     &:hover {
@@ -29,14 +35,11 @@
     }
   }
 }
-
 .my-container {
   transition: 0.4s;
-
   &.active-cont {
-    margin-right: 250px;   // desplaza el container a la izquierda
+    margin-right: 270px;   // desplaza el container a la izquierda
   }
-
   input {
     border-radius: 2rem;
     padding: 2px 20px;
@@ -47,8 +50,6 @@
   display: flex;
   justify-content: flex-end; // empuja el botón al borde derecho
 }
-
-
 #menu-btn {
   background-color: #ffffff;
   color: #ea00ff8e;
