@@ -1,10 +1,10 @@
+import  Modal  from './components/modal';
 import { ToastContainer } from 'react-toastify';
 
-import  ModalOpen  from './components/modal'
 function App() {
   return (
     <>
-    <ModalOpen/>
+    <Modal/>
       <ToastContainer position="top-left" autoClose={3000}/>
     </>
   )
