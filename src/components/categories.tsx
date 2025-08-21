@@ -1,78 +1,45 @@
-import "../assets/sass/_categories.scss";
+import "@/assets/sass/_categories.scss";
 import { DiAndroid } from "react-icons/di";
+import { Link } from "react-router-dom";
 
 function Categories() {
+  const categories = [
+    { name: "Zapatillas", products: 3, id: "01" },
+    { name: "Botines", products: 2, id: "02" },
+    { name: "Ropa deportiva", products: 13, id: "03" },
+    { name: "Calzado femenino", products: 22, id: "04" },
+    { name: "Indumentaria femenina", products: 18, id: "05" },
+    { name: "Camisetas", products: 4, id: "06" },
+  ];
+
   return (
     <section className="section">
       <div className="main-section categories-view1-full">
         {/* FancyTitle */}
-        <div className="fancy-title-view1 fancy-title-view1-color">
-          <h2>Categorias</h2>
-          <p>
-            Explora todo nuestro catalogo
-          </p>
+        <div className="fancy-title-view1 fancy-title-view1-color text-center">
+          <h2>Categorías</h2>
+          <p>Explora todo nuestro catálogo</p>
         </div>
+
         <span className="light-transparent"></span>
+
         <div className="container">
           <div className="row">
-            <div className="col-md-12">
-              {/* Categories List */}
-              <div className="categories categories-view1">
-                <ul className="row">
-                  <li className="col-md-4">
-                    <div className="categories-view1-wrap">
-                      <i><DiAndroid/></i>
-                      <a href="#">Zapatillas</a>
-                      <small>(3 Open Vacancies)</small>
-                      <span>01</span>
-                    </div>
-                  </li>
-                  <li className="col-md-4">
-                    <div className="categories-view1-wrap">
-                      <i><DiAndroid/></i>
-                      <a href="#">Botines</a>
-                      <small>(2 Open Vacancies)</small>
-                      <span>02</span>
-                    </div>
-                  </li>
-                  <li className="col-md-4">
-                    <div className="categories-view1-wrap">
-                      <i><DiAndroid/></i>
-                      <a href="#">Ropa deportiva</a>
-                      <small>(13 Open Vacancies)</small>
-                      <span>03</span>
-                    </div>
-                  </li>
-                  <li className="col-md-4">
-                    <div className="categories-view1-wrap">
-                      <div>
-                        <i><DiAndroid/></i>
-                        </div>
-                      
-                      <a href="#">Calzado femenino</a>
-                      <small>(22 Open Vacancies)</small>
-                      <span>04</span>
-                    </div>
-                  </li>
-                  <li className="col-md-4">
-                    <div className="categories-view1-wrap">
-                      <i><DiAndroid/></i>
-                      <a href="#">Indumentaria femenina</a>
-                      <small>(18 Open Vacancies)</small>
-                      <span>05</span>
-                    </div>
-                  </li>
-                  <li className="col-md-4">
-                    <div className="categories-view1-wrap">
-                      <i><DiAndroid/></i>
-                      <a href="#">Camisetas</a>
-                      <small>(4 Open Vacancies)</small>
-                      <span>06</span>
-                    </div>
-                  </li>
-                </ul>
+            {categories.map((cat) => (
+              <div className="col-md-4 mb-4" key={cat.id}>
+                <div className="categories-view1-wrap text-center p-3">
+                  <span role="img" aria-label={cat.name} className="icon mb-2">
+                    <DiAndroid size={40} />
+                  </span>
+                  <h5>
+                    <Link to={`/categoria/${cat.id}`}>{cat.name}</Link>
+                  </h5>
+                  <small className="text-muted">
+                    ({cat.products} productos)
+                  </small>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

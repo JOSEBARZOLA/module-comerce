@@ -1,4 +1,4 @@
-import '../assets/sass/_card.scss';
+import "@/assets/sass/_card.scss";
 
 function Card() {
   return (
@@ -29,8 +29,8 @@ function Card() {
             <span className="old">$2,499</span>
             <span className="new">$1,999</span>
           </div>
-       {/*  
-        <button className="btn">
+          {/*
+          <button className="btn">
             <span>Add to Cart</span>
             <svg
               className="icon"
@@ -45,60 +45,27 @@ function Card() {
               <line x1="3" y1="6" x2="21" y2="6" />
               <path d="M16 10a4 4 0 01-8 0" />
             </svg>
-          </button> */}
+          </button> 
+          */}
         </div>
         <div className="meta">
           <div className="rating">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="#FFD700"
-              stroke="#FFD700"
-              strokeWidth="0.5"
-            >
-              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="#FFD700"
-              stroke="#FFD700"
-              strokeWidth="0.5"
-            >
-              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="#FFD700"
-              stroke="#FFD700"
-              strokeWidth="0.5"
-            >
-              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="#FFD700"
-              stroke="#FFD700"
-              strokeWidth="0.5"
-            >
-              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="#FFD700"
-              stroke="#FFD700"
-              strokeWidth="0.5"
-            >
-              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
+            {/* ⭐⭐⭐⭐⭐ */}
+            {Array(5)
+              .fill(null)
+              .map((_, i) => (
+                <svg
+                  key={i}
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="#FFD700"
+                  stroke="#FFD700"
+                  strokeWidth="0.5"
+                >
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+              ))}
             <span className="rcount">245 Reviews</span>
           </div>
           <div className="stock">In Stock</div>

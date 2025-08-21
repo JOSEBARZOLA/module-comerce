@@ -1,7 +1,6 @@
-import "../assets/sass/_bodySection.scss";
-import Categories from "./categories";
-import "./containerVideo"
-import ContainerVideo from "./containerVideo";
+import "@/assets/sass/_body-section.scss";   // 👈 ojo, usá el mismo nombre del archivo real (_body-section.scss)
+import Categories from "@/components/Categories";
+import ContainerVideo from "@/components/ContainerVideo";
 
 function BodySections() {
   return (
@@ -20,20 +19,18 @@ function BodySections() {
       </section>
       <section className="sectionBody">
         <div className="section-content has-padding" id="categ">
-          <Categories/>
+          <Categories />
         </div>
       </section>
       <section className="sectionBody">
-        <div className="section-content has-diagonal">
-          
-        </div>
+        <div className="section-content has-diagonal"></div>
         <div className="section-mask bg-option-2 has-parallax">
           <div>
             <ContainerVideo />
           </div>
         </div>
       </section>
-      
+
       <section className="sectionBody">
         <div className="section-content has-padding">
           <h1>aca puede ir un footer</h1>

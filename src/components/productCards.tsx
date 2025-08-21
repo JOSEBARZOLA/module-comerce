@@ -1,300 +1,138 @@
-import "../assets/sass/_productCards.scss";
+// src/modules/shopverse/ProductCards/ProductCard.tsx
+import "@/assets/sass/_product-cards.scss";
+import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
 import {
-  MDBBtn,
-  MDBCard,
-  MDBCardBody,
-  MDBCardImage,
-  MDBCol,
-  MDBContainer,
-  MDBIcon,
-  MDBInput,
-  MDBRow,
-  MDBTypography,
-} from "mdb-react-ui-kit";
-import "mdb-react-ui-kit/dist/css/mdb.min.css";
+  FaArrowLeft,
+  FaTrashAlt,
+  FaCcMastercard,
+  FaCcVisa,
+  FaCcAmex,
+  FaCcPaypal,
+} from "react-icons/fa";
+import type { Product } from "@/types/Product";
 
-function ProductCard() {
+interface ProductCardProps {
+  product: Product;
+}
+
+function ProductCard({ product }: ProductCardProps) {
   return (
-      <MDBContainer className="py-5 h-100 bg-transparent">
-        <MDBRow className="justify-content-center align-items-center h-100">
-          <MDBCol>
-            <MDBCard>
-              <MDBCardBody className="p-4">
-                <MDBRow>
-                  <MDBCol lg="7">
-                    <MDBTypography tag="h5">
-                      <a href="#!" className="text-body">
-                        <MDBIcon fas icon="long-arrow-alt-left me-2" /> Regresar...
-                      </a>
-                    </MDBTypography>
-                    <hr />
-                    <div className="d-flex justify-content-between align-items-center mb-4">
-                      <div>
-                        <p className="mb-0">Tienes cuatro productos en el carrito.</p>
+    <Container className="py-5 h-100 bg-transparent">
+      <Row className="justify-content-center align-items-center h-100">
+        <Col>
+          <Card>
+            <Card.Body className="p-4">
+              <Row>
+                {/* 🛒 Carrito */}
+                <Col lg={7}>
+                  <h5>
+                    <a href="#!" className="text-body">
+                      <FaArrowLeft className="me-2" />
+                      Regresar...
+                    </a>
+                  </h5>
+                  <hr />
+                  <div className="d-flex justify-content-between align-items-center mb-4">
+                    <p className="mb-0">Producto en el carrito:</p>
+                  </div>
+
+                  {/* Producto dinámico */}
+                  <Card className="mb-3">
+                    <Card.Body>
+                      <div className="d-flex justify-content-between">
+                        <div className="d-flex flex-row align-items-center">
+                          <img
+                            src={product.image}
+                            className="rounded-3"
+                            style={{ width: "65px" }}
+                            alt={product.name}
+                          />
+                          <div className="ms-3">
+                            <h5>{product.name}</h5>
+                            <p className="small mb-0">{product.description}</p>
+                          </div>
+                        </div>
+                        <div className="d-flex flex-row align-items-center">
+                          <div style={{ width: "50px" }}>
+                            <h5 className="fw-normal mb-0">1</h5>
+                          </div>
+                          <div style={{ width: "80px" }}>
+                            <h5 className="mb-0">${product.price}</h5>
+                          </div>
+                          <a href="#!" style={{ color: "#cecece" }}>
+                            <FaTrashAlt />
+                          </a>
+                        </div>
                       </div>
-                    </div>
-                    <MDBCard className="mb-3">
-                      <MDBCardBody>
-                        <div className="d-flex justify-content-between">
-                          <div className="d-flex flex-row align-items-center">
-                            <div>
-                              <MDBCardImage
-                                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
-                                fluid
-                                className="rounded-3"
-                                style={{ width: "65px" }}
-                                alt="Shopping item"
-                              />
-                            </div>
-                            <div className="ms-3">
-                              <MDBTypography tag="h5">
-                                Iphone 11 pro
-                              </MDBTypography>
-                              <p className="small mb-0">256GB, Navy Blue</p>
-                            </div>
-                          </div>
-                          <div className="d-flex flex-row align-items-center">
-                            <div style={{ width: "50px" }}>
-                              <MDBTypography
-                                tag="h5"
-                                className="fw-normal mb-0"
-                              >
-                                2
-                              </MDBTypography>
-                            </div>
-                            <div style={{ width: "80px" }}>
-                              <MDBTypography tag="h5" className="mb-0">
-                                $900
-                              </MDBTypography>
-                            </div>
-                            <a href="#!" style={{ color: "#cecece" }}>
-                              <MDBIcon fas icon="trash-alt" />
-                            </a>
-                          </div>
-                        </div>
-                      </MDBCardBody>
-                    </MDBCard>
-                    <MDBCard className="mb-3">
-                      <MDBCardBody>
-                        <div className="d-flex justify-content-between">
-                          <div className="d-flex flex-row align-items-center">
-                            <div>
-                              <MDBCardImage
-                                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img2.webp"
-                                fluid
-                                className="rounded-3"
-                                style={{ width: "65px" }}
-                                alt="Shopping item"
-                              />
-                            </div>
-                            <div className="ms-3">
-                              <MDBTypography tag="h5">
-                                Samsung galaxy Note 10
-                              </MDBTypography>
-                              <p className="small mb-0">256GB, Navy Blue</p>
-                            </div>
-                          </div>
-                          <div className="d-flex flex-row align-items-center">
-                            <div style={{ width: "50px" }}>
-                              <MDBTypography
-                                tag="h5"
-                                className="fw-normal mb-0"
-                              >
-                                2
-                              </MDBTypography>
-                            </div>
-                            <div style={{ width: "80px" }}>
-                              <MDBTypography tag="h5" className="mb-0">
-                                $900
-                              </MDBTypography>
-                            </div>
-                            <a href="#!" style={{ color: "#cecece" }}>
-                              <MDBIcon fas icon="trash-alt" />
-                            </a>
-                          </div>
-                        </div>
-                      </MDBCardBody>
-                    </MDBCard>
-                    <MDBCard className="mb-3">
-                      <MDBCardBody>
-                        <div className="d-flex justify-content-between">
-                          <div className="d-flex flex-row align-items-center">
-                            <div>
-                              <MDBCardImage
-                                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img3.webp"
-                                fluid
-                                className="rounded-3"
-                                style={{ width: "65px" }}
-                                alt="Shopping item"
-                              />
-                            </div>
-                            <div className="ms-3">
-                              <MDBTypography tag="h5">
-                                Canon EOS M50
-                              </MDBTypography>
-                              <p className="small mb-0">Onyx Black</p>
-                            </div>
-                          </div>
-                          <div className="d-flex flex-row align-items-center">
-                            <div style={{ width: "50px" }}>
-                              <MDBTypography
-                                tag="h5"
-                                className="fw-normal mb-0"
-                              >
-                                1
-                              </MDBTypography>
-                            </div>
-                            <div style={{ width: "80px" }}>
-                              <MDBTypography tag="h5" className="mb-0">
-                                $1199
-                              </MDBTypography>
-                            </div>
-                            <a href="#!" style={{ color: "#cecece" }}>
-                              <MDBIcon fas icon="trash-alt" />
-                            </a>
-                          </div>
-                        </div>
-                      </MDBCardBody>
-                    </MDBCard>
-                    <MDBCard className="mb-3">
-                      <MDBCardBody>
-                        <div className="d-flex justify-content-between">
-                          <div className="d-flex flex-row align-items-center">
-                            <div>
-                              <MDBCardImage
-                                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img4.webp"
-                                fluid
-                                className="rounded-3"
-                                style={{ width: "65px" }}
-                                alt="Shopping item"
-                              />
-                            </div>
-                            <div className="ms-3">
-                              <MDBTypography tag="h5">
-                                MacBook Pro
-                              </MDBTypography>
-                              <p className="small mb-0">1TB, Graphite</p>
-                            </div>
-                          </div>
-                          <div className="d-flex flex-row align-items-center">
-                            <div style={{ width: "50px" }}>
-                              <MDBTypography
-                                tag="h5"
-                                className="fw-normal mb-0"
-                              >
-                                1
-                              </MDBTypography>
-                            </div>
-                            <div style={{ width: "80px" }}>
-                              <MDBTypography tag="h5" className="mb-0">
-                                $1799
-                              </MDBTypography>
-                            </div>
-                            <a href="#!" style={{ color: "#cecece" }}>
-                              <MDBIcon fas icon="trash-alt" />
-                            </a>
-                          </div>
-                        </div>
-                      </MDBCardBody>
-                    </MDBCard>
-                  </MDBCol>
-                  <MDBCol lg="5">
-                    <MDBCard className="bg-primary text-white rounded-3">
-                      <MDBCardBody>
-                        <div className="d-flex justify-content-between align-items-center mb-4">
-                          <MDBTypography tag="h5" className="mb-0">
-                            Detalles de la tarjeta
-                          </MDBTypography>
-                        </div>
-                        <p className="small">Aceptamos</p>
-                        <a href="#!" type="submit" className="text-white">
-                          <MDBIcon fab icon="cc-mastercard fa-2x me-2" />
-                        </a>
-                        <a href="#!" type="submit" className="text-white">
-                          <MDBIcon fab icon="cc-visa fa-2x me-2" />
-                        </a>
-                        <a href="#!" type="submit" className="text-white">
-                          <MDBIcon fab icon="cc-amex fa-2x me-2" />
-                        </a>
-                        <a href="#!" type="submit" className="text-white">
-                          <MDBIcon fab icon="cc-paypal fa-2x me-2" />
-                        </a>
-                        <form className="mt-4">
-                          <MDBInput
-                            className="mb-4"
-                            label="Nombre de la tarjeta"
+                    </Card.Body>
+                  </Card>
+                </Col>
+
+                {/* 💳 Pago */}
+                <Col lg={5}>
+                  <Card className="bg-primary text-white rounded-3">
+                    <Card.Body>
+                      <div className="d-flex justify-content-between align-items-center mb-4">
+                        <h5 className="mb-0">Detalles de la tarjeta</h5>
+                      </div>
+                      <p className="small">Aceptamos</p>
+                      <div className="d-flex mb-3">
+                        <FaCcMastercard size={32} className="me-2" />
+                        <FaCcVisa size={32} className="me-2" />
+                        <FaCcAmex size={32} className="me-2" />
+                        <FaCcPaypal size={32} />
+                      </div>
+
+                      <Form className="mt-4">
+                        <Form.Group className="mb-3">
+                          <Form.Label>Nombre de la tarjeta</Form.Label>
+                          <Form.Control
                             type="text"
-                            size="lg"
                             placeholder="Nombre de la tarjeta"
-                            contrast
                           />
-                          <MDBInput
-                            className="mb-4"
-                            label="Numero de tarjeta"
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                          <Form.Label>Número de tarjeta</Form.Label>
+                          <Form.Control
                             type="text"
-                            size="lg"
-                            minLength="19"
-                            maxLength="19"
                             placeholder="1234 5678 9012 3457"
-                            contrast
                           />
-                          <MDBRow className="mb-4">
-                            <MDBCol md="6">
-                              <MDBInput
-                                className="mb-4"
-                                label="Vencimiento"
-                                type="text"
-                                size="lg"
-                                minLength="7"
-                                maxLength="7"
-                                placeholder="MM/YYYY"
-                                contrast
-                              />
-                            </MDBCol>
-                            <MDBCol md="6">
-                              <MDBInput
-                                className="mb-4"
-                                label="CVV"
-                                type="text"
-                                size="lg"
-                                minLength="3"
-                                maxLength="3"
-                                placeholder="&#9679;&#9679;&#9679;"
-                                contrast
-                              />
-                            </MDBCol>
-                          </MDBRow>
-                        </form>
-                        <hr />
-                        <br/>
-                        <div className="d-flex justify-content-between">
-                          <p className="mb-2">Subtotal</p>
-                          <p className="mb-2">$ 4798.00</p>
-                        </div>
-                        <div className="d-flex justify-content-between">
-                          <p className="mb-2">Shipping</p>
-                          <p className="mb-2">$ 20.00</p>
-                        </div>
-                        <div className="d-flex justify-content-between">
-                          <p className="mb-2">Total</p>
-                          <p className="mb-2">$ 4818.00</p>
-                        </div>
-                        <MDBBtn color="info" block size="lg">
-                          <div className="d-flex justify-content-center">
-                            <span>
-                              Comprar{" "}
-                            </span>
-                          </div>
-                        </MDBBtn>
-                      </MDBCardBody>
-                    </MDBCard>
-                  </MDBCol>
-                </MDBRow>
-              </MDBCardBody>
-            </MDBCard>
-          </MDBCol>
-        </MDBRow>
-      </MDBContainer>
+                        </Form.Group>
+                        <Row>
+                          <Col md={6}>
+                            <Form.Group className="mb-3">
+                              <Form.Label>Vencimiento</Form.Label>
+                              <Form.Control type="text" placeholder="MM/YYYY" />
+                            </Form.Group>
+                          </Col>
+                          <Col md={6}>
+                            <Form.Group className="mb-3">
+                              <Form.Label>CVV</Form.Label>
+                              <Form.Control type="password" placeholder="•••" />
+                            </Form.Group>
+                          </Col>
+                        </Row>
+                      </Form>
+
+                      <hr />
+                      <div className="d-flex justify-content-between">
+                        <p className="mb-2">Precio</p>
+                        <p className="mb-2">${product.price}</p>
+                      </div>
+
+                      <Button variant="info" className="w-100 mt-3">
+                        Comprar
+                      </Button>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              </Row>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+    </Container>
   );
 }
+
 export default ProductCard;
