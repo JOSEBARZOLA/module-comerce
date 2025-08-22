@@ -1,6 +1,6 @@
 import "@/assets/sass/_body-section.scss";
-import Categories from "./categories";
-import ContainerVideo from "./containerVideo";
+import Categories from "@/components/categories";
+import ContainerVideo from "@/components/containerVideo";
 
 function BodySections() {
   return (
