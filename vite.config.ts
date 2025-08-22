@@ -7,13 +7,13 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src'), // 👈 Importar con "@/..."
+      '@': path.resolve(__dirname, 'src'), // Importar con "@/..."
     },
   },
   css: {
     preprocessorOptions: {
       scss: {
-        // 👇 Si en el futuro querés un import global de variables, lo agregás acá
+        // 👇import global de variables
         // additionalData: `@use "@/assets/sass/variables" as *;`
       },
     },

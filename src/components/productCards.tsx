@@ -10,11 +10,9 @@ import {
   FaCcPaypal,
 } from "react-icons/fa";
 import type { Product } from "@/types/Product";
-
 interface ProductCardProps {
   product: Product;
 }
-
 function ProductCard({ product }: ProductCardProps) {
   return (
     <Container className="py-5 h-100 bg-transparent">
@@ -67,7 +65,6 @@ function ProductCard({ product }: ProductCardProps) {
                     </Card.Body>
                   </Card>
                 </Col>
-
                 {/* 💳 Pago */}
                 <Col lg={5}>
                   <Card className="bg-primary text-white rounded-3">
@@ -82,7 +79,6 @@ function ProductCard({ product }: ProductCardProps) {
                         <FaCcAmex size={32} className="me-2" />
                         <FaCcPaypal size={32} />
                       </div>
-
                       <Form className="mt-4">
                         <Form.Group className="mb-3">
                           <Form.Label>Nombre de la tarjeta</Form.Label>

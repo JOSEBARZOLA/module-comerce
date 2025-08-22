@@ -37,11 +37,9 @@
         transition: width 0.3s ease;
       }
     }
-
     &:hover .sponsors-title::after {
       width: 80%;
     }
-
     .sponsors-subtitle {
       font-size: 1rem;
       color: #1a1a1a;
@@ -50,7 +48,6 @@
       line-height: 1.4;
     }
   }
-
   /* Sponsors grupos */
   .sponsors-group {
     display: flex;
@@ -64,7 +61,6 @@
       margin-top: 3rem;
     }
   }
-
   /* Animación entrada */
   .sponsor-card {
     background: rgb(255, 255, 255);
@@ -84,14 +80,12 @@
       opacity: 1;
       transform: translateY(0) scale(1);
     }
-
     img {
       max-width: 100%;
       max-height: 100%;
       object-fit: contain;
       transition: filter 0.3s ease;
     }
-
     /* Tiers */
     &.tier-1 {
       width: 220px;
