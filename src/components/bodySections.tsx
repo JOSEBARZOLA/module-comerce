@@ -1,6 +1,6 @@
 import "@/assets/sass/_body-section.scss";   // 👈 ojo, usá el mismo nombre del archivo real (_body-section.scss)
-import Categories from "@/components/Categories";
-import ContainerVideo from "@/components/ContainerVideo";
+import Categories from "@/components/categories";
+import ContainerVideo from "@/components/containerVideo";
 
 function BodySections() {
   return (

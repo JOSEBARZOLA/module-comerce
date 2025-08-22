@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Container, Button, Modal } from "react-bootstrap";
-import ProductCard from "@/components/ProductCards";
+import ProductCard from "@/components/productCards";
 
 export default function ModalOpen() {
   const [showModal, setShowModal] = useState(false);

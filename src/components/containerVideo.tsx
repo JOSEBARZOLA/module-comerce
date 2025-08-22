@@ -1,6 +1,6 @@
 import { Container } from "react-bootstrap";
 import { useCallback, useRef } from "react";
-import "@/assets/sass/_containerVideo.scss";
+import "@/assets/sass/_container-video.scss";
 
 function ContainerVideo() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
