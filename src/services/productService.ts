@@ -1,4 +1,4 @@
-import type { Product } from "../types/Product";
+import type { Product } from "@/types/Product";
 
 export async function fetchProducts(): Promise<Product[]> {
   // Simulación de fetch con mock local
