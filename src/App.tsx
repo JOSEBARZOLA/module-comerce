@@ -1,13 +1,12 @@
 
 import { ToastContainer } from "react-toastify";
 import { CartProvider } from "@/contexts/CartProvider";
-import CardsMarcas from "./components/cardsMarcas";
-
+import SponsorsSection from "./components/sponsorsSections";
 
 function App() {
   return (
     <CartProvider>
-      <CardsMarcas />
+      <SponsorsSection />
       <ToastContainer position="top-left" autoClose={3000} />
     </CartProvider>
   );

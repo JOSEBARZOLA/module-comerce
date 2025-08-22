@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Container, Button, Modal } from "react-bootstrap";
-import ProductCard from "./productCards";
+import ProductCard from "@/components/productCards";
 import "@/assets/sass/_modal.scss";
 
 export default function ModalOpen() {

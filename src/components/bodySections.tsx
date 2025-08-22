@@ -1,3 +1,4 @@
+
 import "@/assets/sass/_body-section.scss";
 import Categories from "@/components/categories";
 import ContainerVideo from "@/components/containerVideo";
