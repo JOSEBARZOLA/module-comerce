@@ -9,12 +9,10 @@
   overflow: hidden;
   position: relative;
   cursor: pointer;
-
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0 2px 2px #000000;
   }
-
   .badge {
     position: absolute;
     top: 10px;
@@ -35,31 +33,26 @@
     box-shadow: 0 3px 10px rgba(255, 0, 0, 0.2);
     z-index: 10;
   }
-
   .tilt {
     overflow: hidden;
 
     .img {
       height: 200px;
       overflow: hidden;
-
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         transition: transform 0.5s;
       }
-
       // Hover effect on image scale
       .card:hover & img {
         transform: scale(1.05);
       }
     }
   }
-
   .info {
     padding: 20px;
-
     .cat {
       font-size: 13px;
       font-weight: 600;
@@ -68,7 +61,6 @@
       color: #71717a;
       margin-bottom: 5px;
     }
-
     .title {
       font-size: 20px;
       font-weight: 700;
@@ -76,19 +68,16 @@
       margin: 0 0 10px;
       letter-spacing: -0.5px;
     }
-
     .desc {
       font-size: 15px;
       color: #52525b;
       line-height: 1.4;
       margin-bottom: 12px;
     }
-
     .feats {
       display: flex;
       gap: 6px;
       margin-bottom: 15px;
-
       .feat {
         font-size: 13px;
         background: #f4f4f5;
@@ -98,7 +87,6 @@
         font-weight: 500;
       }
     }
-
     .bottom {
       display: flex;
       justify-content: space-between;
@@ -108,21 +96,19 @@
       .price {
         display: flex;
         flex-direction: column;
-
+        
         .old {
           font-size: 25px;
           text-decoration: line-through;
           color: #a1a1aa;
           margin-bottom: 2px;
         }
-
         .new {
           font-size: 30px;
           font-weight: 900;
           color: #18181b;
         }
       }
-
       .btn {
         background: linear-gradient(45deg, #18181b, #18171e, #2a2a4c);
         color: #fff;

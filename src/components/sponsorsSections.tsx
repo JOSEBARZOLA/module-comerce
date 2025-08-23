@@ -2,15 +2,15 @@ import { useEffect, useRef } from "react";
 import "@/assets/sass/_sponsors-section.scss";
 
 // Import de imágenes
-import adidasLogo from "@/assets/img/sponsors/adidasLogo.svg";
-import converseLogo from "@/assets/img/sponsors/converseLogo.svg";
-import diadoraLogo from "@/assets/img/sponsors/diadoraLogo.svg";
-import dunlopLogo from "@/assets/img/sponsors/dunlopLogo.svg";
-import hushPuppies from "@/assets/img/sponsors/hushPuppies.png";
-import jordanAir from "@/assets/img/sponsors/jordanAir.svg";
-import nikeLogo2 from "@/assets/img/sponsors/nikeLogo2.svg";
-import havaianasLogo from "@/assets/img/sponsors/havaianasLogo.svg";
-import yankeesLogo from "@/assets/img/sponsors/yankeesLogo.svg";
+import adidasLogo from "@/assets/img/adidasLogo.svg";
+import converseLogo from "@/assets/img/converseLogo.svg";
+import diadoraLogo from "@/assets/img/diadoraLogo.svg";
+import dunlopLogo from "@/assets/img/dunlopLogo.svg";
+import hushPuppies from "@/assets/img/hushPuppies.png";
+import jordanAir from "@/assets/img/jordanAir.svg";
+import nikeLogo from "@/assets/img/nikeLogo.svg";
+import LeCoqLogo from "@/assets/img/leCoqLogo.svg";
+import vansLogo from "@/assets/img/vansLogo.svg";
 
 interface Sponsor {
   src: string;
@@ -26,14 +26,14 @@ const sponsors: Sponsor[] = [
 
   { src: hushPuppies, alt: "Merrell", tier: 2 },
   { src: jordanAir, alt: "Araikani", tier: 2 },
-  { src: nikeLogo2, alt: "Canelo", tier: 2 },
+  { src: nikeLogo, alt: "Canelo", tier: 2 },
 
-  { src: havaianasLogo, alt: "Mervcik", tier: 3 },
-  { src: yankeesLogo, alt: "Aqualic", tier: 3 },
+  { src: LeCoqLogo, alt: "Mervcik", tier: 3 },
+  { src: vansLogo, alt: "Aqualic", tier: 3 },
   { src: converseLogo, alt: "Hidrata Estuardo Romero", tier: 3 },
   { src: adidasLogo, alt: "Frescos del Sur", tier: 3 },
 
-  { src: havaianasLogo, alt: "Hoka", tier: 4 },
+  { src: LeCoqLogo, alt: "Hoka", tier: 4 },
   { src: hushPuppies, alt: "Dorhamann Bike", tier: 4 },
   { src: adidasLogo, alt: "Complejo Chacras", tier: 4 },
 

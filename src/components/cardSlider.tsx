@@ -1,10 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-
+import "@/assets/sass/_card-slider.scss"
 // estilos
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 
 function Slider() {
   return (
