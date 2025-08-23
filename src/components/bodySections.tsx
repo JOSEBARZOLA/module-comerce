@@ -1,4 +1,3 @@
-
 import "@/assets/sass/_body-section.scss";
 import Categories from "@/components/categories";
 import ContainerVideo from "@/components/containerVideo";
@@ -31,7 +30,6 @@ function BodySections() {
           </div>
         </div>
       </section>
-
       <section className="sectionBody">
         <div className="section-content has-padding">
           <h1>aca puede ir un footer</h1>

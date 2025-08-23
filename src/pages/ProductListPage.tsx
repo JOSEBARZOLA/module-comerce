@@ -17,7 +17,6 @@ const ProductListPage = () => {
   useEffect(() => {
     fetchProducts().then(setProducts);
   }, []);
-
   return (
     <CartProvider>
       <div className="flex flex-col md:flex-row">
@@ -31,5 +30,4 @@ const ProductListPage = () => {
     </CartProvider>
   );
 };
-
 export default ProductListPage;

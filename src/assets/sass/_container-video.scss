@@ -12,7 +12,6 @@
   }
 }
 /* Base */
-
 h1 {
   font-size: 45px!important;
   font-weight: bold!important;
@@ -22,7 +21,6 @@ h1 {
   text-transform: uppercase;
   z-index: 4;
 }
-
 h1 {
   background: linear-gradient(
     to right,
@@ -37,7 +35,6 @@ h1 {
   -webkit-text-fill-color: transparent;
   animation: shine 3s linear infinite;
 }
-
 @keyframes shine {
   from {
     background-position: 0 0;

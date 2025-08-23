@@ -10,10 +10,8 @@ export type CartContextType = {
   removeFromCart: (id: number) => void;
   clearCart: () => void;
 };
-
 // 👇 solo creamos el contexto
 export const CartContext = createContext<CartContextType | undefined>(undefined);
-
 export type CartProviderProps = {
   children: ReactNode;
 };

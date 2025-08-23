@@ -6,16 +6,13 @@ body,
   padding: 0;
   background-color: rgb(255, 255, 255);
 }
-
 body {
   min-width: 320px;
   place-items: center;
 }
-
 #root {
   width: 100%;
 }
-
 .modal-dialog {
   max-width: 90% !important;
 }

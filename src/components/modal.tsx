@@ -5,10 +5,8 @@ import "@/assets/sass/_modal.scss";
 
 export default function ModalOpen() {
   const [showModal, setShowModal] = useState(false);
-
   const handleToggle = () => setShowModal((prev) => !prev);
   const handleClose = () => setShowModal(false);
-
   return (
     <Container className="py-5 h-100 bg-transparent">
       <Button onClick={handleToggle} variant="primary">

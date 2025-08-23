@@ -11,7 +11,6 @@ function Categories() {
     { name: "Indumentaria femenina", products: 18, id: "05" },
     { name: "Camisetas", products: 4, id: "06" },
   ];
-
   return (
     <section className="section">
       <div className="main-section categories-view1-full">
@@ -20,9 +19,7 @@ function Categories() {
           <h2>Categorías</h2>
           <p>Explora todo nuestro catálogo</p>
         </div>
-
         <span className="light-transparent"></span>
-
         <div className="container">
           <div className="row">
             {categories.map((cat) => (
@@ -46,5 +43,4 @@ function Categories() {
     </section>
   );
 }
-
 export default Categories;

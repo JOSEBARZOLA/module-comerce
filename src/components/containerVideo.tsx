@@ -4,15 +4,12 @@ import "@/assets/sass/_container-video.scss";
 
 function ContainerVideo() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
-
   const handleMouseEnter = useCallback(() => {
     videoRef.current?.play();
   }, []);
-
   const handleMouseLeave = useCallback(() => {
     videoRef.current?.pause();
   }, []);
-
   return (
     <Container>
       <video
@@ -33,5 +30,4 @@ function ContainerVideo() {
     </Container>
   );
 }
-
 export default ContainerVideo;

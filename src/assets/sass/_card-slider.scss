@@ -4,17 +4,14 @@
 
 .section{ 
 background-color: rgb(255, 255, 255);
-
 .card-wrapper {
   max-width: 1400px;
   margin: 0 60px  0;
   overflow: hidden;
-
   .swiper-slide{
     margin: 0 0; //este tiene las card
   }
   
-
   @media (max-width: 768px) {
     
     .swiper-button-prev, .swiper-button-next {
@@ -22,5 +19,4 @@ background-color: rgb(255, 255, 255);
     }
   }
 }
-
 }

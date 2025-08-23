@@ -6,7 +6,6 @@
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-
     /* Bundler mode */
     "moduleResolution": "node",
     "allowImportingTsExtensions": true,
@@ -14,13 +13,11 @@
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
-
     /* Paths */
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
     },
-
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
