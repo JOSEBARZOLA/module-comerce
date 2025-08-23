@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Container, Button, Modal } from "react-bootstrap";
 import ProductCard from "@/components/productCards";
+import "@/assets/sass/_modal.scss";
 
 export default function ModalOpen() {
   const [showModal, setShowModal] = useState(false);
@@ -15,22 +16,15 @@ export default function ModalOpen() {
         <Modal.Header closeButton>
           <Modal.Title>Carrito</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
-          <ProductCard
-            product={{
-              id: 1,
-              name: "Remera básica",
-              description: "Remera de algodón 100%",
-              price: 29.99,
-              image: "/img/remera.jpg",
-            }}
-          />
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Cerrar
-          </Button>
-        </Modal.Footer>
+        <ProductCard
+          product={{
+            id: 1,
+            name: "Remera básica",
+            description: "Remera de algodón 100%",
+            price: 29.99,
+            image: "/img/remera.jpg",
+          }}
+        />
       </Modal>
     </Container>
   );
