@@ -112,14 +112,14 @@ function ProductCard({ product }: ProductCardProps) {
               </Col>
             </Row>
           </Card.Body>
-          <Card.Footer>
+          <div>
             <h5 className="mb-0">
               <a href="#/" className="text-body d-flex align-items-center">
                 <FaArrowLeft className="me-2" />
                 Regresar...
               </a>
             </h5>
-          </Card.Footer>
+          </div>
         </Card>
       </Col>
     </Row>

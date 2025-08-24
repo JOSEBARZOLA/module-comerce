@@ -2,15 +2,15 @@ import { useEffect, useRef } from "react";
 import "@/assets/sass/_sponsors-section.scss";
 
 // Import de imágenes
-import adidasLogo from "@/assets/img/adidasLogo.svg";
-import converseLogo from "@/assets/img/converseLogo.svg";
-import diadoraLogo from "@/assets/img/diadoraLogo.svg";
-import dunlopLogo from "@/assets/img/dunlopLogo.svg";
-import hushPuppies from "@/assets/img/hushPuppies.png";
-import jordanAir from "@/assets/img/jordanAir.svg";
-import nikeLogo from "@/assets/img/nikeLogo.svg";
-import LeCoqLogo from "@/assets/img/leCoqLogo.svg";
-import vansLogo from "@/assets/img/vansLogo.svg";
+import adidasLogo from "@/assets/img/sponsors/adidasLogo.svg";
+import converseLogo from "@/assets/img/sponsors/converseLogo.svg";
+import diadoraLogo from "@/assets/img/sponsors/diadoraLogo.svg";
+import dunlopLogo from "@/assets/img/sponsors/dunlopLogo.svg";
+import hushPuppies from "@/assets/img/sponsors/hushPuppies.png";
+import jordanAir from "@/assets/img/sponsors/jordanAir.svg";
+import nikeLogo from "@/assets/img/sponsors/nikeLogo.svg";
+import LeCoqLogo from "@/assets/img/sponsors/leCoqLogo.svg";
+import vansLogo from "@/assets/img/sponsors/vansLogo.svg";
 
 interface Sponsor {
   src: string;

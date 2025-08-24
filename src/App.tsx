@@ -1,14 +1,14 @@
 
 import { ToastContainer } from "react-toastify";
 import { CartProvider } from "@/contexts/CartProvider";
-import SponsorsSection from "@/components/sponsorsSections";
-import  Modal  from "@/components/modal";
+import CubeSlide from "./components/cubeSlide";
+import CreativeSlide from "./components/creativeSlide";
 
 function App() {
   return (
     <CartProvider>
-      <Modal/>
-      <SponsorsSection />
+      <CubeSlide/>
+      <CreativeSlide/>
       <ToastContainer position="top-left" autoClose={3000} />
     </CartProvider>
   );
