@@ -4,21 +4,26 @@ import { EffectCube } from "swiper/modules";
 
 // Import Swiper styles
 import "@/assets/sass/_swiper-slides.scss";
-
+import { Container } from "react-bootstrap";
 // import required modules
 
 function CubeSlide() {
   return (
-    <>
+      <Container>
       <Swiper
         effect={"cube"}
         grabCursor={true}
+        loop={true}
         cubeEffect={{
           shadow: true,
           slideShadows: true,
           shadowOffset: 55,
           shadowScale: 0.94,
         }}
+        autoplay={{
+         delay: 2600,
+         pauseOnMouseEnter: true,
+         }}
         pagination={true}
         modules={[EffectCube]}
         className="mySwiper"
@@ -51,7 +56,8 @@ function CubeSlide() {
           <img src="" />
         </SwiperSlide>
       </Swiper>
-    </>
+      </Container>
+    
   );
 }
 export default CubeSlide;

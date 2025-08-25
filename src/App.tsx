@@ -1,13 +1,14 @@
 
 import { ToastContainer } from "react-toastify";
 import { CartProvider } from "@/contexts/CartProvider";
-import ModalOpen from "./components/modal";
+import NewSwiper from "./components/newSwipper";
+
 
 function App() {
   return (
     <CartProvider>
     
-     <ModalOpen/>
+     <NewSwiper/>
       <ToastContainer position="top-left" autoClose={3000} />
     </CartProvider>
   );
