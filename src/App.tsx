@@ -7,7 +7,6 @@ import NewSwiper from "./components/newSwipper";
 function App() {
   return (
     <CartProvider>
-    
      <NewSwiper/>
       <ToastContainer position="top-left" autoClose={3000} />
     </CartProvider>

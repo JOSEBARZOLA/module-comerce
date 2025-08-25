@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import "@/assets/sass/_sponsors-section.scss";
 
+
 // Import de imágenes
 import adidasLogo from "@/assets/img/sponsors/adidasLogo.svg";
 import converseLogo from "@/assets/img/sponsors/converseLogo.svg";

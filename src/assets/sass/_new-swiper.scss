@@ -1,59 +1,115 @@
 @use 'swiper/css/effect-cube';
 @use "swiper/css";
-.container{
+
+.sponsors-section {
     padding-top: 5vh;
+    text-align: center;
+    height: 100%;
+  background: #162561;
+  background-image: radial-gradient(
+      circle at 20% 100%,
+      rgba(184, 184, 184, 0.1) 0%,
+      rgba(184, 184, 184, 0.1) 33%,
+      rgba(96, 96, 96, 0.1) 33%,
+      rgba(96, 96, 96, 0.1) 66%,
+      rgba(7, 7, 7, 0.1) 66%,
+      rgba(7, 7, 7, 0.1) 99%
+    ),
+    linear-gradient(40deg, #040a22, #162561, #202e64, #6f7aa6);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+.container{
+    padding: 0 0 0 0;
+    width: 320px;
 }
+.sponsors-header {
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .sponsors-icon {
+      font-size: 2rem;
+      color: #f4c542;
+      margin-bottom: 0.5rem;
+    }
+
+    .sponsors-title {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: #001147;
+      position: relative;
+      display: inline-block;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+
+      &::after {
+        content: "";
+        display: block;
+        margin: 0.5rem auto 0;
+        width: 60%;
+        height: 3px;
+        background-color: #000530;
+        border-radius: 2px;
+        transition: width 0.3s ease;
+      }
+    }
+    &:hover .sponsors-title::after {
+      width: 80%;
+    }
+    .sponsors-subtitle {
+      font-size: 1.3rem;
+      color: #1a1a1a;
+      margin-top: 0.5rem;
+      max-width: 500px;
+      line-height: 1.4;
+      text-align: center;
+     
+    }
+  }
+
+  @media (max-width: 768px) {
+    .sponsors-title {
+      font-size: 1.5rem;
+    }
+
+    .sponsors-subtitle {
+      font-size: 0.875rem;
+      text-align: center;
+    }
+
+    .sponsors-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.25rem;
+    }
+  }
+}
+
+
 .swiper {
   position: relative;
-  width: 400px;
-  height: 490px;
+  width: 420px;
+  height: 450px;
+  border-radius: 20px;
 }
 
 .swiper-slide {
   position: relative;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(56, 50, 50, 0.548);
   user-select: none;
   border-radius: 20px;
 }
-
 .swiper-slide img {
   width: 100%;
   height: 100%;
   border-radius: 20px;
-}
-
-.overlay {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 150px;
-  padding: 10px 20px;
-  background: rgba(93, 95, 145, 0.2);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  color: #fff;
-  border-radius: 0 0 20px 20px;
-}
-
-.overlay h1 {
-  font-size: clamp(1.2rem, 4vw, 1.5rem);
-  font-weight: 600;
-}
-
-.overlay p {
-  font-size: clamp(0.8rem, 4vw, 0.9rem);
-  font-weight: 300;
-  line-height: 1.3;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 @media (max-width: 1050px) {
   .swiper {
-    width: 350px;
+    width: 320px;
     height: 450px;
   }
 }
@@ -62,19 +118,12 @@
   .swiper {
     grid-area: slider;
   }
-  .content {
-    grid-area: content;
-    text-align: center;
-  }
-
-  .content h1 {
-    margin-bottom: 20px;
-  }
+  
 }
 
 @media (max-width: 470px) {
   .swiper {
-    width: 300px;
-    height: 400px;
+    width: 320px;
+    height: 450px;
   }
 }
