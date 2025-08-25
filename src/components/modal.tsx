@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Container, Button, Modal } from "react-bootstrap";
-import ProductCard from "@/components/productCards";
+{/*import ProductCard from "@/components/productCards";*/}
+import SignUp from "./signUp";
 import "@/assets/sass/_modal.scss";
-import ParticleBackground from "@/components/efectParticle";
 
 export default function ModalOpen() {
   const [showModal, setShowModal] = useState(false);
@@ -15,10 +15,11 @@ export default function ModalOpen() {
         Modal carrito
       </Button>
       <Modal show={showModal} onHide={handleClose} centered>
-        <ParticleBackground/>
-        <Modal.Header closeButton>
-          <Modal.Title>Carrito</Modal.Title>
+        <Modal.Header closeButton className="no-border-header">
+        {/**   <Modal.Title>Carrito</Modal.Title>*/ }
         </Modal.Header>
+          <SignUp/>
+        {/** 
         <ProductCard
           product={{
             id: 1,
@@ -27,7 +28,7 @@ export default function ModalOpen() {
             price: 29.99,
             image: "/img/remera.jpg",
           }}
-        />
+        />*/}
       </Modal>
     </Container>
   );
