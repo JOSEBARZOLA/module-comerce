@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Container, Button, Modal } from "react-bootstrap";
 import ProductCard from "@/components/productCards";
 import "@/assets/sass/_modal.scss";
+import ParticleBackground from "@/components/efectParticle";
 
 export default function ModalOpen() {
   const [showModal, setShowModal] = useState(false);
@@ -9,10 +10,12 @@ export default function ModalOpen() {
   const handleClose = () => setShowModal(false);
   return (
     <Container className="py-5 h-100 bg-transparent">
+      
       <Button onClick={handleToggle} variant="primary">
         Modal carrito
       </Button>
       <Modal show={showModal} onHide={handleClose} centered>
+        <ParticleBackground/>
         <Modal.Header closeButton>
           <Modal.Title>Carrito</Modal.Title>
         </Modal.Header>

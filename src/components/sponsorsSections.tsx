@@ -70,6 +70,7 @@ function SponsorsSection() {
   );
   return (
     <section id="sponsors" className="sponsors-section">
+
       <div className="sponsors-header">
         <div className="sponsors-icon">🏅</div>
         <h2 className="sponsors-title">SPONSORS</h2>

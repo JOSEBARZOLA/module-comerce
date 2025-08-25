@@ -29,7 +29,7 @@ function Categories() {
                     <DiAndroid size={40} />
                   </span>
                   <h5>
-                    <Link to={`/categoria/${cat.id}`}>{cat.name}</Link>
+                    <Link to={`${cat.id}`}>{cat.name}</Link>
                   </h5>
                   <small className="text-muted">
                     ({cat.products} productos)
@@ -41,6 +41,6 @@ function Categories() {
         </div>
       </div>
     </section>
-  );
-}
+  )
+};
 export default Categories;
