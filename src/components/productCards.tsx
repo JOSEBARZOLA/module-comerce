@@ -1,128 +1,59 @@
 import "@/assets/sass/_product-cards.scss";
-import { Row, Col, Card, Form, Button } from "react-bootstrap";
-import {
-  FaArrowLeft,
-  FaTrashAlt,
-  FaCcMastercard,
-  FaCcVisa,
-  FaCcAmex,
-  FaCcPaypal,
-} from "react-icons/fa";
-import type { Product } from "@/types/Product";
-interface ProductCardProps {
-  product: Product;
-}
-function ProductCard({ product }: ProductCardProps) {
+import { Row, Col, Card, Container } from "react-bootstrap";
+import pumaLogo from "@/assets/img/sponsors/pumaLogo.svg";
+const products = [pumaLogo];
+
+function ProductCard() {
   return (
-    <Row className="justify-content-center align-items-center h-100">
-      <Col>
-        <Card>
-          <Card.Body className="p-4">
-            <Row>
-              {/* 🛒 Carrito */}
-              <Col lg={7}>
-                <div className="d-flex justify-content-between align-items-center mb-4">
-                  <p className="mb-0">Producto en el carrito:</p>
+    <>
+      <Row className="justify-content-center align-items-center h-100">
+        <Col>
+          <Card className="no-border-card shadow p-4">
+            <Row className="align-items-center">
+              <Container className="col-md-3 col-lg-1 cl-  justify-content-center align-items-center h-100" >
+                {products.map((logo) => (
+                <div  key={logo}>
+                  {" "}
+                  <img className="img-products"  src={logo}  />
                 </div>
-                {/* Producto dinámico */}
-                <Card className="mb-3">
-                  <Card.Body>
-                    <div className="d-flex justify-content-between">
-                      <div className="d-flex flex-row align-items-center">
-                        <img
-                          src={product.image}
-                          className="rounded-3"
-                          style={{ width: "65px" }}
-                          alt={product.name}
-                        />
-                        <div className="ms-3">
-                          <h5>{product.name}</h5>
-                          <p className="small mb-0">{product.description}</p>
-                        </div>
-                      </div>
-                      <div className="d-flex flex-row align-items-center">
-                        <div style={{ width: "50px" }}>
-                          <h5 className="fw-normal mb-0">1</h5>
-                        </div>
-                        <div style={{ width: "80px" }}>
-                          <h5 className="mb-0">${product.price}</h5>
-                        </div>
-                        <a href="#!" style={{ color: "#cecece" }}>
-                          <FaTrashAlt />
-                        </a>
-                      </div>
-                    </div>
-                  </Card.Body>
-                </Card>
+              ))}
+              </Container >
+              
+              <Col className="col-md-6 ">
+                <div className="info-main">
+                  <a href="#" className="h5 title">
+                    {" "}
+                    Apple Watch Series 3{" "}
+                  </a>
+                  <p>
+                    Monitor your health. Track your workouts. Get the motivation
+                    you need to achieve your fitness goals. And stay connected
+                    to the people and information you care about.
+                  </p>
+                </div>
               </Col>
-              {/* 💳 Pago */}
-              <Col lg={5}>
-                <Card className="bg-primary text-white rounded-3">
-                  <Card.Body>
-                    <div className="d-flex justify-content-between align-items-center mb-4">
-                      <h5 className="mb-0">Detalles de la tarjeta</h5>
-                    </div>
-                    <p className="small">Aceptamos</p>
-                    <div className="d-flex mb-3">
-                      <FaCcMastercard size={32} className="me-2" />
-                      <FaCcVisa size={32} className="me-2" />
-                      <FaCcAmex size={32} className="me-2" />
-                      <FaCcPaypal size={32} />
-                    </div>
-                    <Form className="mt-4">
-                      <Form.Group className="mb-3">
-                        <Form.Label>Nombre de la tarjeta</Form.Label>
-                        <Form.Control
-                          type="text"
-                          placeholder="Nombre de la tarjeta"
-                        />
-                      </Form.Group>
-                      <Form.Group className="mb-3">
-                        <Form.Label>Número de tarjeta</Form.Label>
-                        <Form.Control
-                          type="text"
-                          placeholder="1234 5678 9012 3457"
-                        />
-                      </Form.Group>
-                      <Row>
-                        <Col md={6}>
-                          <Form.Group className="mb-3">
-                            <Form.Label>Vencimiento</Form.Label>
-                            <Form.Control type="text" placeholder="MM/YYYY" />
-                          </Form.Group>
-                        </Col>
-                        <Col md={6}>
-                          <Form.Group className="mb-3">
-                            <Form.Label>CVV</Form.Label>
-                            <Form.Control type="password" placeholder="•••" />
-                          </Form.Group>
-                        </Col>
-                      </Row>
-                    </Form>
-                    <hr />
-                    <div className="d-flex justify-content-between">
-                      <p className="mb-2">Precio</p>
-                      <p className="mb-2">${product.price}</p>
-                    </div>
-                    <Button variant="info" className="w-100 mt-3">
-                      Comprar
-                    </Button>
-                  </Card.Body>
-                </Card>
+              <Col className="col-12 col-md-3">
+                <div className="d-flex align-items-center justify-content-center">
+                  <span className="h5 mb-0 text-gray text-through me-2">
+                    $299.00
+                  </span>
+                </div>
+                
+                <div className="d-grid gap-2 mt-4">
+                  <a className="btn btn-tertiary btn-sm" href="#">
+                    Detalles
+                  </a>
+                  <a href="#" className="btn btn-tertiary btn-sm">
+                    <span className="fa fa-trash me-1"></span>
+                    Quitar del carrito
+                  </a>
+                </div>
               </Col>
             </Row>
-          </Card.Body>
-          <div>
-            <h5 className="mb-0">
-              <a href="#/" className="text-body d-flex align-items-center">
-                <FaArrowLeft className="me-2" />
-                Regresar...
-              </a>
-            </h5>
-          </div>
-        </Card>
-      </Col>
-    </Row>
+          </Card>
+        </Col>
+      </Row>
+    </>
   );
 }
 export default ProductCard;

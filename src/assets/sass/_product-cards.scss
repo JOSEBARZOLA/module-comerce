@@ -1,3 +1,11 @@
+.no-border-card {
+  border:none;
+}
+.img-products{
+    
+    max-width: 130px !important;
+    max-height: 130px !important;
+}
 @media (min-width: 1025px) {
     .h-custom {
     height: 100vh !important;
