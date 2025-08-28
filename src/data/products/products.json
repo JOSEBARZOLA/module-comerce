@@ -1,0 +1,962 @@
+[
+  {
+    "id": 1,
+    "name": "Botines Adidas Predator",
+    "description": "Botines de fútbol con excelente agarre en césped",
+    "price": 150,
+    "category": "Botines",
+    "gender": "Unisex",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Adidas+Predator",
+    "sizes": [
+      41,
+      42,
+      43,
+      44
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Botines Nike Mercurial",
+    "description": "Ligeros y cómodos, ideales para velocidad",
+    "price": 170,
+    "category": "Botines",
+    "gender": "Unisex",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Nike+Mercurial",
+    "sizes": [
+      41,
+      42,
+      43,
+      44
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Botines Puma Future",
+    "description": "Diseño moderno con ajuste de cordones adaptable",
+    "price": 145,
+    "category": "Botines",
+    "gender": "Unisex",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Puma+Future",
+    "sizes": [
+      41,
+      42,
+      43,
+      44
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Botines Umbro Velocita",
+    "description": "Botines de fútbol con suela multitaco",
+    "price": 120,
+    "category": "Botines",
+    "gender": "Unisex",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Umbro+Velocita",
+    "sizes": [
+      41,
+      42,
+      43,
+      44
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Botines Mizuno Morelia",
+    "description": "Clásicos, cuero natural de máxima calidad",
+    "price": 180,
+    "category": "Botines",
+    "gender": "Unisex",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Mizuno+Morelia",
+    "sizes": [
+      41,
+      42,
+      43,
+      44
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Botines Adidas Copa Mundial",
+    "description": "Icónicos botines de cuero",
+    "price": 160,
+    "category": "Botines",
+    "gender": "Unisex",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Adidas+Copa+Mundial",
+    "sizes": [
+      41,
+      42,
+      43,
+      44
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Botines Lotto Maestro",
+    "description": "Comodidad y agarre para todo tipo de terrenos",
+    "price": 130,
+    "category": "Botines",
+    "gender": "Unisex",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Lotto+Maestro",
+    "sizes": [
+      41,
+      42,
+      43,
+      44
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Botines Nike Phantom",
+    "description": "Diseño ligero con gran control del balón",
+    "price": 175,
+    "category": "Botines",
+    "gender": "Unisex",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Nike+Phantom",
+    "sizes": [
+      41,
+      42,
+      43,
+      44
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Botines Joma Aguila",
+    "description": "Resistentes y económicos",
+    "price": 110,
+    "category": "Botines",
+    "gender": "Unisex",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Joma+Aguila",
+    "sizes": [
+      41,
+      42,
+      43,
+      44
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Botines Topper Fútbol",
+    "description": "Botines clásicos usados en Argentina",
+    "price": 90,
+    "category": "Botines",
+    "gender": "Unisex",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Topper+Fútbol",
+    "sizes": [
+      41,
+      42,
+      43,
+      44
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Zapatillas Nike Air Max",
+    "description": "Clásicas con amortiguación Air",
+    "price": 200,
+    "category": "Zapatillas Masculinas",
+    "gender": "Masculino",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Nike+Air+Max",
+    "sizes": [
+      41,
+      42,
+      43,
+      44
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Zapatillas Adidas Ultraboost",
+    "description": "Comodidad total para running",
+    "price": 220,
+    "category": "Zapatillas Masculinas",
+    "gender": "Masculino",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Adidas+Ultraboost",
+    "sizes": [
+      41,
+      42,
+      43,
+      44
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Zapatillas Puma RS-X",
+    "description": "Estilo urbano retro",
+    "price": 150,
+    "category": "Zapatillas Masculinas",
+    "gender": "Masculino",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Puma+RS-X",
+    "sizes": [
+      41,
+      42,
+      43,
+      44
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Zapatillas Reebok Classic",
+    "description": "Modelo icónico de los 90s",
+    "price": 130,
+    "category": "Zapatillas Masculinas",
+    "gender": "Masculino",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Reebok+Classic",
+    "sizes": [
+      41,
+      42,
+      43,
+      44
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Zapatillas Converse Chuck",
+    "description": "Clásicas de lona",
+    "price": 90,
+    "category": "Zapatillas Masculinas",
+    "gender": "Masculino",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Converse+Chuck",
+    "sizes": [
+      41,
+      42,
+      43,
+      44
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Zapatillas Vans Old Skool",
+    "description": "Estilo skate retro",
+    "price": 95,
+    "category": "Zapatillas Masculinas",
+    "gender": "Masculino",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Vans+Old+Skool",
+    "sizes": [
+      41,
+      42,
+      43,
+      44
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Zapatillas New Balance 574",
+    "description": "Clásicas de running",
+    "price": 110,
+    "category": "Zapatillas Masculinas",
+    "gender": "Masculino",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=New+Balance+574",
+    "sizes": [
+      41,
+      42,
+      43,
+      44
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Zapatillas Asics Gel-Kayano",
+    "description": "Gran soporte y estabilidad",
+    "price": 180,
+    "category": "Zapatillas Masculinas",
+    "gender": "Masculino",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Asics+Gel-Kayano",
+    "sizes": [
+      41,
+      42,
+      43,
+      44
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Zapatillas Fila Disruptor",
+    "description": "Diseño chunky urbano",
+    "price": 100,
+    "category": "Zapatillas Masculinas",
+    "gender": "Masculino",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Fila+Disruptor",
+    "sizes": [
+      41,
+      42,
+      43,
+      44
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Zapatillas Nike Air Force 1",
+    "description": "Modelo legendario urbano",
+    "price": 120,
+    "category": "Zapatillas Masculinas",
+    "gender": "Masculino",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Nike+Air+Force+1",
+    "sizes": [
+      41,
+      42,
+      43,
+      44
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Calzado Botas Timberland",
+    "description": "Botas de cuero resistentes al agua",
+    "price": 180,
+    "category": "Calzado Femenino",
+    "gender": "Femenino",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Botas+Timberland",
+    "sizes": [
+      33,
+      34,
+      35,
+      36
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Calzado Zapatos Taco Alto",
+    "description": "Elegantes para ocasión especial",
+    "price": 140,
+    "category": "Calzado Femenino",
+    "gender": "Femenino",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Zapatos+Taco+Alto",
+    "sizes": [
+      33,
+      34,
+      35,
+      36
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Calzado Botas UGG",
+    "description": "Abrigo y comodidad en invierno",
+    "price": 160,
+    "category": "Calzado Femenino",
+    "gender": "Femenino",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Botas+UGG",
+    "sizes": [
+      33,
+      34,
+      35,
+      36
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Calzado Zapatos Flats",
+    "description": "Cómodos para uso diario",
+    "price": 80,
+    "category": "Calzado Femenino",
+    "gender": "Femenino",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Zapatos+Flats",
+    "sizes": [
+      33,
+      34,
+      35,
+      36
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Calzado Sandalias Verano",
+    "description": "Sandalias ligeras y frescas",
+    "price": 70,
+    "category": "Calzado Femenino",
+    "gender": "Femenino",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Sandalias+Verano",
+    "sizes": [
+      33,
+      34,
+      35,
+      36
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Calzado Botas Dr. Martens",
+    "description": "Icónicas botas de cuero",
+    "price": 190,
+    "category": "Calzado Femenino",
+    "gender": "Femenino",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Botas+Dr.+Martens",
+    "sizes": [
+      33,
+      34,
+      35,
+      36
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Calzado Zapatos Oxford",
+    "description": "Zapatos de vestir clásicos",
+    "price": 150,
+    "category": "Calzado Femenino",
+    "gender": "Femenino",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Zapatos+Oxford",
+    "sizes": [
+      33,
+      34,
+      35,
+      36
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Calzado Botas de Nieve",
+    "description": "Impermeables para invierno",
+    "price": 175,
+    "category": "Calzado Femenino",
+    "gender": "Femenino",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Botas+de+Nieve",
+    "sizes": [
+      33,
+      34,
+      35,
+      36
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Calzado Sandalias Plataforma",
+    "description": "Altas y modernas",
+    "price": 95,
+    "category": "Calzado Femenino",
+    "gender": "Femenino",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Sandalias+Plataforma",
+    "sizes": [
+      33,
+      34,
+      35,
+      36
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Calzado Zapatillas Fila Mujer",
+    "description": "Deportivas urbanas",
+    "price": 110,
+    "category": "Calzado Femenino",
+    "gender": "Femenino",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Zapatillas+Fila+Mujer",
+    "sizes": [
+      33,
+      34,
+      35,
+      36
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Camiseta Boca Juniors",
+    "description": "Camiseta oficial de Boca Juniors",
+    "price": 99.9,
+    "category": "Camisetas de Fútbol",
+    "gender": "Unisex",
+    "stock": 30,
+    "image": "https://via.placeholder.com/300x300?text=Camiseta+Boca+Juniors",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Camiseta River Plate",
+    "description": "Camiseta oficial de River Plate",
+    "price": 99.9,
+    "category": "Camisetas de Fútbol",
+    "gender": "Unisex",
+    "stock": 30,
+    "image": "https://via.placeholder.com/300x300?text=Camiseta+River+Plate",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Camiseta Independiente",
+    "description": "Camiseta oficial de Independiente",
+    "price": 99.9,
+    "category": "Camisetas de Fútbol",
+    "gender": "Unisex",
+    "stock": 30,
+    "image": "https://via.placeholder.com/300x300?text=Camiseta+Independiente",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Camiseta Racing Club",
+    "description": "Camiseta oficial de Racing Club",
+    "price": 99.9,
+    "category": "Camisetas de Fútbol",
+    "gender": "Unisex",
+    "stock": 30,
+    "image": "https://via.placeholder.com/300x300?text=Camiseta+Racing+Club",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Camiseta San Lorenzo",
+    "description": "Camiseta oficial de San Lorenzo",
+    "price": 99.9,
+    "category": "Camisetas de Fútbol",
+    "gender": "Unisex",
+    "stock": 30,
+    "image": "https://via.placeholder.com/300x300?text=Camiseta+San+Lorenzo",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Camiseta Estudiantes LP",
+    "description": "Camiseta oficial de Estudiantes LP",
+    "price": 99.9,
+    "category": "Camisetas de Fútbol",
+    "gender": "Unisex",
+    "stock": 30,
+    "image": "https://via.placeholder.com/300x300?text=Camiseta+Estudiantes+LP",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Camiseta Gimnasia LP",
+    "description": "Camiseta oficial de Gimnasia LP",
+    "price": 99.9,
+    "category": "Camisetas de Fútbol",
+    "gender": "Unisex",
+    "stock": 30,
+    "image": "https://via.placeholder.com/300x300?text=Camiseta+Gimnasia+LP",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Camiseta Rosario Central",
+    "description": "Camiseta oficial de Rosario Central",
+    "price": 99.9,
+    "category": "Camisetas de Fútbol",
+    "gender": "Unisex",
+    "stock": 30,
+    "image": "https://via.placeholder.com/300x300?text=Camiseta+Rosario+Central",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Camiseta Newells Old Boys",
+    "description": "Camiseta oficial de Newells Old Boys",
+    "price": 99.9,
+    "category": "Camisetas de Fútbol",
+    "gender": "Unisex",
+    "stock": 30,
+    "image": "https://via.placeholder.com/300x300?text=Camiseta+Newells+Old+Boys",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Camiseta Vélez Sarsfield",
+    "description": "Camiseta oficial de Vélez Sarsfield",
+    "price": 99.9,
+    "category": "Camisetas de Fútbol",
+    "gender": "Unisex",
+    "stock": 30,
+    "image": "https://via.placeholder.com/300x300?text=Camiseta+Vélez+Sarsfield",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Remera Básica",
+    "description": "Remera de algodón lisa",
+    "price": 25,
+    "category": "Ropa Casual",
+    "gender": "Unisex",
+    "stock": 25,
+    "image": "https://via.placeholder.com/300x300?text=Remera+Básica",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Chomba Polo",
+    "description": "Chomba clásica estilo polo",
+    "price": 40,
+    "category": "Ropa Casual",
+    "gender": "Unisex",
+    "stock": 25,
+    "image": "https://via.placeholder.com/300x300?text=Chomba+Polo",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Buzo Canguro",
+    "description": "Buzo con capucha y bolsillo",
+    "price": 55,
+    "category": "Ropa Casual",
+    "gender": "Unisex",
+    "stock": 25,
+    "image": "https://via.placeholder.com/300x300?text=Buzo+Canguro",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Jean Slim Fit",
+    "description": "Jean clásico azul",
+    "price": 70,
+    "category": "Ropa Casual",
+    "gender": "Unisex",
+    "stock": 25,
+    "image": "https://via.placeholder.com/300x300?text=Jean+Slim+Fit",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "id": 45,
+    "name": "Camisa Cuadros",
+    "description": "Camisa casual de algodón",
+    "price": 60,
+    "category": "Ropa Casual",
+    "gender": "Unisex",
+    "stock": 25,
+    "image": "https://via.placeholder.com/300x300?text=Camisa+Cuadros",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Short Deportivo",
+    "description": "Short cómodo para verano",
+    "price": 35,
+    "category": "Ropa Casual",
+    "gender": "Unisex",
+    "stock": 25,
+    "image": "https://via.placeholder.com/300x300?text=Short+Deportivo",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Jogger Urbano",
+    "description": "Pantalón jogger de moda",
+    "price": 65,
+    "category": "Ropa Casual",
+    "gender": "Unisex",
+    "stock": 25,
+    "image": "https://via.placeholder.com/300x300?text=Jogger+Urbano",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "id": 48,
+    "name": "Campera Jean",
+    "description": "Campera de jean clásica",
+    "price": 85,
+    "category": "Ropa Casual",
+    "gender": "Unisex",
+    "stock": 25,
+    "image": "https://via.placeholder.com/300x300?text=Campera+Jean",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "id": 49,
+    "name": "Remera Estampada",
+    "description": "Remera con diseño gráfico",
+    "price": 30,
+    "category": "Ropa Casual",
+    "gender": "Unisex",
+    "stock": 25,
+    "image": "https://via.placeholder.com/300x300?text=Remera+Estampada",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "id": 50,
+    "name": "Sweater Lana",
+    "description": "Sweater abrigado de lana",
+    "price": 90,
+    "category": "Ropa Casual",
+    "gender": "Unisex",
+    "stock": 25,
+    "image": "https://via.placeholder.com/300x300?text=Sweater+Lana",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "id": 51,
+    "name": "Campera Nike Sportswear",
+    "description": "Campera deportiva con cierre",
+    "price": 120,
+    "category": "Camperas Deportivas",
+    "gender": "Unisex",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Nike+Sportswear",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "id": 52,
+    "name": "Campera Adidas Tiro",
+    "description": "Campera ligera de entrenamiento",
+    "price": 110,
+    "category": "Camperas Deportivas",
+    "gender": "Unisex",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Adidas+Tiro",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "id": 53,
+    "name": "Campera Puma Training",
+    "description": "Campera ajustada deportiva",
+    "price": 105,
+    "category": "Camperas Deportivas",
+    "gender": "Unisex",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Puma+Training",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "id": 54,
+    "name": "Campera Reebok Classic",
+    "description": "Campera retro deportiva",
+    "price": 115,
+    "category": "Camperas Deportivas",
+    "gender": "Unisex",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Reebok+Classic",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "id": 55,
+    "name": "Campera Fila Sport",
+    "description": "Campera moderna urbana",
+    "price": 95,
+    "category": "Camperas Deportivas",
+    "gender": "Unisex",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Fila+Sport",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "id": 56,
+    "name": "Campera Under Armour Storm",
+    "description": "Campera impermeable ligera",
+    "price": 140,
+    "category": "Camperas Deportivas",
+    "gender": "Unisex",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Under+Armour+Storm",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "id": 57,
+    "name": "Campera Asics Performance",
+    "description": "Campera para running",
+    "price": 130,
+    "category": "Camperas Deportivas",
+    "gender": "Unisex",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Asics+Performance",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "id": 58,
+    "name": "Campera New Balance Sport",
+    "description": "Campera casual deportiva",
+    "price": 100,
+    "category": "Camperas Deportivas",
+    "gender": "Unisex",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=New+Balance+Sport",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "id": 59,
+    "name": "Campera Topper Entrenamiento",
+    "description": "Campera clásica argentina",
+    "price": 85,
+    "category": "Camperas Deportivas",
+    "gender": "Unisex",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Topper+Entrenamiento",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "id": 60,
+    "name": "Campera Lacoste Sport",
+    "description": "Campera premium deportiva",
+    "price": 160,
+    "category": "Camperas Deportivas",
+    "gender": "Unisex",
+    "stock": 20,
+    "image": "https://via.placeholder.com/300x300?text=Lacoste+Sport",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
+  }
+]
