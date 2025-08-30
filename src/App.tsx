@@ -1,13 +1,13 @@
 
 import { ToastContainer } from "react-toastify";
 import { CartProvider } from "@/contexts/CartProvider";
-import  Modal  from "@/components/modal";
+import ProductsPage from "@/components/sidebarFilter";
 
 
 function App() {
   return (
     <CartProvider>
-      <Modal/>
+      <ProductsPage/>
       <ToastContainer position="top-left" autoClose={3000} />
     </CartProvider>
   );

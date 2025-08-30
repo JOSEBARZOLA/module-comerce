@@ -1,0 +1,94 @@
+// utils/_spacing.scss
+$mt-values: (
+  6: 3.5rem,
+  7: 4rem,
+  8: 4.5rem,
+  9: 5rem,
+  10: 5.5rem,
+  auto: auto
+);
+
+@mixin generate-mt($prefix, $breakpoint: null) {
+  @each $key, $value in $mt-values {
+    .mt#{$prefix}-#{$key} {
+      margin-top: #{$value} !important;
+    }
+  }
+}
+
+@include generate-mt(""); // base (xs)
+@media (min-width: 576px) {
+  @include generate-mt("-sm");
+}
+@media (min-width: 768px) {
+  @include generate-mt("-md");
+}
+@media (min-width: 992px) {
+  @include generate-mt("-lg");
+}
+@media (min-width: 1200px) {
+  @include generate-mt("-xl");
+}
+@media (min-width: 1400px) {
+  @include generate-mt("-xxl");
+}
+
+// utils/_sizes.scss
+$sizes: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50,
+        55, 60, 65, 70, 75, 80, 85, 90, 95, 
+        100, 105, 110, 115, 120, 125, 130, 135,
+        140, 145, 150;
+
+@each $size in $sizes {
+  .bsb-w-#{$size} {
+    width: #{$size}px !important;
+  }
+  .bsb-h-#{$size} {
+    height: #{$size}px !important;
+  }
+}
+
+.bsb-sidebar-1 {
+  &.offcanvas.offcanvas-start {
+    max-width: 300px !important;
+  }
+
+  &.offcanvas {
+    .offcanvas-header {
+      padding-bottom: 0;
+      .btn-close {
+        opacity: 0.3 !important;
+      }
+    }
+
+    .offcanvas-body {
+      background-color: rgb(255, 255, 255);
+      padding: 1rem 2rem;
+    }
+  }
+.form-group{
+    margin-bottom: 5px;
+}
+label{
+    padding-left: 10px;
+    font-size: 1.5vh;
+}
+.form-group:last-child{
+    margin-bottom: 0;
+}
+h6{
+    margin-bottom: 1vh;
+    font-size: 2vh;
+}
+  #btn-buscar {
+    background: linear-gradient(45deg, #3498db, #2ecc71);
+    border: none;
+    align-items: center;
+    display: flex;
+    margin-top: 4vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+}
