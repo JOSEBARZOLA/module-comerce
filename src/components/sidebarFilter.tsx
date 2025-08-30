@@ -17,7 +17,6 @@ function ProductsPage() {
 
 
   useEffect(() => {
-    // Selecciona 28 productos aleatorios sin repetir
     const shuffled = [...products].sort(() => 0.5 - Math.random());
     const selected = shuffled.slice(0, 28);
     setRandomProducts(selected);
@@ -25,8 +24,6 @@ function ProductsPage() {
 
   return (
     <section>
-
-      
       <div id="main-demo">
         <section className="my-1 my-md-1">
           <Container>
@@ -110,7 +107,7 @@ function ProductsPage() {
             </form>
           </FilterSection>
           <FilterSection title="Rango de precio">
-            <div className="mb-3">
+            <div className="mb-1">
               <label className="nav-link-text">
                 Precio mínimo: ${minPrice}
               </label>
@@ -122,7 +119,7 @@ function ProductsPage() {
                 onChange={(e) => setMinPrice(Number(e.target.value))}
               />
             </div>
-            <div className="mb-3">
+            <div className="mb-1">
               <label className="nav-link-text">
                 Precio máximo: ${maxPrice}
               </label>
@@ -160,14 +157,14 @@ function ProductsPage() {
             </form>
           </FilterSection>
           <div className=" col-10 ms-3" id="busc-btn">
-            <button className="btn text-white col-12 col-mb-6" id="btn-buscar">
+            <button className="btn text-white col-12 col-mb-4" id="btn-buscar">
               Buscar
             </button>
           </div>
         </div>
       </aside>
       <button
-        className="btn btn-primary position-fixed top-0 start-0 m-3"
+        className="btn btn-primary position-fixed top-0 start-0 m-2"
         type="button"
         data-bs-toggle="offcanvas"
         data-bs-target="#bsbSidebar1"
