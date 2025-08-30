@@ -1,11 +1,10 @@
 import "@/assets/sass/_sidebarfilter.scss";
-import CardTwo from "@/components/card2";
 import { Container, Row, Col, Form } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import FilterSection from "@/components/filterProps";
 import productsData from "@/data/products/products.json"; 
 import type { Product } from "@/types/Product";
-
+import ProductCard from "@/components/productCards";
 
 
 
@@ -30,7 +29,7 @@ function ProductsPage() {
             <Row className="gy-3 row_card">
               {randomProducts.map((product) =>(
                 <Col  className="col-12 col-md-4 col-xl-3">
-                  <CardTwo key={product.id} product={product} />
+                 <ProductCard key={product.id} product={product}/>
                 </Col>
               ))}
             </Row>

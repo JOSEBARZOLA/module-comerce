@@ -65,6 +65,9 @@ $sizes: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50,
       background-color: rgb(255, 255, 255);
       padding: 1rem 1rem;
     }
+    .sidebar-divider{
+    box-shadow: 0 5vh 0 rgba(0, 0, 0, 0.15);
+  }
   }
 .form-group{
     margin-bottom: 3px;

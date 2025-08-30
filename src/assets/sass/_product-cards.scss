@@ -1,0 +1,69 @@
+.container_card {
+  max-width: 320px;
+  padding: 0; // sin padding extra
+  margin: 0;
+  border:solid #000000; 
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 500px;       // alto fijo
+  max-width: 320px;    // ancho fijo
+  margin: 0 auto;      // centra la card
+   border: 1px solid rgba(0, 0, 0, 0.15); // borde más marcado
+  border-radius: 0.75rem;                // redondeo elegante
+  box-shadow: 10px 10px 60px rgba(0, 0, 0, 0.15); // sombra más amplia y suave
+  overflow: hidden;    // evita que contenido se salga
+}
+
+
+
+.product-image {
+  height: 200px;        // fijo para que no deforme las cards
+  width: 100%;
+  object-fit: cover;    // recorta manteniendo proporción
+  transition: transform 0.3s ease;
+}
+
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; // empuja botones + precio abajo
+  padding: 0.554rem; // control del padding interno
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  display: -webkit-box;
+  line-clamp: 3;    // máximo de 3 líneas
+  -webkit-box-orient: vertical;
+
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.card-price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #0d6efd;
+  margin-bottom: 0.75rem;
+}
+
+.card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
