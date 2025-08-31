@@ -2,24 +2,62 @@ import "@/assets/sass/_sidebarfilter.scss";
 import { Container, Row, Col, Form } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import FilterSection from "@/components/filterProps";
-import productsData from "@/data/products/products.json"; 
+import productsData from "@/data/products/products.json";
 import type { Product } from "@/types/Product";
 import ProductCard from "@/components/productCards";
-
-
 
 function ProductsPage() {
   const [minPrice, setMinPrice] = useState(0);
   const [maxPrice, setMaxPrice] = useState(5000);
+
   const products: Product[] = productsData as Product[];
-  const [randomProducts, setRandomProducts] = useState<Product[]>([]);
 
+  // Productos que se renderizan
+  const [displayProducts, setDisplayProducts] = useState<Product[]>([]);
 
+  // Filtros seleccionados (aún no aplicados)
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+
+  // Filtros aplicados (después de "Buscar")
+  const [appliedCategories, setAppliedCategories] = useState<string[]>([]);
+
+  const toggleCategory = (category: string) => {
+    setSelectedCategories((prev) =>
+      prev.includes(category)
+        ? prev.filter((c) => c !== category)
+        : [...prev, category]
+    );
+  };
+
+  // Al cargar la página, muestro 60 aleatorios
   useEffect(() => {
     const shuffled = [...products].sort(() => 0.5 - Math.random());
-    const selected = shuffled.slice(0, 28);
-    setRandomProducts(selected);
+    const selected = shuffled.slice(0, 60);
+    setDisplayProducts(selected);
   }, [products]);
+
+  // Cuando aplico filtros con "Buscar"
+  const handleSearch = () => {
+  setAppliedCategories(selectedCategories);
+};
+useEffect(() => {
+  let filtered = [...products];
+
+  // Filtro categorías
+  if (appliedCategories.length > 0) {
+    filtered = filtered.filter((p) =>
+      appliedCategories.includes(p.category)
+    );
+  }
+
+  // Filtro precio
+  filtered = filtered.filter(
+    (p) => p.price >= minPrice && p.price <= maxPrice
+  );
+
+  setDisplayProducts(filtered);
+}, [appliedCategories, minPrice, maxPrice, products]);
+
 
   return (
     <section>
@@ -27,13 +65,13 @@ function ProductsPage() {
         <section className="my-1 my-md-1">
           <Container>
             <Row className="gy-3 row_card">
-              {randomProducts.map((product) =>(
-                <Col  className="col-12 col-md-4 col-xl-3">
-                 <ProductCard key={product.id} product={product}/>
+              {displayProducts.map((product: Product) => (
+                <Col key={product.id} className="col-12 col-md-4 col-xl-3">
+                  <ProductCard product={product} />
                 </Col>
               ))}
             </Row>
-          </Container>  
+          </Container>
         </section>
       </div>
       <aside
@@ -56,28 +94,64 @@ function ProductsPage() {
           <FilterSection title="Categorias">
             <form>
               <div className="form-group nav-link-icon">
-                <input type="checkbox" />
+                <input
+                  type="checkbox"
+                  onChange={() => toggleCategory("Botines")}
+                  checked={selectedCategories.includes("Botines")}
+                />
                 <label className="nav-link-text">Botines</label>
               </div>
               <div className="form-group nav-link-icon">
-                <input type="checkbox" />
-                <label className="nav-link-text">Calzado Femenino</label>
+                <div className="form-group nav-link-icon">
+                  <input
+                    type="checkbox"
+                    onChange={() => toggleCategory("Calzado Femenino")}
+                    checked={selectedCategories.includes("Calzado Femenino")}
+                  />
+                  <label className="nav-link-text">Calzado Femenino</label>
+                </div>
               </div>
               <div className="form-group nav-link-icon">
-                <input type="checkbox" />
-                <label className="nav-link-text">Zapatillas Masculinas</label>
+                <div className="form-group nav-link-icon">
+                  <input
+                    type="checkbox"
+                    onChange={() => toggleCategory("Zapatillas Masculinas")}
+                    checked={selectedCategories.includes(
+                      "Zapatillas Masculinas"
+                    )}
+                  />
+                  <label className="nav-link-text">Zapatillas Masculinas</label>
+                </div>
               </div>
               <div className="form-group nav-link-icon ">
-                <input type="checkbox" />
-                <label className="nav-link-text">Camisetas</label>
+                <div className="form-group nav-link-icon">
+                  <input
+                    type="checkbox"
+                    onChange={() => toggleCategory("Camisetas")}
+                    checked={selectedCategories.includes("Camisetas")}
+                  />
+                  <label className="nav-link-text">Camisetas</label>
+                </div>
               </div>
               <div className="form-group nav-link-icon ">
-                <input type="checkbox" />
-                <label className="nav-link-text">Ropa Casual</label>
+                <div className="form-group nav-link-icon">
+                  <input
+                    type="checkbox"
+                    onChange={() => toggleCategory("Ropa Casual")}
+                    checked={selectedCategories.includes("Ropa Casual")}
+                  />
+                  <label className="nav-link-text">Ropa Casual</label>
+                </div>
               </div>
               <div className="form-group nav-link-icon">
-                <input type="checkbox" />
-                <label className="nav-link-text">Camperas Deportivas</label>
+                <div className="form-group nav-link-icon">
+                  <input
+                    type="checkbox"
+                    onChange={() => toggleCategory("Camperas Deportivas")}
+                    checked={selectedCategories.includes("Camperas Deportivas")}
+                  />
+                  <label className="nav-link-text">Camperas Deportivas</label>
+                </div>
               </div>
             </form>
           </FilterSection>
@@ -155,8 +229,13 @@ function ProductsPage() {
               </div>
             </form>
           </FilterSection>
-          <div className=" col-10 ms-3" id="busc-btn">
-            <button className="btn text-white col-12 col-mb-4" id="btn-buscar">
+          <div className="col-10 ms-3" id="busc-btn">
+            <button
+              className="btn btn-primary text-white col-12 col-mb-4"
+              id="btn-buscar"
+              type="button"
+              onClick={handleSearch}
+            >
               Buscar
             </button>
           </div>
