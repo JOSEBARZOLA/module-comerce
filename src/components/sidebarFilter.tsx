@@ -8,19 +8,14 @@ import ProductCard from "@/components/productCards";
 
 function ProductsPage() {
   const [minPrice, setMinPrice] = useState(0);
-  const [maxPrice, setMaxPrice] = useState(5000);
-
+  const [maxPrice, setMaxPrice] = useState(500000);
   const products: Product[] = productsData as Product[];
-
   // Productos que se renderizan
   const [displayProducts, setDisplayProducts] = useState<Product[]>([]);
-
   // Filtros seleccionados (aún no aplicados)
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-
   // Filtros aplicados (después de "Buscar")
   const [appliedCategories, setAppliedCategories] = useState<string[]>([]);
-
   const toggleCategory = (category: string) => {
     setSelectedCategories((prev) =>
       prev.includes(category)
@@ -28,37 +23,28 @@ function ProductsPage() {
         : [...prev, category]
     );
   };
-
   // Al cargar la página, muestro 60 aleatorios
   useEffect(() => {
     const shuffled = [...products].sort(() => 0.5 - Math.random());
     const selected = shuffled.slice(0, 60);
     setDisplayProducts(selected);
   }, [products]);
-
   // Cuando aplico filtros con "Buscar"
   const handleSearch = () => {
-  setAppliedCategories(selectedCategories);
-};
-useEffect(() => {
-  let filtered = [...products];
-
-  // Filtro categorías
-  if (appliedCategories.length > 0) {
-    filtered = filtered.filter((p) =>
-      appliedCategories.includes(p.category)
+    setAppliedCategories(selectedCategories);
+  };
+  useEffect(() => {
+    let filtered = [...products];
+    // Filtro categorías
+    if (appliedCategories.length > 0) {
+      filtered = filtered.filter((p) => appliedCategories.includes(p.category));
+    }
+    // Filtro precio
+    filtered = filtered.filter(
+      (p) => p.price >= minPrice && p.price <= maxPrice
     );
-  }
-
-  // Filtro precio
-  filtered = filtered.filter(
-    (p) => p.price >= minPrice && p.price <= maxPrice
-  );
-
-  setDisplayProducts(filtered);
-}, [appliedCategories, minPrice, maxPrice, products]);
-
-
+    setDisplayProducts(filtered);
+  }, [appliedCategories, minPrice, maxPrice, products]);
   return (
     <section>
       <div id="main-demo">
@@ -171,10 +157,6 @@ useEffect(() => {
               </div>
               <div className="form-group nav-link-icon ">
                 <input type="checkbox" />
-                <label className="nav-link-text">X</label>
-              </div>
-              <div className="form-group nav-link-icon ">
-                <input type="checkbox" />
                 <label className="nav-link-text">XL</label>
               </div>
             </form>
@@ -186,7 +168,7 @@ useEffect(() => {
               </label>
               <Form.Range
                 min={0}
-                max={5000}
+                max={150000}
                 step={10}
                 value={minPrice}
                 onChange={(e) => setMinPrice(Number(e.target.value))}
@@ -197,8 +179,8 @@ useEffect(() => {
                 Precio máximo: ${maxPrice}
               </label>
               <Form.Range
-                min={5000}
-                max={10000}
+                min={150000}
+                max={300000}
                 step={10}
                 value={maxPrice}
                 onChange={(e) => setMaxPrice(Number(e.target.value))}

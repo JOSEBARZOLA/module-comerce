@@ -1,9 +1,4 @@
-.container_card {
-  max-width: 320px;
-  padding: 0; // sin padding extra
-  margin: 0;
-  border:solid #000000; 
-}
+
 
 .product-card {
   display: flex;
@@ -25,7 +20,7 @@
   height: 200px;        // fijo para que no deforme las cards
   width: 100%;
   object-fit: cover;    // recorta manteniendo proporción
-  transition: transform 0.3s ease;
+ 
 }
 
 .card-body {
@@ -52,13 +47,13 @@
   -webkit-box-orient: vertical;
 
   font-size: 1rem;
-  color: #6c757d;
+  color: #2d587e;
 }
 
 .card-price {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  color: #0d6efd;
+  color: #ff0000;
   margin-bottom: 0.75rem;
 }
 
