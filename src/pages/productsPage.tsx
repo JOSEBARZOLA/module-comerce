@@ -58,9 +58,6 @@ const handleVerMas = (product: Product ) => {
     const selected = products.slice(0, 60);
     setDisplayProducts(selected);
   }, [products]);
-
-
-
   return (
     <>
     <NavbarProducts/>
@@ -68,7 +65,7 @@ const handleVerMas = (product: Product ) => {
       <SidebarFilter onFilterChange={setFilters}/>
       {/* Body con cards */}
 
-      <div id="main-demo">
+      <div className="pt-5" id="main-demo">
         <section className="my-1 my-md-1">
           <Container>
             <Row className="gy-3 row_card">
