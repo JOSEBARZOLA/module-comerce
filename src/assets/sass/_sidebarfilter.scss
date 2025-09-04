@@ -85,7 +85,11 @@ h6{
 }
 
   #btn-buscar {
-    background: linear-gradient(45deg, #3498db, #2ecc71);
+  background: linear-gradient(
+    90deg,
+    rgb(140, 48, 158) 0%,
+    rgb(189, 72, 144) 50%,
+    rgba(252, 114, 174, 0.69) 100%);
     border: none;
     align-items: center;
     display: flex;

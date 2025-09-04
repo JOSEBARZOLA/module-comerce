@@ -1,0 +1,66 @@
+.bsb-navbar:not(.bsb-navbar-caret) .dropdown-toggle:after {
+  display: none;
+}
+
+.bsb-navbar {
+  background: #9b2a2a;
+  background: linear-gradient(
+    90deg,
+    rgb(140, 48, 158) 0%,
+    rgb(189, 72, 144) 50%,
+    rgba(252, 114, 174, 0.69) 100%
+  );
+}
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+$primary-color: #800c4c;
+$text-muted: #66042d;
+
+.wrap {
+  display: flex;
+  justify-content: center; // centra horizontalmente
+  align-items: center; // centra verticalmente
+  max-width: 250px; // ancho máximo para que no se estire demasiado
+  margin: 0; // centrado dentro del contenedor
+  padding: 0;
+  border-radius: 30px;
+
+  .search {
+    width: 100%;
+    display: flex;
+
+    .searchTerm {
+      display: flex;
+      border: 1px solid $primary-color;
+      border-right: none;
+      max-width: 150px;
+      height: 36px;
+      border-radius: 5px;
+      outline: none;
+      color: $text-muted;
+      font-size: 14px;
+      
+      &:focus {
+        color: $primary-color;
+      }
+    }
+
+    .searchButton {
+      width: 40px;
+      height: 36px;
+      border: 1px solid $primary-color;
+      background: $primary-color;
+      text-align: center;
+      color: #fff;
+      border-radius: 5px;
+      margin-left: 5px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+  }
+}
+@media (max-width: 320px) {
+  .wrap {
+    max-width: 250px;
+  }
+}

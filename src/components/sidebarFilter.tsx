@@ -1,65 +1,39 @@
 import "@/assets/sass/_sidebarfilter.scss";
-import { Container, Row, Col, Form } from "react-bootstrap";
-import { useState, useEffect } from "react";
+import { Form } from "react-bootstrap";
+import { useState } from "react";
 import FilterSection from "@/components/filterProps";
-import productsData from "@/data/products/products.json";
-import type { Product } from "@/types/Product";
-import ProductCard from "@/components/productCards";
 
-function ProductsPage() {
+interface SidebarFilterProps {
+  onFilterChange: (filters: {
+    categories: string[];
+    minPrice: number;
+    maxPrice: number;
+  }) => void;
+}
+
+function SidebarFilter ({ onFilterChange }: SidebarFilterProps){
   const [minPrice, setMinPrice] = useState(0);
   const [maxPrice, setMaxPrice] = useState(500000);
-  const products: Product[] = productsData as Product[];
-  // Productos que se renderizan
-  const [displayProducts, setDisplayProducts] = useState<Product[]>([]);
-  // Filtros seleccionados (aún no aplicados)
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  // Filtros aplicados (después de "Buscar")
-  const [appliedCategories, setAppliedCategories] = useState<string[]>([]);
-  const toggleCategory = (category: string) => {
+  
+
+const toggleCategory = (category: string) => {
     setSelectedCategories((prev) =>
       prev.includes(category)
         ? prev.filter((c) => c !== category)
         : [...prev, category]
     );
   };
-  // Al cargar la página, muestro 60 aleatorios
-  useEffect(() => {
-    const shuffled = [...products].sort(() => 0.5 - Math.random());
-    const selected = shuffled.slice(0, 60);
-    setDisplayProducts(selected);
-  }, [products]);
-  // Cuando aplico filtros con "Buscar"
   const handleSearch = () => {
-    setAppliedCategories(selectedCategories);
-  };
-  useEffect(() => {
-    let filtered = [...products];
-    // Filtro categorías
-    if (appliedCategories.length > 0) {
-      filtered = filtered.filter((p) => appliedCategories.includes(p.category));
-    }
-    // Filtro precio
-    filtered = filtered.filter(
-      (p) => p.price >= minPrice && p.price <= maxPrice
-    );
-    setDisplayProducts(filtered);
-  }, [appliedCategories, minPrice, maxPrice, products]);
+  onFilterChange({
+    categories: selectedCategories,
+    minPrice,
+    maxPrice,
+  });
+};
+  
   return (
     <section>
-      <div id="main-demo">
-        <section className="my-1 my-md-1">
-          <Container>
-            <Row className="gy-3 row_card">
-              {displayProducts.map((product: Product) => (
-                <Col key={product.id} className="col-12 col-md-4 col-xl-3">
-                  <ProductCard product={product} />
-                </Col>
-              ))}
-            </Row>
-          </Container>
-        </section>
-      </div>
       <aside
         className="bsb-sidebar-1 offcanvas offcanvas-start"
         tabIndex={-1}
@@ -223,16 +197,7 @@ function ProductsPage() {
           </div>
         </div>
       </aside>
-      <button
-        className="btn btn-primary position-fixed top-0 start-0 m-2"
-        type="button"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#bsbSidebar1"
-        aria-controls="bsbSidebar1"
-      >
-        <i className="bi bi-filter-left"></i> Filtros
-      </button>
     </section>
   );
 }
-export default ProductsPage;
+export default SidebarFilter;

@@ -1,6 +1,7 @@
 import "@/assets/sass/_product-cards.scss";
 import { Card } from "react-bootstrap";
 
+
 interface CardProps {
   product: {
     name: string;
@@ -8,8 +9,10 @@ interface CardProps {
     price: number;
     image?: string;
   };
+    onVerMas?: () => void; // 👈 nuevo prop
 }
-function ProductCard({ product }: CardProps) {
+
+function ProductCard({ product, onVerMas }: CardProps) {
   return (
     <Card className="product-card">
       <div className="position-relative overflow-hidden">
@@ -36,7 +39,10 @@ function ProductCard({ product }: CardProps) {
           <button className="btn btn-primary">
             <i className="fas fa-shopping-cart me-2"></i>Agregar
           </button>
-          <button className="btn btn-outline-danger">
+          <button 
+            className="btn btn-outline-danger"
+            onClick={onVerMas} // 👈 aquí llamamos la función que viene del padre
+          >
             <i className="fas fa-circle-info me-2"></i>Ver mas
           </button>
         </div>
@@ -44,4 +50,5 @@ function ProductCard({ product }: CardProps) {
     </Card>
   );
 }
+
 export default ProductCard;
