@@ -1,14 +1,15 @@
 
 import { ToastContainer } from "react-toastify";
 import { CartProvider } from "@/contexts/CartProvider";
-import ProductsPage from "@/pages/productsPage";
+
+import ProductPage from "@/pages/productsPage";
 
 
 
 function App() {
   return (
     <CartProvider>
-      <ProductsPage/>
+      <ProductPage/>
       <ToastContainer position="top-left" autoClose={3000} />
     </CartProvider>
   );

@@ -6,13 +6,12 @@ import FilterSection from "@/components/filterProps";
 interface SidebarFilterProps {
   onFilterChange: (filters: {
     categories: string[];
-    minPrice: number;
     maxPrice: number;
   }) => void;
 }
 
 function SidebarFilter ({ onFilterChange }: SidebarFilterProps){
-  const [minPrice, setMinPrice] = useState(0);
+
   const [maxPrice, setMaxPrice] = useState(500000);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   
@@ -27,7 +26,6 @@ const toggleCategory = (category: string) => {
   const handleSearch = () => {
   onFilterChange({
     categories: selectedCategories,
-    minPrice,
     maxPrice,
   });
 };
@@ -138,23 +136,11 @@ const toggleCategory = (category: string) => {
           <FilterSection title="Rango de precio">
             <div className="mb-1">
               <label className="nav-link-text">
-                Precio mínimo: ${minPrice}
-              </label>
-              <Form.Range
-                min={0}
-                max={150000}
-                step={10}
-                value={minPrice}
-                onChange={(e) => setMinPrice(Number(e.target.value))}
-              />
-            </div>
-            <div className="mb-1">
-              <label className="nav-link-text">
                 Precio máximo: ${maxPrice}
               </label>
               <Form.Range
-                min={150000}
-                max={300000}
+                min={0}
+                max={500000}
                 step={10}
                 value={maxPrice}
                 onChange={(e) => setMaxPrice(Number(e.target.value))}

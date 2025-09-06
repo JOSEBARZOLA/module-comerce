@@ -1,12 +1,15 @@
 import "@/assets/sass/_navbar-product.scss";
 import { useEffect, useState } from "react";
 
+interface NavbarProductsProps {
+  onSearch: (query: string) => void;
+}
 
-function NavbarProducts() {
+function NavbarProducts({ onSearch }: NavbarProductsProps) {
   const [show, setShow] = useState(true);
   const [lastScroll, setLastScroll] = useState(0);
 
-useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
       const currentScroll = window.scrollY;
 
@@ -25,11 +28,21 @@ useEffect(() => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScroll]);
   return (
-    <nav className={`navbar bsb-navbar bsb-navbar-caret ${show ? "show" : "hide"}`}>
-      <div className="container position-relative justify-content-center">
+    <nav
+      className={`navbar bsb-navbar bsb-navbar-caret ${show ? "show" : "hide"}`}
+    >
+      <div className="container justify-content-center" id="container-nav">
         <div className="wrap">
           <div className="search">
-            <input type="text" placeholder=" " />
+            <input
+              type="text"
+              placeholder=""
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  onSearch((e.target as HTMLInputElement).value);
+                }
+              }}
+            />
             <div>
               <svg>
                 <use xlinkHref="#path" />
@@ -67,7 +80,26 @@ useEffect(() => {
             <path d="M9 16H15V18H9z"></path>
           </svg>
         </button>
+       
       </div>
+       <div className="icon-cart" style={{ clear: "left", float: "left" }}>
+          <div
+            className="cart-line-1"
+            style={{ backgroundColor: "#ffffffff" }}
+          ></div>
+          <div
+            className="cart-line-2"
+            style={{ backgroundColor: "#ffffffff" }}
+          ></div>
+          <div
+            className="cart-line-3"
+            style={{ backgroundColor: "#ffffffff" }}
+          ></div>
+          <div
+            className="cart-wheel"
+            style={{ backgroundColor: "#ffffffff" }}
+          ></div>
+        </div>
     </nav>
   );
 }

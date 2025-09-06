@@ -7,19 +7,24 @@ import { Container, Row, Col } from "react-bootstrap";
 import type { Product } from "@/types/Product";
 import "@/assets/sass/_sidebarfilter.scss"
 import NavbarProducts from "@/components/navbarProducts";
-
+import ModalOpen from "@/components/cartModal"
 
 function ProductsPage() {
   const products: Product[] = productsData as Product[];
   // Estado con los productos a mostrar
     const [displayProducts, setDisplayProducts] = useState<Product[]>([]);
- 
+ // Estado  de busqueda
+ const [searchQuery, setSearchQuery] = useState("");
+
   // Estado del modal
   const [showModal, setShowModal] = useState(false);
 
   // si en el futuro quieres mostrar info de un producto específico
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
+  const handleSearch = (query: string) => {
+  setSearchQuery(query);
+};
 
 const handleVerMas = (product: Product ) => {
     setSelectedProduct(product);
@@ -32,11 +37,10 @@ const handleVerMas = (product: Product ) => {
   };
  const [filters, setFilters] = useState<{
     categories: string[];
-    minPrice: number;
+    
     maxPrice: number;
   }>({
     categories: [],
-    minPrice: 0,
     maxPrice: 500000,
   });
   useEffect(() => {
@@ -48,19 +52,39 @@ const handleVerMas = (product: Product ) => {
       );
     }
     filtered = filtered.filter(
-      (p) => p.price >= filters.minPrice && p.price <= filters.maxPrice
+      (p) => p.price <= filters.maxPrice
     );
+ // Filtro de búsqueda
+  if (searchQuery.trim() !== "") {
+    const q = searchQuery.toLowerCase();
+    filtered = filtered.filter(
+      (p) =>
+        p.name.toLowerCase().includes(q) ||
+        (p.description?.toLowerCase().includes(q) ?? false) ||
+        p.category.toLowerCase().includes(q)
+    );
+  }
+
+
+
+
+
+
     setDisplayProducts(filtered);
-  }, [filters, products]);
+  }, [filters, products, searchQuery]);
   useEffect(() => {
     // Ejemplo: mostrar 60 productos random
    // const shuffled = [...products].sort(() => 0.5 - Math.random());
     const selected = products.slice(0, 60);
     setDisplayProducts(selected);
   }, [products]);
+
+
+
+
   return (
     <>
-    <NavbarProducts/>
+    <NavbarProducts onSearch={handleSearch}/>
       {/* Sidebar a la izquierda */}
       <SidebarFilter onFilterChange={setFilters}/>
       {/* Body con cards */}
@@ -83,6 +107,7 @@ const handleVerMas = (product: Product ) => {
 
       {/* Modal VerMas */}
       <VerMas show={showModal} onClose={handleCloseModal} product={selectedProduct}/>
+      <ModalOpen/>
     </>
   );
 }

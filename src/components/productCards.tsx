@@ -40,7 +40,7 @@ function ProductCard({ product, onVerMas }: CardProps) {
             <i className="fas fa-shopping-cart me-2"></i>Agregar
           </button>
           <button 
-            className="btn btn-outline-danger"
+            className="btn btn-outline-success"
             onClick={onVerMas} // 👈 aquí llamamos la función que viene del padre
           >
             <i className="fas fa-circle-info me-2"></i>Ver mas
