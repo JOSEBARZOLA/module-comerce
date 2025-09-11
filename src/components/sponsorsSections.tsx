@@ -76,7 +76,7 @@ function SponsorsSection() {
         <div className="sponsors-icon">🏅</div>
         <h2 className="sponsors-title">SPONSORS</h2>
         <p className="sponsors-subtitle">
-          Marcas que definen nuestro estilo.
+          Marcas que definen un estilo.
         </p>
       </div>
       <div ref={containerRef}>
