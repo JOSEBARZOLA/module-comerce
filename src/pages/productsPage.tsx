@@ -9,6 +9,8 @@ import "@/assets/sass/_sidebarfilter.scss"
 import NavbarProducts from "@/components/navbarProducts";
 import ModalOpen from "@/components/cartModal"
 
+
+
 function ProductsPage() {
   const products: Product[] = productsData as Product[];
   // Estado con los productos a mostrar
