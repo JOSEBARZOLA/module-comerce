@@ -11,7 +11,7 @@ import ModalOpen from "@/components/cartModal"
 
 
 
-function ProductsPage() {
+function ProductsListPage() {
   const products: Product[] = productsData as Product[];
   // Estado con los productos a mostrar
     const [displayProducts, setDisplayProducts] = useState<Product[]>([]);
@@ -114,4 +114,4 @@ const handleVerMas = (product: Product ) => {
   );
 }
 
-export default ProductsPage;
+export default ProductsListPage;

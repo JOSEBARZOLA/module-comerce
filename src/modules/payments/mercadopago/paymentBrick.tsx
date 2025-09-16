@@ -12,7 +12,6 @@ export default function PaymentBrick() {
     let executed = false;
     if (executed) return; // evita la segunda ejecución
     
-    
     // 🔥 Pedir al backend que cree la preferencia
     fetch("http://localhost:3001/create_preference", {
       method: "POST",

@@ -1,15 +1,14 @@
 
 import { ToastContainer } from "react-toastify";
 import { CartProvider } from "@/contexts/CartProvider";
-
-import  PaymentBrick  from "@/modules/payments/mercadopago/paymentBrick";
+import ProductPage from "@/pages/productPage";
 
 
 
 function App() {
   return (
     <CartProvider>
-      <PaymentBrick/>
+      <ProductPage/>
       <ToastContainer position="top-left" autoClose={3000} />
     </CartProvider>
   );
