@@ -2,6 +2,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import "@/assets/sass/_product-page.scss";
 import { useState } from "react";
 import GlassMagnifying from "@/components/glassMagnifying";
+import SizeSelector from "@/components/buttonGroupSize"
+import QuantitySelector from "@/components/quantitySelector"
 
 function ProductPage() {
   const images = [
@@ -74,75 +76,21 @@ function ProductPage() {
                   </li>
                 </ul>
 
-                <fieldset>
-                  <legend className="options-product">
-                    Elije tus opciones
-                  </legend>
-                  <div className="form-group row">
-                    <div className="dropdown">
-                      <button
-                        className="btn btn-light btn-lg dropdown-toggle"
-                        type="button"
-                        data-toggle="dropdown"
-                      >
-                        Talle
-                      </button>
-                      <div className="dropdown-menu">
-                        <a className="dropdown-item" href="#">
-                          36
-                        </a>
-                        <a className="dropdown-item" href="#">
-                          37
-                        </a>
-                        <a className="dropdown-item" href="#">
-                          38
-                        </a>
-                        <a className="dropdown-item" href="#">
-                          39
-                        </a>
-                        <a className="dropdown-item" href="#">
-                          40
-                        </a>
-                        <a className="dropdown-item" href="#">
-                          41
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="form-group row">
-                    <div className="dropdown">
-                      <button
-                        className="btn btn-light btn-lg dropdown-toggle"
-                        type="button"
-                        data-toggle="dropdown"
-                      >
-                        Color
-                      </button>
-                      <div className="dropdown-menu">
-                        <a className="dropdown-item" href="#">
-                          36
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </fieldset>
-
-                <div className="input-group input-group-lg mb-4">
-                  <input
-                    type="number"
-                    className="form-control text-center"
-                    placeholder="Quantity"
-                    id=""
-                    name=""
-                    defaultValue="1"
-                    min="1"
-                    max="5"
-                  />
-                  <div className="input-group-append">
-                    <span className="input-group-text">Quantity</span>
-                  </div>
-                </div>
+                
+                  <SizeSelector/>
+                  <Row className="mini-preview">
+                    <h5>Color: (el del producto)</h5>
+                    {images.map((img, index) => (
+                      <img
+                        key={index}
+                        className="img-fluid mb-2"
+                        src={img}
+                        alt={`Preview ${index + 1}`}
+                        style={{ cursor: "default" }}
+                      />
+                    ))}
+                  </Row>
+                <QuantitySelector/>
 
                 <div className="btn-group btn-group-lg col-12 mb-2">
                   <button className="btn btn-agregar">

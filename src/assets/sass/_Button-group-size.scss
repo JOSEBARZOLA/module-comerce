@@ -1,0 +1,21 @@
+.size-button {
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  background-color: transparent;
+  color: #333;
+}
+
+.size-button:hover {
+  border-color: #3483fa;
+  color: #3483fa;
+  background-color: #4189e640;
+}
+
+.size-button.active {
+  border: 2px solid #3483fa; /* azul estilo MercadoLibre */
+color: #3483fa;
+  background-color: #e6f0ff;
+}
