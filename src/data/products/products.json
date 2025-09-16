@@ -7,8 +7,13 @@
     "category": "Botines",
     "gender": "Unisex",
     "stock": 20,
-    "image": "https://imgs.search.brave.com/8TQ0EiiNsLVgksdfDPE-s0u_37u7AIBML7IDk0lYKK0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zcG9y/dGxpbmUudnRleGFz/c2V0cy5jb20vYXJx/dWl2b3MvaWRzLzEy/NjMzMzktODAwLWF1/dG8_dj02Mzg1NDk3/Nzg5OTYzNzAwMDAm/d2lkdGg9ODAwJmhl/aWdodD1hdXRvJmFz/cGVjdD10cnVl",
-    "size": [
+    "images": [
+    "https://imgs.search.brave.com/U9071IbBpYcJ4aDb_EFAd8OrZZ9M8EP6vUje9B1yENw/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9wcm9k/dWN0aW9uLmNkbi52/YXlwb2wuY29tL3Zh/cmlhbnRzLzhwenhp/Y3NnN3J2ZmNtYnli/MWlnaHg4cHljbmMv/ZTgyYzhkNjE3MWRk/MjViYjUzOGYyZTcy/NjNiNWJjN2RmYzZh/NzkzNTJkODU5MjMw/NzRiZTc2ZGY1M2Zi/YzZmNA",
+    "https://imgs.search.brave.com/zyfaMuIbT4zxckaM_eqsca07478SXdqK7GUMPFysnsU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9wcm9k/dWN0aW9uLmNkbi52/YXlwb2wuY29tL3Zh/cmlhbnRzL2lydDZ3/Zmd2a2xvbGZnMTNk/dXE0cGplaWcwbnAv/ZTgyYzhkNjE3MWRk/MjViYjUzOGYyZTcy/NjNiNWJjN2RmYzZh/NzkzNTJkODU5MjMw/NzRiZTc2ZGY1M2Zi/YzZmNA",
+    "https://imgs.search.brave.com/YhVA7UIX8auoSY2Cdy_y1Q5ZLCoIQdzy7UVFOjhsTSI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zcG9y/dGxpbmUudnRleGFz/c2V0cy5jb20vYXJx/dWl2b3MvaWRzLzE0/MzQ0MDItODAwLWF1/dG8_dj02Mzg3MzA2/ODQyODYzNzAwMDAm/d2lkdGg9ODAwJmhl/aWdodD1hdXRvJmFz/cGVjdD10cnVl",
+    "https://imgs.search.brave.com/W9IWagDJNv0INiHTFa1_IGc9UHIyqPNRRHtDWwVrrUY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zcG9y/dGxpbmUudnRleGFz/c2V0cy5jb20vYXJx/dWl2b3MvaWRzLzE0/MzQzOTEtODAwLWF1/dG8_dj02Mzg3MzA2/ODQxMTYyMzAwMDAm/d2lkdGg9ODAwJmhl/aWdodD1hdXRvJmFz/cGVjdD10cnVl",
+    "https://imgs.search.brave.com/6wpJBgJhdBrAwjgGB2mETwOXPIo0edia_mwLRTAgj0E/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wcm9k/dWN0aW9uLmNkbi52/YXlwb2wuY29tL3Zh/cmlhbnRzLzhwenhp/Y3NnN3J2ZmNtYnli/MWlnaHg4cHljbmMv/ZTgyYzhkNjE3MWRk/MjViYjUzOGYyZTcy/NjNiNWJjN2RmYzZh/NzkzNTJkODU5MjMw/NzRiZTc2ZGY1M2Zi/YzZmNA"
+  ],    "size": [
       41,
       42,
       43,

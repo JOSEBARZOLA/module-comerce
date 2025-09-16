@@ -1,4 +1,7 @@
 /* Texto principal en negro */
+h5{
+  font-size: 16px;
+}
 .quantity-toggle {
   font-weight: bold;
   color: #000 !important;
@@ -15,7 +18,7 @@
 
 /* Ítems del menú */
 .quantity-item {
-  font-size: 14px;
+  font-size: 16px;
   padding: 10px 16px;
   color: #333;
   border-left: 3px solid transparent;

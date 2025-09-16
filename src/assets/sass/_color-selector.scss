@@ -1,0 +1,32 @@
+.color-selector {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  h5 {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .color-options {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  .color-thumb {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #9dafcfad;
+    border-radius: 6px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: border 0.2s ease;
+
+    &:hover {
+      border-color: #4189e640; // negro en hover
+    }
+
+    &.selected {
+      border: 2px solid #3483fa; // azul MercadoLibre para seleccionado
+    }
+  }
+}

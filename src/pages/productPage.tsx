@@ -1,48 +1,66 @@
 import { Container, Row, Col } from "react-bootstrap";
 import "@/assets/sass/_product-page.scss";
-import { useState } from "react";
-import GlassMagnifying from "@/components/glassMagnifying";
-import SizeSelector from "@/components/buttonGroupSize"
-import QuantitySelector from "@/components/quantitySelector"
+import ProductImages from "@/components/productImages";
+import SizeSelector from "@/components/buttonGroupSize";
+import QuantitySelector from "@/components/quantitySelector";
+import ColorSelector from "@/components/colorSelector";
+import AdditionalDetails from "@/components/additionalDetailsProduct";
+import products from "@/data/products/products.json";
+
 
 function ProductPage() {
-  const images = [
-    "https://cdn.pixabay.com/photo/2015/07/24/18/40/model-858754_960_720.jpg",
-    "https://cdn.pixabay.com/photo/2015/07/24/18/38/model-858749_960_720.jpg",
-    "https://cdn.pixabay.com/photo/2015/07/24/18/39/model-858751_960_720.jpg",
-    "https://cdn.pixabay.com/photo/2015/07/24/18/37/model-858748_960_720.jpg",
-    "https://cdn.pixabay.com/photo/2015/07/24/18/40/model-858753_960_720.jpg",
+  const product = products.find((p) => p.id === 1)!;
+  
+
+  const productColors = [
+    { src: "/img/blanco-rojo.png", label: "Blanco/Rojo" },
+    { src: "/img/blanco-azul.png", label: "Blanco/Azul" },
+    { src: "/img/negro-blanco.png", label: "Negro/Blanco" },
+    { src: "/img/rojo-blanco.png", label: "Rojo/Blanco" },
+    { src: "/img/blanco-negro.png", label: "Blanco/Negro" },
   ];
-  const [selectedImage, setSelectedImage] = useState(images[0]); // primera por defecto
+const detailsTabs = [
+    {
+      key: "description",
+      label: "Descripción",
+      content: (
+        <div className="description">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident
+          magni assumenda consectetur facere eius.
+        </div>
+      ),
+    },
+    {
+      key: "features",
+      label: "Características",
+      content: (
+        <div className="characteristics">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla
+            excepturi nam sequi perspiciatis recusandae.
+          </p>
+        </div>
+      ),
+    },
+    {
+      key: "specifications",
+      label: "Especificaciones",
+      content: (
+        <div className="specification">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+            consequatur deleniti nihil dolor.
+          </p>
+        </div>
+      ),
+    },
+  ];
 
   return (
     <>
       <Container className="my-3" id="container-product">
         <Row className="details-snippet1">
-          <Col className="col-md-8" id="container-images">
-            <Row>
-              {/* Miniaturas */}
-              <Col className="col-md-2 mini-preview">
-                {images.map((img, index) => (
-                  <img
-                    key={index}
-                    className="img-fluid mb-2"
-                    src={img}
-                    alt={`Preview ${index + 1}`}
-                    onMouseEnter={() => setSelectedImage(img)} // cambia al pasar el mouse
-                    style={{ cursor: "default" }}
-                  />
-                ))}
-              </Col>
-
-              {/* Imagen principal */}
-              <Col className="col-md-10">
-                <div className="product-image">
-                  <GlassMagnifying src={selectedImage} zoom={2} size={250} />
-                </div>
-              </Col>
-            </Row>
-          </Col>
+          <ProductImages images={product.images || []} />
           <Col className="col-md-4 ">
             <div className="card">
               <div className="card-body">
@@ -75,22 +93,9 @@ function ProductPage() {
                     </p>
                   </li>
                 </ul>
-
-                
-                  <SizeSelector/>
-                  <Row className="mini-preview">
-                    <h5>Color: (el del producto)</h5>
-                    {images.map((img, index) => (
-                      <img
-                        key={index}
-                        className="img-fluid mb-2"
-                        src={img}
-                        alt={`Preview ${index + 1}`}
-                        style={{ cursor: "default" }}
-                      />
-                    ))}
-                  </Row>
-                <QuantitySelector/>
+                <SizeSelector />
+                <ColorSelector colors={productColors} />
+                <QuantitySelector />
 
                 <div className="btn-group btn-group-lg col-12 mb-2">
                   <button className="btn btn-agregar">
@@ -106,70 +111,7 @@ function ProductPage() {
             </div>
           </Col>
         </Row>
-        <div className="additional-details my-5 text-center">
-          <ul className="nav nav-tabs justify-content-center">
-            <li className="nav-tabs">
-              <a
-                className="nav-link active"
-                data-toggle="tab"
-                data-bs-toggle="tab"
-                href="#home"
-              >
-                Description
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link"
-                data-toggle="tab"
-                data-bs-toggle="tab"
-                href="#menu1"
-              >
-                Reviews
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link"
-                data-toggle="tab"
-                data-bs-toggle="tab"
-                href="#menu2"
-              >
-                Specifications
-              </a>
-            </li>
-          </ul>
-
-          <div className="tab-content mt-4 mb-3">
-            <div className="tab-pane container active" id="home">
-              <div className="description">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Provident magni assumenda consectetur facere eius. Minus
-                reprehenderit placeat ullam vel ab eaque sequi impedit, ipsum
-                soluta temporibus fugit ipsa. Dolor libero modi molestiae dicta,
-                vitae minus laborum error cum consequatur autem minima eveniet
-                porro obcaecati quibusdam possimus eos, debitis sint magnam,
-                explicabo accusantium aspernatur ipsa repellat tempore nihil.
-                Cum placeat voluptate dignissimos dicta harum consectetur, nemo
-                debitis tempore. Quod culpa perspiciatis unde natus. Modi
-                expedita, ab repellendus reiciendis sed voluptate, culpa laborum
-                ad, consectetur quas tempora quo? Quibusdam doloribus magnam
-                maxime, accusamus officiis odit reiciendis labore laudantium.
-                Molestiae corporis temporibus ad?.
-              </div>
-            </div>
-            <div className="tab-pane container fade" id="menu1">
-              <div className="review">
-                <p>PUT REVIEWS DESIGN HERE</p>
-              </div>
-            </div>
-            <div className="tab-pane container fade" id="menu2">
-              <div className="specification">
-                <p>PUT SPECIFICATIONS HERE</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <AdditionalDetails tabs={detailsTabs} />
       </Container>
     </>
   );
