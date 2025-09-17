@@ -1,0 +1,45 @@
+.no-border-header {
+  border-bottom: none;
+}
+#modal_body{
+  padding-top: 0%;
+  justify-items: center;
+  img {
+    display: block;
+    width: 700px !important;
+    height: auto; // mantiene proporción original
+  }
+}
+@media (min-width: 1440px) {
+  .modal-content {
+    max-width: 800px;
+    margin: 0 auto; /* centra horizontalmente si el contenedor tiene display:block */
+  }
+  /* si querés que quede CENTRADO vertical y horizontal */
+  .modal {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+@media (max-width: 320px){
+.modal {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.modal-dialog{
+  width: 100%;
+  margin: 0 auto;
+}
+
+}
+.content {
+  display: flex;
+  max-width: 450vh;
+  flex-direction: column;
+
+}

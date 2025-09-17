@@ -1,10 +1,27 @@
+@import url('https://i.postimg.cc/Ls2NMc20/background.png');
 
+
+body{
+    background:url('https://i.postimg.cc/Ls2NMc20/background.png') no-repeat;
+    background-size: cover;
+    //padding-bottom: 1400px;
+}
+
+body, html, #root {
+  background-color: transparent;
+}
+
+body, html{
+    height:100%;
+    margin:0;
+}
 
 #container-product {
   border: 0.5px solid #e2e2e2e1;
   padding: 20px;
   width: 1184px;
   border-radius: 6px;
+  background-color: #ffff;
 }
 #container-product .row {
   margin-left: 0;
@@ -13,123 +30,4 @@
 
 .details-snippet1 {
   color: #585656;
-}
-.details-snippet1 .card {
-  border-color: #dddcdce1;
-}
-.card-body {
-  font-family: -apple-system, Arial, sans-serif;
-  font-size: 16px;
-
-  h1{
-    font-family: "Exo 2", sans-serif !important;
-    font-size: 25px;
-  }
-}
-
-.rating > span:hover:before {
-   content: "\2605";
-   position: absolute;
-   
-}
-.rating {
-  unicode-bidi: bidi-override;
-  direction: rtl;
-  width: 100px;
-}
-.rating > span:hover:before,
-.rating > span:hover ~ span:before {
-   content: "\2605";
-   position: absolute;
-   color: yellow;
-}
-.rating {
-  unicode-bidi: bidi-override;
-  direction: rtl;
-  
-}
-.rating > span {
-  display: inline-block;
-  position: relative;
-  width: 1.1em;
-}
-.rating > span:hover:before,
-.rating > span:hover ~ span:before {
-   content: "\2605";
-   position: absolute;
-}
-
-.price-small {
-  color: #00a650;
-}
-.options-product{
-    font-size: 20px;
-    font-family: -apple-system, Arial, sans-serif;
-}
-
-.btn-agregar {
-  background-color: #4189e626;
-  color: #3483fa;
-  border-color: transparent;
-  border-radius: 6px;
-  display: inline-block;
-  font-family: -apple-system, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  height: 48px;
-  line-height: 48px;
-  padding: 0 24px;
-  text-align: center;
-  width: auto;
-  -webkit-font-smoothing: antialiased;
-}
-
-.btn-comprar {
-  background-color: #3483fa;
-  color: rgb(255, 255, 255);
-  border-color: transparent;
-  border-radius: 6px;
-  display: inline-block;
-  font-family: -apple-system, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  height: 48px;
-  line-height: 48px;
-  padding: 0 24px;
-  text-align: center;
-  width: auto;
-}
-
-.btn-agregar,
-.btn-comprar {
-  transition: background-color 0.2s, box-shadow 0.25s;
-}
-
-/* Hover: oscurecer un poco */
-.btn-agregar:hover {
-  background-color: #4189e640; /* mismo color, pero más oscuro */
-  color: #3483fa;
-}
-
-.btn-comprar:hover {
-  background-color: #2968c8; /* un azul un poco más oscuro */
-  color: #ffff;
-}
-/* AGREGAR */
-.btn-agregar:active,
-.btn-agregar:focus,
-.btn-agregar:visited {
-  background-color: #4189e640 !important; /* igual que hover */
-  color: #3483fa !important;
-  box-shadow: none !important; /* saca el brillo azul del focus */
-  border: none;
-}
-
-/* COMPRAR */
-.btn-comprar:active,
-.btn-comprar:focus,
-.btn-comprar:visited {
-  background-color: #2968c8 !important; /* igual que hover */
-  color: #fff !important;
-  box-shadow: none !important;
 }

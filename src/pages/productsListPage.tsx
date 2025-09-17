@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import SidebarFilter from "@/components/sidebarFilter";
 import ProductCard from "@/components/productCards";
-import VerMas from "@/components/modalVerMas";
+import VerMas from "@/components/modalPaymentInfo";
 import productsData from "@/data/products/products.json"; // tu JSON
 import { Container, Row, Col } from "react-bootstrap";
 import type { Product } from "@/types/Product";

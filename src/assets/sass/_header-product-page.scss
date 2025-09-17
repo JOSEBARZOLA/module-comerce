@@ -1,0 +1,45 @@
+#left {
+  position: absolute;
+  top: 60%;
+}
+
+#right {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  z-index: 1;
+}
+
+nav {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  float: right;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  color: #3483fa;
+  padding: 0 30px;
+  text-decoration: none;
+  font-family: -apple-system, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  height: 48px;
+  line-height: 40px;
+}
+
+nav ul li a {
+  transition: background-color 0.2s, box-shadow 0.25s;
+}
+
+/* Hover: oscurecer un poco */
+nav ul li a:hover {
+  color: #00245a;
+}

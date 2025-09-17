@@ -1,0 +1,112 @@
+.purchase-card .list-group-item{
+    padding: 0;
+}
+
+.card-body {
+  font-family: -apple-system, Arial, sans-serif;
+}
+
+.purchase-card .product-title {
+  font-family: "Exo 2", sans-serif !important;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.purchase-card .product-price {
+  font-size: 28px;
+  font-weight: 400;
+  color: #111;
+  margin: 0;
+}
+
+.purchase-card .price-old {
+  font-size: 18px;
+  color: #00a650; /* verde estilo Mercado Libre */
+  margin-left: 6px;
+}
+
+.purchase-card .payment-methods {
+  display: block;
+  font-size: 14px;
+  color: #3483fa;
+  font-weight: 500;
+  margin-top: 4px;
+  text-decoration: none;
+  background: none;
+  border: none;
+}
+
+.purchase-card .payment-methods:hover {
+  text-decoration: underline;
+}
+
+
+
+.btn-agregar {
+  background-color: #4189e626;
+  color: #3483fa;
+  border-color: transparent;
+  border-radius: 6px;
+  display: inline-block;
+  font-family: -apple-system, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 24px;
+  text-align: center;
+  width: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn-comprar {
+  background-color: #3483fa;
+  color: rgb(255, 255, 255);
+  border-color: transparent;
+  border-radius: 6px;
+  display: inline-block;
+  font-family: -apple-system, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 24px;
+  text-align: center;
+  width: auto;
+}
+
+.btn-agregar,
+.btn-comprar {
+  transition: background-color 0.2s, box-shadow 0.25s;
+}
+
+/* Hover: oscurecer un poco */
+.btn-agregar:hover {
+  background-color: #4189e640; /* mismo color, pero más oscuro */
+  color: #3483fa;
+}
+
+.btn-comprar:hover {
+  background-color: #2968c8; /* un azul un poco más oscuro */
+  color: #ffff;
+}
+/* AGREGAR */
+.btn-agregar:active,
+.btn-agregar:focus,
+.btn-agregar:visited {
+  background-color: #4189e640 !important; /* igual que hover */
+  color: #3483fa !important;
+  box-shadow: none !important; /* saca el brillo azul del focus */
+  border: none;
+}
+
+/* COMPRAR */
+.btn-comprar:active,
+.btn-comprar:focus,
+.btn-comprar:visited {
+  background-color: #2968c8 !important; /* igual que hover */
+  color: #fff !important;
+  box-shadow: none !important;
+}
