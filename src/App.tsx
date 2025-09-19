@@ -1,8 +1,7 @@
 
 import { ToastContainer } from "react-toastify";
 import { CartProvider } from "@/contexts/CartProvider";
-import ProductPage from "@/pages/productPage";
-
+import ProductPage from "./pages/productPage";
 
 
 function App() {

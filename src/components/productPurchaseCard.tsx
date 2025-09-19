@@ -1,9 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import SizeSelector from "@/components/buttonGroupSize";
 import QuantitySelector from "@/components/quantitySelector";
 import ColorSelector from "@/components/colorSelector";
 import "@/assets/sass/_product-purchase-card.scss"
 import PaymentInfo from "@/components/modalPaymentInfo";
+import PaymentBrick from "@/modules/payments/mercadopago/paymentBrick"; 
+import { Modal } from "react-bootstrap";
+
 
 interface Product {
   id: number;
@@ -36,6 +39,9 @@ const productColors = [
 ];
 
 const ProductPurchaseCard: React.FC<Props> = ({ product}) => {
+const [showPayment, setShowPayment] = useState(false);
+
+
   return (
     <div className="card purchase-card">
       <div className="card-body">
@@ -66,11 +72,23 @@ const ProductPurchaseCard: React.FC<Props> = ({ product}) => {
           </button>
         </div>
         <div className="btn-group btn-group-lg col-12">
-          <button className="btn btn-comprar">
+          <button
+            className="btn btn-comprar"
+            onClick={() => setShowPayment(true)}
+          >
             <i className="me-2"></i>Comprar ahora
           </button>
         </div>
       </div>
+      {/* Modal con PaymentBrick */}
+      <Modal show={showPayment} onHide={() => setShowPayment(false)} centered size="lg">
+        <Modal.Header closeButton>
+          <Modal.Title>Finalizar compra</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <PaymentBrick title={product.name} amount={product.price} />
+        </Modal.Body>
+      </Modal>
     </div>
   );
 };

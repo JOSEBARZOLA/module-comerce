@@ -4,35 +4,33 @@ import { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 
 initMercadoPago(import.meta.env.VITE_MP_PUBLIC_KEY || "TU_PUBLIC_KEY_DE_PRUEBA", {locale: 'es-AR'});
+type PaymentBrickProps = {
+  title: string;
+  amount: number;
+};
 
-export default function PaymentBrick() {
+export default function PaymentBrick({ title, amount }: PaymentBrickProps) {
   const [preferenceId, setPreferenceId] = useState<string | null>(null);
 
   useEffect(() => {
-    let executed = false;
-    if (executed) return; // evita la segunda ejecución
-    
-    // 🔥 Pedir al backend que cree la preferencia
+    // Crear preferencia con los datos del producto
     fetch("http://localhost:3001/create_preference", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        title: "Producto de prueba",
-        amount: 100, // mismo valor que le pasás a initialization
-      }),
+      body: JSON.stringify({ title, amount }),
     })
       .then((res) => res.json())
       .then((data) => {
         console.log("Preference creada:", data);
-        setPreferenceId(data.id); // el backend devuelve { id: preferenceId }
+        setPreferenceId(data.id);
       })
       .catch((err) => console.error("Error creando preferencia:", err));
-  }, []);
+  }, [title, amount]); // importante: se vuelve a ejecutar si cambia el producto
 
   if (!preferenceId) return <div>Cargando pago...</div>;
 
   const initialization = {
-    amount: 100,
+    amount,
     preferenceId,
   };
 
@@ -44,24 +42,20 @@ export default function PaymentBrick() {
       debitCard: "all",
       mercadoPago: "all",
     },
-  }  as const;
+  } as const;
 
   const onSubmit = async ({ selectedPaymentMethod, formData }: any) => {
     console.log("Formulario enviado", selectedPaymentMethod, formData);
-    return new Promise<void>((resolve) => resolve());
+    return Promise.resolve();
   };
-
-  const onError = (error: any) => console.error("Error Brick:", error);
-  const onReady = () => console.log("Brick listo");
-
   return (
     <Container style={{ paddingLeft: 0, paddingRight: 0 }}>
     <Payment
     initialization={initialization}
     customization={customization}
     onSubmit={onSubmit}
-    onReady={onReady}
-    onError={onError}
+        onReady={() => console.log("Brick listo")}
+        onError={(error) => console.error("Error Brick:", error)}
     />
     </Container>
   );
