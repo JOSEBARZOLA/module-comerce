@@ -5,11 +5,16 @@ import AdditionalDetails from "@/components/additionalDetailsProduct";
 import products from "@/data/products/products.json";
 import HeaderProductPage from "@/components/headerProductPage";
 import ProductPurchaseCard from "@/components/productPurchaseCard";
+import ModalOpen from "@/components/cartModal";
+import { useState } from "react";
 
 
 function ProductPage() {
   const product = products.find((p) => p.id === 1)!;
 
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const openCart = () => setIsCartOpen(true);
+  const closeCart = () => setIsCartOpen(false);
  
   const detailsTabs = [
     {
@@ -42,15 +47,17 @@ function ProductPage() {
 
   return (
     <>
-      <HeaderProductPage />
+      <HeaderProductPage onCartClick={openCart}/>
+      
       <Container className="my-3" id="container-product">
         <Row className="details-snippet1">
           <ProductImages images={product.images || []} />
           <Col className="col-md-4 ">
             <ProductPurchaseCard product={product} />
           </Col>
-        </Row>
+        </Row>  
         <AdditionalDetails tabs={detailsTabs} />
+        <ModalOpen isOpen={isCartOpen} onClose={closeCart} />
       </Container>
     </>
   );

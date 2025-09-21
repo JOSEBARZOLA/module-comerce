@@ -1,6 +1,10 @@
 import "@/assets/sass/_header-product-page.scss"
 
-function HeaderProductPage (){
+
+interface HeaderProductPageProps {
+  onCartClick: () => void;
+}
+function HeaderProductPage({ onCartClick }: HeaderProductPageProps){
     return(
 <section>
     <img src="https://i.postimg.cc/T1McCF79/image1.png" id="left" alt=""/>
@@ -10,7 +14,12 @@ function HeaderProductPage (){
     <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Tienda</a></li>
-        <li><a href="#">Carrito</a></li>
+        <li><button 
+              className="cart-btn" id="btn_cart"
+              onClick={onCartClick}
+            >
+              Carrito
+            </button></li>
         <li><a href="#">LogIn/LogOut</a></li>
       </ul>
     </nav>
