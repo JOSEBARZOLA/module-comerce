@@ -1,0 +1,17 @@
+.row_card{
+    justify-content: center;
+}
+
+#col-product{
+    max-width: 220px;
+    max-height: 320px;
+}
+
+@media (min-width: 1200px) {
+    .col-xl-2 {
+        flex: 0 0 auto;
+        width: 16.66666667%;
+        margin-right: 2vh;
+        margin-top: 30px;
+    }
+}

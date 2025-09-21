@@ -6,7 +6,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import type { Product } from "@/types/Product";
 import "@/assets/sass/_sidebarfilter.scss"
 import NavbarProducts from "@/components/navbarProducts";
-
+import "@/assets/sass/_product-list-page.scss"
 
 
 function ProductsListPage() {
@@ -81,11 +81,11 @@ function ProductsListPage() {
       {/* Body con cards */}
 
       <div className="pt-5" id="main-demo">
-        <section className="my-1 my-md-1">
+        <section className="my-1 my-md-2">
           <Container>
             <Row className="gy-3 row_card">
               {displayProducts.map((product) => (
-                <Col key={product.id} className="col-12 col-md-4 col-xl-3">
+                <Col key={product.id} className="col-12 col-md-4 col-xl-2" id="col-product">
                   <ProductCard  product={product}
                   />
                 </Col>
