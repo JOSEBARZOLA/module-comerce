@@ -1,14 +1,8 @@
 @import url('https://i.postimg.cc/Ls2NMc20/background.png');
 
 
-body{
-    background:url('https://i.postimg.cc/Ls2NMc20/background.png') no-repeat;
-    background-size: cover;
-    //padding-bottom: 1400px;
-}
-
 body, html, #root {
-  background-color: transparent;
+  background-color: #e4c3c328;
 }
 
 body, html{
@@ -22,6 +16,7 @@ body, html{
   width: 1184px;
   border-radius: 6px;
   background-color: #ffff;
+ 
   
 }
 #container-product .row {

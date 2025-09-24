@@ -16,7 +16,7 @@ export default function ModalOpen({ isOpen, onClose }: ModalOpenProps)  {
       <Modal show={isOpen} onHide={onClose} centered>
       <Modal.Header closeButton className="no-border-header"></Modal.Header>
       <Modal.Body>
-        <ShoppingCart />
+        <ShoppingCart/>
       </Modal.Body>
     </Modal>
   );

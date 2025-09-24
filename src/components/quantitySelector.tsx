@@ -8,18 +8,20 @@ const QuantitySelector = () => {
 
   return (
     <div>
-      <h5>
+      <h5 id="h5">
         Cantidad:{" "}
         <Dropdown className="d-inline">
           <Dropdown.Toggle
             variant="link"
             className="quantity-toggle"
-            id="dropdown-quantity"
           >
             {quantity} {quantity === 1 ? "unidad" : "unidades"}
           </Dropdown.Toggle>
 
-          <Dropdown.Menu className="quantity-menu">
+          <Dropdown.Menu
+            className="quantity-menu"
+           popperConfig={{ strategy: "absolute" }}  // 👈 acá es
+          >
             {options.map((num) => (
               <Dropdown.Item
                 key={num}

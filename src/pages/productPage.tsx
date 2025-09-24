@@ -3,19 +3,30 @@ import "@/assets/sass/_product-page.scss";
 import ProductImages from "@/components/productImages";
 import AdditionalDetails from "@/components/additionalDetailsProduct";
 import products from "@/data/products/products.json";
-import HeaderProductPage from "@/components/headerProductPage";
+import NavProductPage from "@/components/navbarProductPage";
 import ProductPurchaseCard from "@/components/productPurchaseCard";
 import ModalOpen from "@/components/cartModal";
 import { useState } from "react";
-
+import { useParams } from "react-router-dom";
 
 function ProductPage() {
-  const product = products.find((p) => p.id === 1)!;
+
+
+const { id } = useParams<{ id: string }>();
+const product = products.find((p) => String(p.id) === id);
+console.log("ID de URL:", id);
+console.log("Producto encontrado:", product);
+
 
   const [isCartOpen, setIsCartOpen] = useState(false);
   const openCart = () => setIsCartOpen(true);
   const closeCart = () => setIsCartOpen(false);
  
+
+    if (!product) {
+    return <h2>Producto no encontrado</h2>;
+  }
+  
   const detailsTabs = [
     {
       key: "description",
@@ -47,8 +58,7 @@ function ProductPage() {
 
   return (
     <>
-      <HeaderProductPage onCartClick={openCart}/>
-      
+    <NavProductPage onCartClick={openCart}/>
       <Container className="my-3" id="container-product">
         <Row className="details-snippet1">
           <ProductImages images={product.images || []} />

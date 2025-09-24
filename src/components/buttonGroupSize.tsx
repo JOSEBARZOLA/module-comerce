@@ -8,7 +8,7 @@ const SizeSelector = () => {
 const [hoverSize, setHoverSize] = useState<string | null>(null);
   return (
     <Row className="g-2 mb-4">
-        <h5>
+        <h5 className="size">
         Talle:{" "}
         <strong>
           {hoverSize || selectedSize}

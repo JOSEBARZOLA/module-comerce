@@ -1,6 +1,10 @@
 import "@/assets/sass/_modal-payment-info.scss";
 import { useState } from "react";
 import { Modal } from "react-bootstrap";
+import methodPayment1 from "@/assets/img/payment/methodPayment1.png";
+import methodPayment2 from "@/assets/img/payment/methodPayment2.png";
+import methodPayment3 from "@/assets/img/payment/methodPayment3.png";
+
 
 function PaymentInfo() {
   const [show, setShow] = useState(false);
@@ -18,17 +22,17 @@ function PaymentInfo() {
   <Modal.Header closeButton className="no-border-header"></Modal.Header>
   <Modal.Body id="modal_body" className="p-0">
     <img
-      src="src/assets/img/payment/methodPayment1.png"
+      src={methodPayment1}
       alt="Medio de pago 1"
       className="d-block w-100"
     />
     <img
-      src="src/assets/img/payment/methodPayment2.png"
+      src={methodPayment2}
       alt="Medio de pago 2"
       className="d-block w-100"
     />
     <img
-      src="src/assets/img/payment/methodPayment3.png"
+      src={methodPayment3}
       alt="Medio de pago 3"
       className="d-block w-100"
     />

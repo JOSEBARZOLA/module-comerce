@@ -14,20 +14,25 @@
       "https://imgs.search.brave.com/U9071IbBpYcJ4aDb_EFAd8OrZZ9M8EP6vUje9B1yENw/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9wcm9k/dWN0aW9uLmNkbi52/YXlwb2wuY29tL3Zh/cmlhbnRzLzhwenhp/Y3NnN3J2ZmNtYnli/MWlnaHg4cHljbmMv/ZTgyYzhkNjE3MWRk/MjViYjUzOGYyZTcy/NjNiNWJjN2RmYzZh/NzkzNTJkODU5MjMw/NzRiZTc2ZGY1M2Zi/YzZmNA",
       "https://imgs.search.brave.com/zyfaMuIbT4zxckaM_eqsca07478SXdqK7GUMPFysnsU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9wcm9k/dWN0aW9uLmNkbi52/YXlwb2wuY29tL3Zh/cmlhbnRzL2lydDZ3/Zmd2a2xvbGZnMTNk/dXE0cGplaWcwbnAv/ZTgyYzhkNjE3MWRk/MjViYjUzOGYyZTcy/NjNiNWJjN2RmYzZh/NzkzNTJkODU5MjMw/NzRiZTc2ZGY1M2Zi/YzZmNA",
       "https://imgs.search.brave.com/YhVA7UIX8auoSY2Cdy_y1Q5ZLCoIQdzy7UVFOjhsTSI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zcG9y/dGxpbmUudnRleGFz/c2V0cy5jb20vYXJx/dWl2b3MvaWRzLzE0/MzQ0MDItODAwLWF1/dG8_dj02Mzg3MzA2/ODQyODYzNzAwMDAm/d2lkdGg9ODAwJmhl/aWdodD1hdXRvJmFz/cGVjdD10cnVl",
-      "https://imgs.search.brave.com/W9IWagDJNv0INiHTFa1_IGc9UHIyqPNRRHtDWwVrrUY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zcG9y/dGxpbmUudnRleGFz/c2V0cy5jb20vYXJx/dWl2b3MvaWRzLzE0/MzQzOTEtODAwLWF1/dG8_dj02Mzg3MzA2/ODQxMTYyMzAwMDAm/d2lkdGg9ODAwJmhl/aWdodD1hdXRvJmFz/cGVjdD10cnVl",
-      "https://imgs.search.brave.com/6wpJBgJhdBrAwjgGB2mETwOXPIo0edia_mwLRTAgj0E/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wcm9k/dWN0aW9uLmNkbi52/YXlwb2wuY29tL3Zh/cmlhbnRzLzhwenhp/Y3NnN3J2ZmNtYnli/MWlnaHg4cHljbmMv/ZTgyYzhkNjE3MWRk/MjViYjUzOGYyZTcy/NjNiNWJjN2RmYzZh/NzkzNTJkODU5MjMw/NzRiZTc2ZGY1M2Zi/YzZmNA"
+      "https://imgs.search.brave.com/EZhEBrstnbo31eoD5XZt3KEtSBtx788AM9w0gXdQeaw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wcm9k/dWN0aW9uLmNkbi52/YXlwb2wuY29tL3Zh/cmlhbnRzL2g1Nmtz/enhid2prbGlsY3Js/YWZjbnQwYXpjMnAv/ZTgyYzhkNjE3MWRk/MjViYjUzOGYyZTcy/NjNiNWJjN2RmYzZh/NzkzNTJkODU5MjMw/NzRiZTc2ZGY1M2Zi/YzZmNA",
+      "https://imgs.search.brave.com/p3amky0OShkGhbalwWwfxXUuTg_EpqR23Pxhs56o9E8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wcm9k/dWN0aW9uLmNkbi52/YXlwb2wuY29tL3Zh/cmlhbnRzLzc4NmMx/YW8zOGljY3RyeXBn/aDhsdnh6aGI3Z3cv/ZTgyYzhkNjE3MWRk/MjViYjUzOGYyZTcy/NjNiNWJjN2RmYzZh/NzkzNTJkODU5MjMw/NzRiZTc2ZGY1M2Zi/YzZmNA"
     ],
     "size": [41, 42, 43, 44]
   },
-  {
+  { 
     "id": 2,
-    "name": "Botines Nike Mercurial",
+    "name": "Botines Nike Mercurial", 
     "description": "Ligeros y cómodos, ideales para velocidad",
     "price": 170000,
+    "oldPrice": 155000,
     "category": "Botines",
     "gender": "Unisex",
     "stock": 20,
-    "image": "https://imgs.search.brave.com/LKg031K1ljL-6o5ujMr7VtxWRGGNc0RV0-nlHkVnjDo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZGV4dGVyLmNvbS5h/ci9kdy9pbWFnZS92/Mi9CRFRGX1BSRC9v/bi9kZW1hbmR3YXJl/LnN0YXRpYy8tL1Np/dGVzLTM2NS1kYWJy/YS1jYXRhbG9nL2Rl/ZmF1bHQvZHdiYTMz/M2E2ZS9wcm9kdWN0/cy9OSURKNTYyOS02/MDEvTklESjU2Mjkt/NjAxLTIuSlBHP3N3/PTYwMCZzaD02MDA",
+    "images": ["https://imgs.search.brave.com/LKg031K1ljL-6o5ujMr7VtxWRGGNc0RV0-nlHkVnjDo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZGV4dGVyLmNvbS5h/ci9kdy9pbWFnZS92/Mi9CRFRGX1BSRC9v/bi9kZW1hbmR3YXJl/LnN0YXRpYy8tL1Np/dGVzLTM2NS1kYWJy/YS1jYXRhbG9nL2Rl/ZmF1bHQvZHdiYTMz/M2E2ZS9wcm9kdWN0/cy9OSURKNTYyOS02/MDEvTklESjU2Mjkt/NjAxLTIuSlBHP3N3/PTYwMCZzaD02MDA",
+    "https://imgs.search.brave.com/MK2IBRnRACzer74tOzMppittqgLJkSzRstBper9pu4E/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZGV4dGVyLmNvbS5h/ci9kdy9pbWFnZS92/Mi9CRFRGX1BSRC9v/bi9kZW1hbmR3YXJl/LnN0YXRpYy8tL1Np/dGVzLTM2NS1kYWJy/YS1jYXRhbG9nL2Rl/ZmF1bHQvZHc3NTIz/NTI4Ny9wcm9kdWN0/cy9OSURKNTYyOS02/MDEvTklESjU2Mjkt/NjAxLTEuSlBHP3N3/PTYwMCZzaD02MDA",
+     "https://www.dexter.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dwe1d665d0/products/NIDJ5629-601/NIDJ5629-601-3.JPG",
+      "https://www.dexter.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dw9fd71f20/products/NIDJ5629-601/NIDJ5629-601-4.JPG"
+     ],
     "size": [41, 42, 43, 44]
   },
   {
@@ -38,7 +43,7 @@
     "category": "Botines",
     "gender": "Unisex",
     "stock": 20,
-    "image": "https://imgs.search.brave.com/EH-_cIRL9zjXWJDt7v2gQO6S7QIhJSuEtsTRLIw4JVM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMucHVtYS5uZXQv/aW1hZ2VzLzEwODU4/OC8wMS9zdjA0L2Zu/ZC9BUkcvdy82MDAv/aC82MDAvZm10L3Bu/Zy9iZy8jRkFGQUZB",
+    "images": ["https://imgs.search.brave.com/EH-_cIRL9zjXWJDt7v2gQO6S7QIhJSuEtsTRLIw4JVM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMucHVtYS5uZXQv/aW1hZ2VzLzEwODU4/OC8wMS9zdjA0L2Zu/ZC9BUkcvdy82MDAv/aC82MDAvZm10L3Bu/Zy9iZy8jRkFGQUZB"],
     "size": [41, 42, 43, 44]
   },
   {
@@ -49,7 +54,7 @@
     "category": "Botines",
     "gender": "Unisex",
     "stock": 20,
-    "image": "https://imgs.search.brave.com/ILf_oX7qND7Okv2SvAt4AsZX-FhUxfLkmfdtxlY82Z0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/XzYxOTc2NS1NTEI3/MTYzNjc2MjU3OV8w/OTIwMjMtRS1jaHV0/ZWlyYS11bWJyby12/ZWxvY2l0YS1hbGNo/ZW1pc3QtcHJlbWll/ci1jYW1wby1tYXNj/dWxpbmEud2VicA",
+    "images": ["https://imgs.search.brave.com/ILf_oX7qND7Okv2SvAt4AsZX-FhUxfLkmfdtxlY82Z0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/XzYxOTc2NS1NTEI3/MTYzNjc2MjU3OV8w/OTIwMjMtRS1jaHV0/ZWlyYS11bWJyby12/ZWxvY2l0YS1hbGNo/ZW1pc3QtcHJlbWll/ci1jYW1wby1tYXNj/dWxpbmEud2VicA"],
     "size": [41, 42, 43, 44]
   },
   {
@@ -60,7 +65,7 @@
     "category": "Botines",
     "gender": "Unisex",
     "stock": 20,
-    "image": "https://imgs.search.brave.com/s2HzGY2lZZ0kbQLZvgEGl58H1JM3FclNM-fkH5lTbOs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/XzYzNzk4MS1NTEE4/Njk3OTEwNjYyMl8w/NzIwMjUtRS53ZWJw",
+    "images": ["https://imgs.search.brave.com/s2HzGY2lZZ0kbQLZvgEGl58H1JM3FclNM-fkH5lTbOs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/XzYzNzk4MS1NTEE4/Njk3OTEwNjYyMl8w/NzIwMjUtRS53ZWJw"],
     "size": [41, 42, 43, 44]
   },
   {
@@ -71,7 +76,7 @@
     "category": "Botines",
     "gender": "Unisex",
     "stock": 20,
-    "image": "https://imgs.search.brave.com/2tjobOdLwlidxK2PN4LMCmNCZvxDErXLrImbZEGk6xU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9uZXdz/cG9ydC52dGV4YXNz/ZXRzLmNvbS9hcnF1/aXZvcy9pZHMvMjAw/NTY0NTItODAwLWF1/dG8_dj02Mzg3NjM1/MjU4MTkxNzAwMDAm/d2lkdGg9ODAwJmhl/aWdodD1hdXRvJmFz/cGVjdD10cnVl",
+    "images": ["https://imgs.search.brave.com/2tjobOdLwlidxK2PN4LMCmNCZvxDErXLrImbZEGk6xU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9uZXdz/cG9ydC52dGV4YXNz/ZXRzLmNvbS9hcnF1/aXZvcy9pZHMvMjAw/NTY0NTItODAwLWF1/dG8_dj02Mzg3NjM1/MjU4MTkxNzAwMDAm/d2lkdGg9ODAwJmhl/aWdodD1hdXRvJmFz/cGVjdD10cnVl"],
     "size": [41, 42, 43, 44]
   },
   {
@@ -82,7 +87,7 @@
     "category": "Botines",
     "gender": "Unisex",
     "stock": 20,
-    "image": "https://http2.mlstatic.com/D_NQ_NP_605994-MLA82242935774_022025-O.webp",
+    "images": ["https://http2.mlstatic.com/D_NQ_NP_605994-MLA82242935774_022025-O.webp"],
     "size": [41, 42, 43, 44]
   },
   {
@@ -93,7 +98,7 @@
     "category": "Botines",
     "gender": "Unisex",
     "stock": 20,
-    "image": "https://imgs.search.brave.com/u7LQn5kS16rof1mtbqfrS9J1gOlN9omvFTFY9S3l5oI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90ZW1w/bG9mdXRib2wudnRl/eGFzc2V0cy5jb20v/YXJxdWl2b3MvaWRz/LzIwMzA2MDc5LTUw/MC1hdXRvP3Y9NjM4/ODM0MjUxOTI2MDAw/MDAwJndpZHRoPTUw/MCZoZWlnaHQ9YXV0/byZhc3BlY3Q9dHJ1/ZQ",
+    "images": ["https://imgs.search.brave.com/u7LQn5kS16rof1mtbqfrS9J1gOlN9omvFTFY9S3l5oI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90ZW1w/bG9mdXRib2wudnRl/eGFzc2V0cy5jb20v/YXJxdWl2b3MvaWRz/LzIwMzA2MDc5LTUw/MC1hdXRvP3Y9NjM4/ODM0MjUxOTI2MDAw/MDAwJndpZHRoPTUw/MCZoZWlnaHQ9YXV0/byZhc3BlY3Q9dHJ1/ZQ"],
     "size": [41, 42, 43, 44]
   },
   {
@@ -104,7 +109,7 @@
     "category": "Botines",
     "gender": "Unisex",
     "stock": 20,
-    "image": "",
+    "images": [""],
     "size": [41, 42, 43, 44]
   },
   {
@@ -115,7 +120,7 @@
     "category": "Botines",
     "gender": "Unisex",
     "stock": 20,
-    "image": "",
+    "images": [""],
     "size": [41, 42, 43, 44]
   },
   {
@@ -126,7 +131,7 @@
     "category": "Zapatillas Masculinas",
     "gender": "Masculino",
     "stock": 20,
-    "image": "",
+   "images": [""],
     "size": [41, 42, 43, 44]
   },
   {
@@ -137,7 +142,7 @@
     "category": "Zapatillas Masculinas",
     "gender": "Masculino",
     "stock": 20,
-    "image": "",
+    "images": [""],
     "size": [41, 42, 43, 44]
   },
   {
@@ -148,7 +153,7 @@
     "category": "Zapatillas Masculinas",
     "gender": "Masculino",
     "stock": 20,
-    "image": "",
+    "images": [""],
     "size": [41, 42, 43, 44]
   },
   {
@@ -159,7 +164,7 @@
     "category": "Zapatillas Masculinas",
     "gender": "Masculino",
     "stock": 20,
-    "image": "",
+    "images": [""],
     "size": [41, 42, 43, 44]
   },
   {
@@ -170,7 +175,7 @@
     "category": "Zapatillas Masculinas",
     "gender": "Masculino",
     "stock": 20,
-    "image": "",
+   "images": [""],
     "size": [41, 42, 43, 44]
   },
   {
@@ -181,7 +186,7 @@
     "category": "Zapatillas Masculinas",
     "gender": "Masculino",
     "stock": 20,
-    "image": "",
+    "images": [""],
     "size": [41, 42, 43, 44]
   },
   {
@@ -192,7 +197,7 @@
     "category": "Zapatillas Masculinas",
     "gender": "Masculino",
     "stock": 20,
-    "image": "",
+   "images": [""],
     "size": [41, 42, 43, 44]
   },
   {
@@ -203,7 +208,7 @@
     "category": "Zapatillas Masculinas",
     "gender": "Masculino",
     "stock": 20,
-    "image": "",
+    "images": [""],
     "size": [41, 42, 43, 44]
   },
   {
@@ -214,7 +219,7 @@
     "category": "Zapatillas Masculinas",
     "gender": "Masculino",
     "stock": 20,
-    "image": "",
+   "images": [""],
     "size": [41, 42, 43, 44]
   },
   {
@@ -225,7 +230,7 @@
     "category": "Zapatillas Masculinas",
     "gender": "Masculino",
     "stock": 20,
-    "image": "",
+   "images": [""],
     "size": [41, 42, 43, 44]
   },
   {
@@ -236,7 +241,7 @@
     "category": "Calzado Femenino",
     "gender": "Femenino",
     "stock": 20,
-    "image": "",
+    "images": [""],
     "size": [33, 34, 35, 36]
   },
   {
@@ -247,7 +252,7 @@
     "category": "Calzado Femenino",
     "gender": "Femenino",
     "stock": 20,
-    "image": "",
+    "images": [""],
     "size": [33, 34, 35, 36]
   },
   {
@@ -258,7 +263,7 @@
     "category": "Calzado Femenino",
     "gender": "Femenino",
     "stock": 20,
-    "image": "",
+   "images": [""],
     "size": [33, 34, 35, 36]
   },
   {
@@ -269,7 +274,7 @@
     "category": "Calzado Femenino",
     "gender": "Femenino",
     "stock": 20,
-    "image": "",
+    "images": [""],
     "size": [33, 34, 35, 36]
   },
   {
@@ -280,7 +285,7 @@
     "category": "Calzado Femenino",
     "gender": "Femenino",
     "stock": 20,
-    "image": "",
+   "images": [""],
     "size": [33, 34, 35, 36]
   },
   {
@@ -291,7 +296,7 @@
     "category": "Calzado Femenino",
     "gender": "Femenino",
     "stock": 20,
-    "image": "",
+    "images": [""],
     "size": [33, 34, 35, 36]
   },
   {
@@ -302,7 +307,7 @@
     "category": "Calzado Femenino",
     "gender": "Femenino",
     "stock": 20,
-    "image": "",
+    "images": [""],
     "size": [33, 34, 35, 36]
   },
   {
@@ -313,7 +318,7 @@
     "category": "Calzado Femenino",
     "gender": "Femenino",
     "stock": 20,
-    "image": "",
+    "images": [""],
     "size": [33, 34, 35, 36]
   },
   {
@@ -324,7 +329,7 @@
     "category": "Calzado Femenino",
     "gender": "Femenino",
     "stock": 20,
-    "image": "",
+    "images": [""],
     "size": [33, 34, 35, 36]
   },
   {
@@ -335,7 +340,7 @@
     "category": "Calzado Femenino",
     "gender": "Femenino",
     "stock": 20,
-    "image": "",
+   "images": [""],
     "size": [33, 34, 35, 36]
   },
   {
@@ -346,7 +351,7 @@
     "category": "Camisetas",
     "gender": "Unisex",
     "stock": 30,
-    "image": "",
+   "images": [""],
     "size": ["S", "M", "L", "XL"]
   },
   {
@@ -357,7 +362,7 @@
     "category": "Camisetas",
     "gender": "Unisex",
     "stock": 30,
-    "image": "",
+   "images": [""],
     "size": ["S", "M", "L", "XL"]
   },
   {
@@ -368,7 +373,7 @@
     "category": "Camisetas",
     "gender": "Unisex",
     "stock": 30,
-    "image": "",
+   "images": [""],
     "size": ["S", "M", "L", "XL"]
   },
   {
@@ -379,7 +384,7 @@
     "category": "Camisetas",
     "gender": "Unisex",
     "stock": 30,
-    "image": "",
+   "images": [""],
     "size": ["S", "M", "L", "XL"]
   },
   {
@@ -390,7 +395,7 @@
     "category": "Camisetas",
     "gender": "Unisex",
     "stock": 30,
-    "image": "",
+   "images": [""],
     "size": ["S", "M", "L", "XL"]
   },
   {
@@ -401,7 +406,7 @@
     "category": "Camisetas",
     "gender": "Unisex",
     "stock": 30,
-    "image": "",
+    "images": [""],
     "size": ["S", "M", "L", "XL"]
   },
   {
@@ -412,7 +417,7 @@
     "category": "Camisetas",
     "gender": "Unisex",
     "stock": 30,
-    "image": "",
+    "images": [""],
     "size": ["S", "M", "L", "XL"]
   },
   {
@@ -423,7 +428,7 @@
     "category": "Camisetas",
     "gender": "Unisex",
     "stock": 30,
-    "image": "",
+   "images": [""],
     "size": ["S", "M", "L", "XL"]
   },
   {
@@ -434,7 +439,7 @@
     "category": "Camisetas",
     "gender": "Unisex",
     "stock": 30,
-    "image": "",
+    "images": [""],
     "size": ["S", "M", "L", "XL"]
   },
   {
@@ -445,7 +450,7 @@
     "category": "Camisetas",
     "gender": "Unisex",
     "stock": 30,
-    "image": "",
+    "images": [""],
     "size": ["S", "M", "L", "XL"]
   },
   {
@@ -456,7 +461,7 @@
     "category": "Ropa Casual",
     "gender": "Unisex",
     "stock": 25,
-    "image": "",
+    "images": [""],
     "size": ["S", "M", "L", "XL"]
   },
   {
@@ -467,7 +472,7 @@
     "category": "Ropa Casual",
     "gender": "Unisex",
     "stock": 25,
-    "image": "",
+    "images": [""],
     "size": ["S", "M", "L", "XL"]
   },
   {
@@ -478,7 +483,7 @@
     "category": "Ropa Casual",
     "gender": "Unisex",
     "stock": 25,
-    "image": "",
+    "images": [""],
     "size": ["S", "M", "L", "XL"]
   },
   {
@@ -489,7 +494,7 @@
     "category": "Ropa Casual",
     "gender": "Unisex",
     "stock": 25,
-    "image": "",
+    "images": [""],
     "size": ["S", "M", "L", "XL"]
   },
   {
@@ -500,7 +505,7 @@
     "category": "Ropa Casual",
     "gender": "Unisex",
     "stock": 25,
-    "image": "",
+    "images": [""],
     "size": ["S", "M", "L", "XL"]
   },
   {
@@ -511,7 +516,7 @@
     "category": "Ropa Casual",
     "gender": "Unisex",
     "stock": 25,
-    "image": "",
+    "images": [""],
     "size": ["S", "M", "L", "XL"]
   },
   {
@@ -522,7 +527,7 @@
     "category": "Ropa Casual",
     "gender": "Unisex",
     "stock": 25,
-    "image": "",
+    "images": [""],
     "size": ["S", "M", "L", "XL"]
   },
   {
@@ -533,7 +538,7 @@
     "category": "Ropa Casual",
     "gender": "Unisex",
     "stock": 25,
-    "image": "",
+   "images": [""],
     "size": ["S", "M", "L", "XL"]
   },
   {
@@ -544,7 +549,7 @@
     "category": "Ropa Casual",
     "gender": "Unisex",
     "stock": 25,
-    "image": "",
+    "images": [""],
     "size": ["S", "M", "L", "XL"]
   },
   {
@@ -555,7 +560,7 @@
     "category": "Ropa Casual",
     "gender": "Unisex",
     "stock": 25,
-    "image": "",
+   "images": [""],
     "size": ["S", "M", "L", "XL"]
   },
   {
@@ -566,7 +571,7 @@
     "category": "Camperas Deportivas",
     "gender": "Unisex",
     "stock": 20,
-    "image": "",
+    "images": [""],
     "size": ["S", "M", "L", "XL"]
   },
   {
@@ -577,7 +582,7 @@
     "category": "Camperas Deportivas",
     "gender": "Unisex",
     "stock": 20,
-    "image": "",
+    "images": [""],
     "size": ["S", "M", "L", "XL"]
   },
   {
@@ -588,7 +593,7 @@
     "category": "Camperas Deportivas",
     "gender": "Unisex",
     "stock": 20,
-    "image": "",
+   "images": [""],
     "size": ["S", "M", "L", "XL"]
   },
   {
@@ -599,7 +604,7 @@
     "category": "Camperas Deportivas",
     "gender": "Unisex",
     "stock": 20,
-    "image": "",
+    "images": [""],
     "size": ["S", "M", "L", "XL"]
   },
   {
@@ -610,7 +615,7 @@
     "category": "Camperas Deportivas",
     "gender": "Unisex",
     "stock": 20,
-    "image": "",
+    "images": [""],
     "size": ["S", "M", "L", "XL"]
   },
   {
@@ -621,7 +626,7 @@
     "category": "Camperas Deportivas",
     "gender": "Unisex",
     "stock": 20,
-    "image": "",
+    "images": [""],
     "size": ["S", "M", "L", "XL"]
   },
   {
@@ -632,7 +637,7 @@
     "category": "Camperas Deportivas",
     "gender": "Unisex",
     "stock": 20,
-    "image": "",
+    "images": [""],
     "size": ["S", "M", "L", "XL"]
   },
   {
@@ -643,7 +648,7 @@
     "category": "Camperas Deportivas",
     "gender": "Unisex",
     "stock": 20,
-    "image": "",
+    "images": [""],
     "size": ["S", "M", "L", "XL"]
   },
   {
@@ -654,7 +659,7 @@
     "category": "Camperas Deportivas",
     "gender": "Unisex",
     "stock": 20,
-    "image": "",
+    "images": [""],
     "size": ["S", "M", "L", "XL"]
   },
   {
@@ -665,7 +670,7 @@
     "category": "Camperas Deportivas",
     "gender": "Unisex",
     "stock": 20,
-    "image": "",
+    "images": [""],
     "size": ["S", "M", "L", "XL"]
   }
 ]

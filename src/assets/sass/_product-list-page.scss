@@ -1,11 +1,21 @@
+#main-demo * {
+  box-sizing: initial;
+}
+
 .row_card{
-    justify-content: center;
+    justify-content: center;    
 }
 
 #col-product{
-    max-width: 220px;
-    max-height: 320px;
+     width: 220px;    // más angosta, similar a ML
+  height: 350px;
+  box-sizing:initial !important;
 }
+#col-product .product-card {
+  width: 220px;
+  margin: 0 auto; // centra la card dentro de la columna
+}
+
 
 @media (min-width: 1200px) {
     .col-xl-2 {

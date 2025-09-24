@@ -85,7 +85,7 @@ const ShoppingCart: React.FC = () => {
           <div className="col-lg-8">
             <div className="d-flex flex-column gap-2">
               {products.map((product) => (
-                <div key={product.id} className="product-card p-3 shadow-sm">
+                <div key={product.id} className="product-cart p-3 shadow-sm">
                   <div className="row align-items-center">
                     <div className="col-md-2">
                       <img
