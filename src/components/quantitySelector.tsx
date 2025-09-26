@@ -1,11 +1,15 @@
-import { useState } from "react";
+
 import { Dropdown } from "react-bootstrap";
 import "@/assets/sass/_quantity-selector.scss";
 
-const QuantitySelector = () => {
-  const [quantity, setQuantity] = useState(1);
+interface QuantitySelectorProps {
+  quantity: number;
+  onChange: (q: number) => void;
+}
+const QuantitySelector: React.FC<QuantitySelectorProps> = ({ quantity, onChange }) => {
   const options = [1, 2, 3, 4, 5];
 
+  
   return (
     <div>
       <h5 id="h5">
@@ -25,7 +29,7 @@ const QuantitySelector = () => {
             {options.map((num) => (
               <Dropdown.Item
                 key={num}
-                onClick={() => setQuantity(num)}
+               onClick={() => onChange(num)} // 👈 avisamos al padre
                 className={`quantity-item ${
                   quantity === num ? "active" : ""
                 }`}

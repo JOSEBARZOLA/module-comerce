@@ -6,12 +6,13 @@ import "@/assets/sass/_product-purchase-card.scss"
 import PaymentInfo from "@/components/modalPaymentInfo";
 import PaymentBrick from "@/modules/payments/mercadopago/paymentBrick"; 
 import { Modal } from "react-bootstrap";
-
+import { useCart } from "@/contexts/useCart";
 
 interface Product {
   id: number;
   name: string;
   description: string;
+  category:string;
   descriptionFull?: string;
   price: number;
   oldPrice?: number;
@@ -19,8 +20,9 @@ interface Product {
 
 interface Props {
   product: Product;
+    quantity: number;
+  setQuantity: React.Dispatch<React.SetStateAction<number>>;
 }
-
 const formatPrice = (price: number) => {
   return price.toLocaleString("es-AR", {
     style: "currency",
@@ -28,6 +30,7 @@ const formatPrice = (price: number) => {
     minimumFractionDigits: 0,
   });
 };
+
 
 
 const productColors = [
@@ -40,7 +43,8 @@ const productColors = [
 
 const ProductPurchaseCard: React.FC<Props> = ({ product}) => {
 const [showPayment, setShowPayment] = useState(false);
-
+const { addToCart } = useCart();
+const [quantity, setQuantity] = useState<number>(1);
 
   return (
     <div className="card purchase-card">
@@ -60,15 +64,15 @@ const [showPayment, setShowPayment] = useState(false);
                 </small>
               )}
             </p>
-            <PaymentInfo />
           </li>
         </ul>
+        <PaymentInfo />
         <SizeSelector />
         <ColorSelector colors={productColors} />
-        <QuantitySelector />
+        <QuantitySelector quantity={quantity} onChange={setQuantity}/>
         <div className="btn-group btn-group-lg col-12 mb-2">
-          <button className="btn btn-agregar">
-            <i className="me-2"></i>Agregar al carrito
+          <button className="btn btn-agregar" onClick={() => addToCart(product, quantity)}>
+            <i className="me-2" ></i>Agregar al carrito
           </button>
         </div>
         <div className="btn-group btn-group-lg col-12">

@@ -1,4 +1,3 @@
-import "@/assets/sass/_nav-product-page.scss"
 import { useNavigate } from "react-router-dom";
 
 
