@@ -1,34 +1,58 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { CartContext, type CartItem, type CartProviderProps } from "./CartContext";
 import type { Product } from "@/types/Product";
+import { toast } from "react-toastify";
 
 export const CartProvider = ({ children }: CartProviderProps) => {
   const [cart, setCart] = useState<CartItem[]>([]);
+  const toastRef = useRef(false); // ✅ para evitar duplicados
 
   const addToCart = (product: Product, quantity: number) => {
-  setCart((prev) => {
-    const exists = prev.find((item) => item.id === product.id);
-    if (exists) {
-      return prev.map((item) =>
-        item.id === product.id
-          ? {
-              ...item,
-              quantity: Math.min(item.quantity + quantity, 5), // 👈 nunca pasa de 5
-            }
-          : item
-      );
-    }
-    return [...prev, { ...product, quantity: Math.min(quantity, 5) }]; // 👈 por si ya vienen más de 5
-  });
-};
+    toastRef.current = false; // reset antes de cada acción
 
+    setCart((prev) => {
+      const exists = prev.find((item) => item.id === product.id);
+
+      if (exists) {
+        const newQuantity = Math.min(exists.quantity + quantity, 5);
+
+        // Mostrar toast solo una vez
+        if (!toastRef.current) {
+          if (exists.quantity + quantity > 5) {
+            toast.info("Máximo 5 unidades por producto");
+          } else {
+            toast.success("Producto agregado al carrito");
+          }
+          toastRef.current = true;
+        }
+
+        return prev.map((item) =>
+          item.id === product.id ? { ...item, quantity: newQuantity } : item
+        );
+      }
+
+      // Nuevo producto
+      const finalQuantity = Math.min(quantity, 5);
+
+      if (!toastRef.current) {
+        if (quantity > 5) {
+          toast.info("Máximo 5 unidades por producto");
+        } else {
+          toast.success("Producto agregado al carrito");
+        }
+        toastRef.current = true;
+      }
+
+      return [...prev, { ...product, quantity: finalQuantity }];
+    });
+  };
 
   const removeFromCart = (id: number) => {
     setCart((prev) => prev.filter((item) => item.id !== id));
   };
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart}}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
       {children}
     </CartContext.Provider>
   );

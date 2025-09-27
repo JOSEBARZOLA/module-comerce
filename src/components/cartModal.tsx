@@ -1,6 +1,6 @@
 
 import {  Modal } from "react-bootstrap";
-import "@/assets/sass/_modal.scss";
+import "@/assets/sass/_cart-modal.scss";
 import ShoppingCart from "@/components/shoppingCart";
 
 interface ModalOpenProps {
