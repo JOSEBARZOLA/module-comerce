@@ -1,8 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import type { ReactNode } from "react";
 
-
-
 interface FilterSectionProps {
   title: string;
   children: ReactNode;
@@ -12,8 +10,6 @@ function FilterSection({ title, children }: FilterSectionProps) {
   const [open, setOpen] = useState(true);
   const contentRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState("0px");
-
-  
 
   useEffect(() => {
     if (contentRef.current) {

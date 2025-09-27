@@ -1,5 +1,4 @@
-
-import {  Modal } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 import "@/assets/sass/_cart-modal.scss";
 import ShoppingCart from "@/components/shoppingCart";
 
@@ -8,15 +7,12 @@ interface ModalOpenProps {
   onClose: () => void;
 }
 
-export default function ModalOpen({ isOpen, onClose }: ModalOpenProps)  {
-
-
-
+export default function ModalOpen({ isOpen, onClose }: ModalOpenProps) {
   return (
-      <Modal show={isOpen} onHide={onClose} centered>
+    <Modal show={isOpen} onHide={onClose} centered>
       <Modal.Header closeButton className="no-border-header"></Modal.Header>
       <Modal.Body>
-        <ShoppingCart/>
+        <ShoppingCart />
       </Modal.Body>
     </Modal>
   );

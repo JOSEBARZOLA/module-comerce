@@ -5,8 +5,6 @@ import ProductsListPage from "@/pages/productsListPage";
 import ProductPage from "@/pages/productPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-
-
 function App() {
   return (
     <CartProvider>

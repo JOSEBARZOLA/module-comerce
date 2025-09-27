@@ -1,13 +1,13 @@
 /* Texto principal en negro */
-#h5{
+#h5 {
   font-size: 16px;
 }
 .quantity-toggle {
-   font-weight: bold;
+  font-weight: bold;
   color: #000 !important;
   text-decoration: none !important;
-  padding: 0 8px;   // 👈 dejá un mínimo padding para que no colapse
-  
+  padding: 0 8px; // 👈 dejá un mínimo padding para que no colapse
+
   align-items: center;
 }
 
@@ -16,8 +16,8 @@
   min-width: 140px;
   border-radius: 6px;
   padding: 0;
-   margin-top: 4px; // 👈 separa el menú del toggle
-  z-index: 1050;   // 👈 asegura que quede arriba de otros elementos
+  margin-top: 4px; // 👈 separa el menú del toggle
+  z-index: 1050; // 👈 asegura que quede arriba de otros elementos
 }
 
 /* Ítems del menú */

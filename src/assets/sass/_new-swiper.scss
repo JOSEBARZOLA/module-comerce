@@ -1,10 +1,10 @@
-@use 'swiper/css/effect-cube';
+@use "swiper/css/effect-cube";
 @use "swiper/css";
 
 .sponsors-section {
-    padding-top: 5vh;
-    text-align: center;
-    height: 100%;
+  padding-top: 5vh;
+  text-align: center;
+  height: 100%;
   background: #162561;
   background-image: radial-gradient(
       circle at 20% 100%,
@@ -19,11 +19,11 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-.container{
+  .container {
     padding: 0 0 0 0;
     width: 320px;
-}
-.sponsors-header {
+  }
+  .sponsors-header {
     margin-bottom: 3rem;
     display: flex;
     flex-direction: column;
@@ -64,7 +64,6 @@
       max-width: 500px;
       line-height: 1.4;
       text-align: center;
-     
     }
   }
 
@@ -84,7 +83,6 @@
     }
   }
 }
-
 
 .swiper {
   position: relative;
@@ -118,7 +116,6 @@
   .swiper {
     grid-area: slider;
   }
-  
 }
 
 @media (max-width: 470px) {

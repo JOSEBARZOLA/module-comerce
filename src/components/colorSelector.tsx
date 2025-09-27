@@ -1,4 +1,3 @@
-
 import "@/assets/sass/_color-selector.scss";
 import React, { useState } from "react";
 
@@ -30,7 +29,6 @@ const ColorSelector: React.FC<ColorSelectorProps> = ({ colors }) => {
           <img
             key={index}
             src={color.src}
-            
             className={`color-thumb ${
               selectedColor?.label === color.label ? "selected" : ""
             }`}

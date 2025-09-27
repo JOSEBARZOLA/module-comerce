@@ -4,19 +4,14 @@ import { useState } from "react";
 import FilterSection from "@/components/filterProps";
 
 interface SidebarFilterProps {
-  onFilterChange: (filters: {
-    categories: string[];
-    maxPrice: number;
-  }) => void;
+  onFilterChange: (filters: { categories: string[]; maxPrice: number }) => void;
 }
 
-function SidebarFilter ({ onFilterChange }: SidebarFilterProps){
-
+function SidebarFilter({ onFilterChange }: SidebarFilterProps) {
   const [maxPrice, setMaxPrice] = useState(500000);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  
 
-const toggleCategory = (category: string) => {
+  const toggleCategory = (category: string) => {
     setSelectedCategories((prev) =>
       prev.includes(category)
         ? prev.filter((c) => c !== category)
@@ -24,12 +19,12 @@ const toggleCategory = (category: string) => {
     );
   };
   const handleSearch = () => {
-  onFilterChange({
-    categories: selectedCategories,
-    maxPrice,
-  });
-};
-  
+    onFilterChange({
+      categories: selectedCategories,
+      maxPrice,
+    });
+  };
+
   return (
     <section>
       <aside

@@ -80,26 +80,25 @@ function NavbarProducts({ onSearch }: NavbarProductsProps) {
             <path d="M9 16H15V18H9z"></path>
           </svg>
         </button>
-       
       </div>
-       <div className="icon-cart" style={{ clear: "left", float: "left" }}>
-          <div
-            className="cart-line-1"
-            style={{ backgroundColor: "#ffffffff" }}
-          ></div>
-          <div
-            className="cart-line-2"
-            style={{ backgroundColor: "#ffffffff" }}
-          ></div>
-          <div
-            className="cart-line-3"
-            style={{ backgroundColor: "#ffffffff" }}
-          ></div>
-          <div
-            className="cart-wheel"
-            style={{ backgroundColor: "#ffffffff" }}
-          ></div>
-        </div>
+      <div className="icon-cart" style={{ clear: "left", float: "left" }}>
+        <div
+          className="cart-line-1"
+          style={{ backgroundColor: "#ffffffff" }}
+        ></div>
+        <div
+          className="cart-line-2"
+          style={{ backgroundColor: "#ffffffff" }}
+        ></div>
+        <div
+          className="cart-line-3"
+          style={{ backgroundColor: "#ffffffff" }}
+        ></div>
+        <div
+          className="cart-wheel"
+          style={{ backgroundColor: "#ffffffff" }}
+        ></div>
+      </div>
     </nav>
   );
 }

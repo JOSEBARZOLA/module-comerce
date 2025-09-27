@@ -13,7 +13,7 @@ export default function ParticleBackground() {
       fpsLimit: 60,
       backgroundMode: {
         enable: true,
-    zIndex: -1,
+        zIndex: -1,
         color: { value: "transparent" },
       },
       fullScreen: {
@@ -65,10 +65,10 @@ export default function ParticleBackground() {
           direction: "none" as const,
           outModes: { default: "out" as const },
           attract: {
-        enable: false,
-        rotateX: 600,
-        rotateY: 1200,
-      },
+            enable: false,
+            rotateX: 600,
+            rotateY: 1200,
+          },
         },
       },
     }),

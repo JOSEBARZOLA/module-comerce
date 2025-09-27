@@ -1,3 +1,4 @@
+{/**
 import type { Product } from "@/types/Product";
 
 export async function fetchProducts(): Promise<Product[]> {
@@ -19,3 +20,4 @@ export async function fetchProducts(): Promise<Product[]> {
     },
   ];
 }
+ */}

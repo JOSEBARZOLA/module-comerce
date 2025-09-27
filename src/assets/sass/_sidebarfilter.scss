@@ -5,7 +5,7 @@ $mt-values: (
   8: 4.5rem,
   9: 5rem,
   10: 5.5rem,
-  auto: auto
+  auto: auto,
 );
 
 @mixin generate-mt($prefix, $breakpoint: null) {
@@ -34,10 +34,8 @@ $mt-values: (
 }
 
 // utils/_sizes.scss
-$sizes: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50,
-        55, 60, 65, 70, 75, 80, 85, 90, 95, 
-        100, 105, 110, 115, 120, 125, 130, 135,
-        140, 145, 150;
+$sizes: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90,
+  95, 100, 105, 110, 115, 120, 125, 130, 135, 140, 145, 150;
 
 @each $size in $sizes {
   .bsb-w-#{$size} {
@@ -65,34 +63,34 @@ $sizes: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50,
       background-color: rgb(255, 255, 255);
       padding: 1rem 1rem;
     }
-    .sidebar-divider{
-    box-shadow: 0 5vh 0 rgba(0, 0, 0, 0.15);
+    .sidebar-divider {
+      box-shadow: 0 5vh 0 rgba(0, 0, 0, 0.15);
+    }
   }
-  }
-.form-group{
+  .form-group {
     margin-bottom: 3px;
-}
-label{
+  }
+  label {
     padding-left: 10px;
     font-size: 1.5vh;
-}
-.form-group:last-child{
+  }
+  .form-group:last-child {
     margin-bottom: 0;
-}
-h6{
+  }
+  h6 {
     margin-bottom: 1vh;
     font-size: 2vh;
-}
+  }
 
   #btn-buscar {
-  background: linear-gradient(
-    90deg,
-    rgba(140, 48, 158, 0.411) 0%,
-    rgba(189, 72, 144, 0.568) 50%,
-    rgba(252, 114, 174, 0.69) 100%
-  );
+    background: linear-gradient(
+      90deg,
+      rgba(140, 48, 158, 0.411) 0%,
+      rgba(189, 72, 144, 0.568) 50%,
+      rgba(252, 114, 174, 0.69) 100%
+    );
     box-shadow: 0 2px 6px rgba(189, 72, 144, 0.4);
-border: 2px solid transparent; /* para mantener tamaño si querés */
+    border: 2px solid transparent; /* para mantener tamaño si querés */
 
     align-items: center;
     display: flex;
@@ -100,5 +98,4 @@ border: 2px solid transparent; /* para mantener tamaño si querés */
     justify-content: center;
     align-items: center;
   }
-  
 }

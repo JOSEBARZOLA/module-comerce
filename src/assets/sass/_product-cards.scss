@@ -5,7 +5,7 @@
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); // sombra ligera
   overflow: hidden;
-  width: 220px;    // más angosta, similar a ML
+  width: 220px; // más angosta, similar a ML
   height: 350px;
   margin: 0px auto;
   transition: box-shadow 0.2s ease;
@@ -16,7 +16,7 @@
 }
 
 .product-images {
-  height: 180px; 
+  height: 180px;
   width: 100%;
   object-fit: contain; // evita cortes bruscos
   background: #fff;
@@ -61,19 +61,17 @@
   color: #666;
   line-height: 1.2;
   font-size: 13px;
-    line-height: 1.3;
-    max-height: 35px;
+  line-height: 1.3;
+  max-height: 35px;
 }
 
-.envio-span{
-      color: #00a650;
-    font-size: 14px;
-    font-weight: 600;
-    text-align: left;
-
+.envio-span {
+  color: #00a650;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
 }
 .full-badge {
-  
   align-items: center;
   gap: 1px;
   color: #00a650;

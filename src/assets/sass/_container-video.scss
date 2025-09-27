@@ -1,9 +1,9 @@
 .container {
   padding-top: 20px;
-  
-  .containerTitle{
+
+  .containerTitle {
     display: flex;
-     position: absolute;
+    position: absolute;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%); // centra en X e Y
@@ -13,10 +13,10 @@
 }
 /* Base */
 h1 {
-  font-size: 45px!important;
-  font-weight: bold!important;
+  font-size: 45px !important;
+  font-weight: bold !important;
   font-family: monospace;
-  letter-spacing: 6px!important;
+  letter-spacing: 6px !important;
   pointer-events: none;
   text-transform: uppercase;
   z-index: 4;

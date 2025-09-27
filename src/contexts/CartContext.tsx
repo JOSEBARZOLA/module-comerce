@@ -3,7 +3,6 @@ import type { ReactNode } from "react";
 import type { Product } from "@/types/Product";
 
 export type CartItem = Product & { quantity: number };
-
 export type CartContextType = {
   cart: CartItem[];
   addToCart: (product: Product, quantity: number) => void;

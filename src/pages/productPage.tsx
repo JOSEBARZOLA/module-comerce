@@ -10,23 +10,21 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 
 function ProductPage() {
+  const [quantity, setQuantity] = useState<number>(1);
 
-const [quantity, setQuantity] = useState<number>(1);
-
-const { id } = useParams<{ id: string }>();
-const product = products.find((p) => String(p.id) === id);
-console.log("ID de URL:", id);
-console.log("Producto encontrado:", product);
-
+  const { id } = useParams<{ id: string }>();
+  const product = products.find((p) => String(p.id) === id);
+  console.log("ID de URL:", id);
+  console.log("Producto encontrado:", product);
 
   const [isCartOpen, setIsCartOpen] = useState(false);
   const openCart = () => setIsCartOpen(true);
   const closeCart = () => setIsCartOpen(false);
- 
 
-    if (!product) {
+  if (!product) {
     return <h2>Producto no encontrado</h2>;
   }
+
   
   const detailsTabs = [
     {
@@ -59,14 +57,18 @@ console.log("Producto encontrado:", product);
 
   return (
     <>
-    <NavProductPage onCartClick={openCart}/>
+      <NavProductPage onCartClick={openCart} />
       <Container className="my-3" id="container-product">
         <Row className="details-snippet1">
           <ProductImages images={product.images || []} />
           <Col className="col-md-4 ">
-            <ProductPurchaseCard product={product} quantity={quantity} setQuantity={setQuantity} />
+            <ProductPurchaseCard
+              product={product}
+              quantity={quantity}
+              setQuantity={setQuantity}
+            />
           </Col>
-        </Row>  
+        </Row>
         <AdditionalDetails tabs={detailsTabs} />
         <ModalOpen isOpen={isCartOpen} onClose={closeCart} />
       </Container>

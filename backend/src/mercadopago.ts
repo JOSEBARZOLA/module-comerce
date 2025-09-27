@@ -1,8 +1,7 @@
-import express, { type Request, type Response } from 'express';
-import cors from 'cors';
-import dotenv from 'dotenv';
-import { MercadoPagoConfig, Preference } from 'mercadopago'; // <- import nombrado
-
+import express, { type Request, type Response } from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+import { MercadoPagoConfig, Preference } from "mercadopago"; // <- import nombrado
 
 dotenv.config();
 const app = express();
@@ -16,7 +15,7 @@ const client = new MercadoPagoConfig({
 // 2) Instanciar el cliente de Preference
 const preferenceClient = new Preference(client);
 // Ruta para crear preferencias
-app.post('/create_preference', async (req: Request, res: Response) => {
+app.post("/create_preference", async (req: Request, res: Response) => {
   try {
     const { title, amount } = req.body;
 
@@ -24,8 +23,8 @@ app.post('/create_preference', async (req: Request, res: Response) => {
     const preference = {
       items: [
         {
-          id: '1234',
-          title: title ?? 'Producto prueba',
+          id: "1234",
+          title: title ?? "Producto prueba",
           quantity: 1,
           unit_price: Number(amount) || 100,
         },
@@ -36,18 +35,20 @@ app.post('/create_preference', async (req: Request, res: Response) => {
     // según versión, el id puede venir como response.id o response.body.id
     const preferenceId = response.id;
     // logueá la response completa si querés ver estructura exacta
-    console.log('create preference response:', response);
+    console.log("create preference response:", response);
     if (!preferenceId) {
       // devuelve la response completa para debug si no hay id
       return res.status(201).json({ raw: response });
     }
     res.json({ id: preferenceId });
   } catch (error: any) {
-    console.error('Error creando preferencia:', error);
+    console.error("Error creando preferencia:", error);
     res.status(500).json({ error: error.message ?? error });
   }
 });
 // test
-app.get('/', (_req, res) => res.send('Backend de Mercado Pago corriendo'));
+app.get("/", (_req, res) => res.send("Backend de Mercado Pago corriendo"));
 const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => console.log(`Servidor corriendo en http://localhost:${PORT}`));
+app.listen(PORT, () =>
+  console.log(`Servidor corriendo en http://localhost:${PORT}`)
+);

@@ -2,30 +2,29 @@
   border-bottom: none;
 }
 @media (min-width: 1450px) {
-  
   /* si querés que quede CENTRADO vertical y horizontal */
   .modal {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     .modal-content {
-    max-width: auto;
-    max-height: auto;
-    margin: 0 auto; /* centra horizontalmente si el contenedor tiene display:block */
-  }
+      max-width: auto;
+      max-height: auto;
+      margin: 0 auto; /* centra horizontalmente si el contenedor tiene display:block */
+    }
   }
 }
-@media (max-width: 320px){
-.modal {
+@media (max-width: 320px) {
+  .modal {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-.modal-dialog{
-  width: 100%;
-  margin: 0 auto;
-}
+  .modal-dialog {
+    width: 100%;
+    margin: 0 auto;
+  }
 }

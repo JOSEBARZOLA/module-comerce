@@ -25,7 +25,6 @@ p {
     position: relative;
     z-index: 2;
   }
-
   .section-mask {
     position: absolute;
     top: 0;
@@ -48,7 +47,6 @@ p {
       // Recorte diagonal con clip-path para mostrar solo en esa forma
       clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
     }
-
     // Ojo: eliminamos la máscara negra con skew para evitar sobreposición
     // .mask-diagonal {
     //   position: absolute;
@@ -60,7 +58,6 @@ p {
     //   transform: skewY(10deg);
     //   z-index: 2;
     // }
-
     &.bg-option-2 {
       .mask-bg {
         background: url(https://tribekaretail.com/wp-content/uploads/2017/07/tribe_portada-1.jpg)
@@ -69,7 +66,6 @@ p {
         clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
       }
     }
-
     &.has-parallax {
       .mask-bg {
         background-position: center calc(50% + var(--scroll, 0px));
@@ -77,7 +73,6 @@ p {
     }
   }
 }
-
 .has-padding {
   padding-top: 250px !important;
   padding-bottom: 250px !important;

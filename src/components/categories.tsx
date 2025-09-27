@@ -41,6 +41,6 @@ function Categories() {
         </div>
       </div>
     </section>
-  )
-};
+  );
+}
 export default Categories;

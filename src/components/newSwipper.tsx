@@ -33,7 +33,6 @@ function NewSwiper() {
         <h2 className="sponsors-title">SPONSORS</h2>
         <p className="sponsors-subtitle">Marcas que definen nuestro estilo.</p>
       </div>
-
       <Container>
         <Swiper
           modules={[EffectCube, Autoplay]}

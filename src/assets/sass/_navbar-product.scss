@@ -8,7 +8,7 @@
   );
   border-bottom: 0.1px #b8075059 solid;
   box-shadow: 0 4px 6px rgb(85, 0, 0); // 👈 sombra suave hacia abajo
-position: fixed;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 1030;
@@ -21,7 +21,6 @@ position: fixed;
   &.show {
     transform: translateY(0); // vuelve a aparecer
   }
-
 }
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import url("https://fonts.googleapis.com/css?family=Mukta+Malar");
@@ -118,8 +117,6 @@ $text-muted: #66042d;
       box-sizing: inherit;
     }
   }
-
-  
 }
 .icon-cart {
   width: 35px;
@@ -138,7 +135,7 @@ $text-muted: #66042d;
   -webkit-transform: rotate(5deg);
   -moz-transform: rotate(5deg);
   -ms-transform: rotate(5deg);
-  transform: rotate(5deg); 
+  transform: rotate(5deg);
   background-color: #000;
   border-bottom-left-radius: 35%;
 }
@@ -152,7 +149,7 @@ $text-muted: #66042d;
   -webkit-transform: rotate(80deg);
   -moz-transform: rotate(80deg);
   -ms-transform: rotate(80deg);
-  transform: rotate(80deg); 
+  transform: rotate(80deg);
   background-color: #000;
 }
 
@@ -166,7 +163,7 @@ $text-muted: #66042d;
   -webkit-transform: rotate(-80deg);
   -moz-transform: rotate(-80deg);
   -ms-transform: rotate(-80deg);
-  transform: rotate(-80deg); 
+  transform: rotate(-80deg);
   background-color: inherit;
 }
 
@@ -181,7 +178,7 @@ $text-muted: #66042d;
   -webkit-transform: rotate(40deg);
   -moz-transform: rotate(40deg);
   -ms-transform: rotate(40deg);
-  transform: rotate(40deg); 
+  transform: rotate(40deg);
   border-top-left-radius: 50%;
   border-bottom-left-radius: 25%;
 }
@@ -226,31 +223,26 @@ $text-muted: #66042d;
   bottom: 0;
 }
 
-
 .navbar-toggler {
   margin-left: 12px;
   border: none;
   box-shadow: none !important;
 }
 
-
-
 @media (max-width: 425px) {
   .wrap {
     max-width: 300px;
-    margin:0px 0px;
+    margin: 0px 0px;
   }
-  #container-nav{
+  #container-nav {
     max-width: 200px;
     margin: 0px 0px 0px 50px;
   }
-
 }
 
-@media (width: 768px){
-#container-nav{
+@media (width: 768px) {
+  #container-nav {
     max-width: 400px;
     margin: 0px 0px 0 20vh;
   }
-
 }

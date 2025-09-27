@@ -32,12 +32,6 @@ function CardSlide() {
         <SwiperSlide>
           <img src="" />
         </SwiperSlide>
-        <SwiperSlide>
-          <img src="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="" />
-        </SwiperSlide>
       </Swiper>
     </>
   );

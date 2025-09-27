@@ -3,7 +3,10 @@ import { Payment, initMercadoPago } from "@mercadopago/sdk-react";
 import { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 
-initMercadoPago(import.meta.env.VITE_MP_PUBLIC_KEY || "TU_PUBLIC_KEY_DE_PRUEBA", {locale: 'es-AR'});
+initMercadoPago(
+  import.meta.env.VITE_MP_PUBLIC_KEY || "TU_PUBLIC_KEY_DE_PRUEBA",
+  { locale: "es-AR" }
+);
 type PaymentBrickProps = {
   title: string;
   amount: number;
@@ -50,13 +53,13 @@ export default function PaymentBrick({ title, amount }: PaymentBrickProps) {
   };
   return (
     <Container style={{ paddingLeft: 0, paddingRight: 0 }}>
-    <Payment
-    initialization={initialization}
-    customization={customization}
-    onSubmit={onSubmit}
+      <Payment
+        initialization={initialization}
+        customization={customization}
+        onSubmit={onSubmit}
         onReady={() => console.log("Brick listo")}
         onError={(error) => console.error("Error Brick:", error)}
-    />
+      />
     </Container>
   );
 }

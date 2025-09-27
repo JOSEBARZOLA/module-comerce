@@ -1,7 +1,7 @@
-@use 'swiper/css';
-@use 'swiper/css/effect-creative';
-@use 'swiper/css/effect-cube';
-@use 'swiper/css/effect-cards';
+@use "swiper/css";
+@use "swiper/css/effect-creative";
+@use "swiper/css/effect-cube";
+@use "swiper/css/effect-cards";
 
 $swiper-colors: (
   1: rgb(206, 17, 17),
@@ -13,7 +13,7 @@ $swiper-colors: (
   7: rgb(35, 99, 19),
   8: rgb(0, 68, 255),
   9: rgb(218, 12, 218),
-  10:rgb(54, 94, 77)
+  10: rgb(54, 94, 77),
 );
 
 .swiper {
@@ -30,10 +30,10 @@ $swiper-colors: (
   font-weight: bold;
   color: #fff;
   @each $i, $color in $swiper-colors {
-      &:nth-child(#{$i}n) {
-        background-color: $color;
-      }
+    &:nth-child(#{$i}n) {
+      background-color: $color;
     }
+  }
 }
 .swiper-slide img {
   display: block;

@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import "@/assets/sass/_sponsors-section.scss";
 
-
 // Import de imágenes
 import adidasLogo from "@/assets/img/sponsors/adidasLogo.svg";
 import converseLogo from "@/assets/img/sponsors/converseLogo.svg";
@@ -71,13 +70,10 @@ function SponsorsSection() {
   );
   return (
     <section id="sponsors" className="sponsors-section">
-
       <div className="sponsors-header">
         <div className="sponsors-icon">🏅</div>
         <h2 className="sponsors-title">SPONSORS</h2>
-        <p className="sponsors-subtitle">
-          Marcas que definen un estilo.
-        </p>
+        <p className="sponsors-subtitle">Marcas que definen un estilo.</p>
       </div>
       <div ref={containerRef}>
         {Object.entries(groupedSponsors).map(([tier, sponsorsInTier]) => (

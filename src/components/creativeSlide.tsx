@@ -36,12 +36,6 @@ function CreativeSlide() {
       <SwiperSlide>
         <img src="" />
       </SwiperSlide>
-      <SwiperSlide>
-        <img src="" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="" />
-      </SwiperSlide>
     </Swiper>
   );
 }

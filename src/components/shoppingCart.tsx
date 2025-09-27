@@ -22,7 +22,6 @@ const ShoppingCart: React.FC = () => {
           <h4 className="mb-0">Carrito de compras</h4>
           <span className="text-muted">{cart.length} Productos</span>
         </div>
-
         <div className="row g-4">
           {/* Cart Items */}
           <div className="col-lg-8">
@@ -68,7 +67,6 @@ const ShoppingCart: React.FC = () => {
               )}
             </div>
           </div>
-
           {/* Summary Section */}
           <div className="col-lg-4">
             <div className="summary-card p-4 shadow-sm">

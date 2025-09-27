@@ -1,5 +1,9 @@
 import { useState, useRef } from "react";
-import { CartContext, type CartItem, type CartProviderProps } from "./CartContext";
+import {
+  CartContext,
+  type CartItem,
+  type CartProviderProps,
+} from "./CartContext";
 import type { Product } from "@/types/Product";
 import { toast } from "react-toastify";
 
@@ -15,7 +19,6 @@ export const CartProvider = ({ children }: CartProviderProps) => {
 
       if (exists) {
         const newQuantity = Math.min(exists.quantity + quantity, 5);
-
         // Mostrar toast solo una vez
         if (!toastRef.current) {
           if (exists.quantity + quantity > 5) {
@@ -30,7 +33,6 @@ export const CartProvider = ({ children }: CartProviderProps) => {
           item.id === product.id ? { ...item, quantity: newQuantity } : item
         );
       }
-
       // Nuevo producto
       const finalQuantity = Math.min(quantity, 5);
 

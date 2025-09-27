@@ -1,7 +1,7 @@
-// src/modules/shopverse/pages/ShopverseHomePage.tsx
-import { useSafeClientConfig } from "@/contexts/ClientConfigContext";
+{/** src/modules/shopverse/pages/ShopverseHomePage.tsx
+  import { useSafeClientConfig } from "@/contexts/ClientConfigContext";
 
-export default function ShopverseHomePage() {
+ export default function ShopverseHomePage() {
   const { name, clientId, businessType } = useSafeClientConfig();
   return (
     <div style={{ padding: "2rem", color: "white" }}>
@@ -11,4 +11,4 @@ export default function ShopverseHomePage() {
       <p>Business: {businessType}</p>
     </div>
   );
-}
+} */}

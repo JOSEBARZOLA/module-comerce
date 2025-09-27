@@ -28,7 +28,6 @@ const AdditionalDetails: React.FC<AdditionalDetailsProps> = ({ tabs }) => {
           </li>
         ))}
       </ul>
-
       <div className="tab-content mt-4 mb-3">
         {tabs.map(
           (tab) =>

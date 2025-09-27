@@ -3,6 +3,6 @@ export interface Product {
   name: string;
   price: number;
   description?: string;
-  category: string;   // 👈 OBLIGATORIO
+  category: string; // 👈 OBLIGATORIO
   images?: string[];
 }
