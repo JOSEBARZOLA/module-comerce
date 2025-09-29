@@ -1,0 +1,22 @@
+.carousel--images {
+  margin-top: 30px;
+  height: 540px;
+  display: flex;
+  gap: 2em;
+  padding: 30px;
+  background-color: black;
+  overflow-x: scroll;
+  /* removes the horizontal scrollbar: */
+  scrollbar-width: none;
+}
+
+.carousel--item {
+  /* carousel item should have min-width declared: */
+  min-width: 318px;
+  /* carousel item should have defined height: */
+  height: 476px;
+  background-position: center;
+  background-size: cover;
+  vertical-align: middle;
+   filter: brightness(45%);
+}

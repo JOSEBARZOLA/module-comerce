@@ -7,6 +7,7 @@ import type { Product } from "@/types/Product";
 import "@/assets/sass/_sidebarfilter.scss";
 import NavbarProducts from "@/components/navbarProducts";
 import "@/assets/sass/_product-list-page.scss";
+import ImagesCarousel from "@/components/imagesCarousel";
 
 function ProductsListPage() {
   const products: Product[] = productsData as Product[];
@@ -81,6 +82,7 @@ function ProductsListPage() {
           </Container>
         </section>
       </div>
+      <ImagesCarousel/>
     </>
   );
 }
