@@ -4,7 +4,7 @@
   display: flex;
   gap: 2em;
   padding: 30px;
-  background-color: black;
+  background-color: rgba(255, 125, 125, 0.192);
   overflow-x: scroll;
   /* removes the horizontal scrollbar: */
   scrollbar-width: none;
@@ -18,5 +18,5 @@
   background-position: center;
   background-size: cover;
   vertical-align: middle;
-   filter: brightness(45%);
+  filter: brightness(65%);
 }
