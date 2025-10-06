@@ -7,6 +7,7 @@ initMercadoPago(
   import.meta.env.VITE_MP_PUBLIC_KEY || "TU_PUBLIC_KEY_DE_PRUEBA",
   { locale: "es-AR" }
 );
+
 type PaymentBrickProps = {
   title: string;
   amount: number;
@@ -16,7 +17,6 @@ export default function PaymentBrick({ title, amount }: PaymentBrickProps) {
   const [preferenceId, setPreferenceId] = useState<string | null>(null);
 
   useEffect(() => {
-    // Crear preferencia con los datos del producto
     fetch("http://localhost:3001/create_preference", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -28,7 +28,7 @@ export default function PaymentBrick({ title, amount }: PaymentBrickProps) {
         setPreferenceId(data.id);
       })
       .catch((err) => console.error("Error creando preferencia:", err));
-  }, [title, amount]); // importante: se vuelve a ejecutar si cambia el producto
+  }, [title, amount]);
 
   if (!preferenceId) return <div>Cargando pago...</div>;
 
@@ -45,12 +45,39 @@ export default function PaymentBrick({ title, amount }: PaymentBrickProps) {
       debitCard: "all",
       mercadoPago: "all",
     },
+    texts: {
+      form: {
+        locale: "es-AR",
+      },
+    },
   } as const;
 
   const onSubmit = async ({ selectedPaymentMethod, formData }: any) => {
     console.log("Formulario enviado", selectedPaymentMethod, formData);
+
+    try {
+      const res = await fetch("http://localhost:3001/process_payment", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+      console.log("Respuesta del backend al procesar pago:", data);
+
+      if (res.ok) {
+        alert("✅ Pago procesado correctamente");
+      } else {
+        alert("❌ Error al procesar el pago: " + (data.error || "Desconocido"));
+      }
+    } catch (error) {
+      console.error("Error enviando pago al backend:", error);
+      alert("❌ Error de conexión con el servidor");
+    }
+
     return Promise.resolve();
   };
+
   return (
     <Container style={{ paddingLeft: 0, paddingRight: 0 }}>
       <Payment

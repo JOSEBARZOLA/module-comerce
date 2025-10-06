@@ -59,6 +59,10 @@ const ProductPurchaseCard: React.FC<Props> = ({ product }) => {
   const { addToCart } = useCart();
   const [quantity, setQuantity] = useState<number>(1);
 
+  // 👇 nuevo estado para el talle
+  const [selectedSize, setSelectedSize] = useState<string>("36 AR");
+
+
   return (
     <div className="card purchase-card">
       <div className="card-body">
@@ -78,13 +82,13 @@ const ProductPurchaseCard: React.FC<Props> = ({ product }) => {
           </li>
         </ul>
         <PaymentInfo />
-        <SizeSelector />
+        <SizeSelector selectedSize={selectedSize} onChange={setSelectedSize}/>
         <ColorSelector colors={productColors} />
         <QuantitySelector quantity={quantity} onChange={setQuantity} />
         <div className="btn-group btn-group-lg col-12 mb-2">
           <button
             className="btn btn-agregar"
-            onClick={() => addToCart(product, quantity)}
+            onClick={() => addToCart(product, quantity, selectedSize)}
           >
             <i className="me-2"></i>Agregar al carrito
           </button>

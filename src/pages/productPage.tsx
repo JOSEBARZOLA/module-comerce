@@ -12,6 +12,7 @@ import { useParams } from "react-router-dom";
 function ProductPage() {
   const [quantity, setQuantity] = useState<number>(1);
 
+
   const { id } = useParams<{ id: string }>();
   const product = products.find((p) => String(p.id) === id);
   console.log("ID de URL:", id);

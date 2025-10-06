@@ -9,7 +9,7 @@ function HeroCarouselVideo() {
 
   useEffect(() => {
     // Cargar videos
-    const modules = import.meta.glob("/src/assets/videos/kim_activa/*.mp4", {
+    const modules = import.meta.glob("/src/assets/vid/kim_activa/*.mp4", {
       eager: true,
     });
     const vids: string[] = Object.values(modules).map(

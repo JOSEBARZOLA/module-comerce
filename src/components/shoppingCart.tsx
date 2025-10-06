@@ -41,7 +41,7 @@ const ShoppingCart: React.FC = () => {
                       </div>
                       <div className="col-md-4">
                         <h6 className="mb-1">{product.name}</h6>
-                        <p className="text-muted mb-0">{product.description}</p>
+                        <p className=" mb-0 size-product">Talle: {product.size}</p>
                       </div>
                       <div className="col-md-3">
                         <span>
@@ -57,7 +57,7 @@ const ShoppingCart: React.FC = () => {
                       <div className="col-md-1">
                         <i
                           className="bx bx-trash remove-btn"
-                          onClick={() => removeFromCart(product.id)}
+                          onClick={() => removeFromCart(product.id, product.size)}
                           style={{ cursor: "pointer" }}
                         ></i>
                       </div>

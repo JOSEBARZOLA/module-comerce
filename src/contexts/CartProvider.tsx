@@ -11,11 +11,11 @@ export const CartProvider = ({ children }: CartProviderProps) => {
   const [cart, setCart] = useState<CartItem[]>([]);
   const toastRef = useRef(false); // ✅ para evitar duplicados
 
-  const addToCart = (product: Product, quantity: number) => {
+  const addToCart = (product: Product, quantity: number, size: string) => {
     toastRef.current = false; // reset antes de cada acción
 
     setCart((prev) => {
-      const exists = prev.find((item) => item.id === product.id);
+       const exists = prev.find((item) => item.id === product.id && item.size === size);
 
       if (exists) {
         const newQuantity = Math.min(exists.quantity + quantity, 5);
@@ -30,7 +30,7 @@ export const CartProvider = ({ children }: CartProviderProps) => {
         }
 
         return prev.map((item) =>
-          item.id === product.id ? { ...item, quantity: newQuantity } : item
+          item.id === product.id && item.size === size ? { ...item, quantity: newQuantity } : item
         );
       }
       // Nuevo producto
@@ -45,13 +45,14 @@ export const CartProvider = ({ children }: CartProviderProps) => {
         toastRef.current = true;
       }
 
-      return [...prev, { ...product, quantity: finalQuantity }];
+      return [...prev, { ...product, quantity: finalQuantity,size}];
     });
   };
 
-  const removeFromCart = (id: number) => {
-    setCart((prev) => prev.filter((item) => item.id !== id));
-  };
+ const removeFromCart = (id: number, size: string) => {
+  setCart((prev) => prev.filter((item) => !(item.id === id && item.size === size)));
+};
+
 
   return (
     <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
