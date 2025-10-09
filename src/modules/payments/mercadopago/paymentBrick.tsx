@@ -55,6 +55,11 @@ export default function PaymentBrick({ title, amount }: PaymentBrickProps) {
   const onSubmit = async ({ selectedPaymentMethod, formData }: any) => {
     console.log("Formulario enviado", selectedPaymentMethod, formData);
 
+      if (formData === null) {
+    // Es un wallet_purchase → no se procesa desde el backend
+    console.log("Pago con Wallet (Checkout Pro) redirigido por Mercado Pago");
+    return;
+  }
     try {
       const res = await fetch("http://localhost:3001/process_payment", {
         method: "POST",

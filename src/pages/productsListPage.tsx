@@ -7,26 +7,18 @@ import type { Product } from "@/types/Product";
 import "@/assets/sass/_sidebarfilter.scss";
 import NavbarProducts from "@/components/navbarProducts";
 import "@/assets/sass/_product-list-page.scss";
-import ImagesCarousel from "@/components/imagesCarousel";
 import HeroCarouselVideo from "@/components/heroCarouselVideo";
-
-
-
+import ContainerPublicity from "@/components/containerPublicity";
 
 function ProductsListPage() {
   const products: Product[] = productsData as Product[];
-  // Estado con los productos a mostrar
-  const [displayProducts, setDisplayProducts] = useState<Product[]>([]);
-  // Estado  de busqueda
-  const [searchQuery, setSearchQuery] = useState("");
-
+  const [displayProducts, setDisplayProducts] = useState<Product[]>([]); // Estado con los productos a mostrar
+  const [searchQuery, setSearchQuery] = useState("");  // Estado  de busqueda
   const handleSearch = (query: string) => {
     setSearchQuery(query);
   };
-
   const [filters, setFilters] = useState<{
     categories: string[];
-
     maxPrice: number;
   }>({
     categories: [],
@@ -34,7 +26,6 @@ function ProductsListPage() {
   });
   useEffect(() => {
     let filtered = [...products];
-
     if (filters.categories.length > 0) {
       filtered = filtered.filter((p) =>
         filters.categories.includes(p.category)
@@ -51,23 +42,19 @@ function ProductsListPage() {
           p.category.toLowerCase().includes(q)
       );
     }
-
     setDisplayProducts(filtered);
   }, [filters, products, searchQuery]);
   useEffect(() => {
-    // Ejemplo: mostrar 60 productos random
-    // const shuffled = [...products].sort(() => 0.5 - Math.random());
     const selected = products.slice(0, 60);
     setDisplayProducts(selected);
   }, [products]);
 
   return (
     <>
+    <ContainerPublicity/>
       <NavbarProducts onSearch={handleSearch} />
-      {/* Sidebar a la izquierda */}
-      <SidebarFilter onFilterChange={setFilters} />
-      {/* Body con cards */}
-      <div className="pt-5" id="main-demo">
+      <SidebarFilter onFilterChange={setFilters} />   {/* Sidebar a la izquierda */}
+      <div className="pt-5" id="main-demo"> {/* Body con cards */}
         <section className="my-1 my-md-2">
           <Container>
             <Row className="gy-3 row_card">
@@ -86,7 +73,6 @@ function ProductsListPage() {
           </Container>
         </section>
       </div>
-   <ImagesCarousel/>
 <HeroCarouselVideo/>
     </>
   );

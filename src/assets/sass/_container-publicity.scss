@@ -1,0 +1,168 @@
+.video_overlay { /* Overlay oscuro */
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.911);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9998;
+  pointer-events: auto;
+  flex-direction: column;
+}
+.container_video {   /* Contenedor del video */
+  position: relative;
+  width: 250px;
+  height: 450px;
+  padding-bottom: 15vh;
+  margin-bottom: 50px;
+  background: transparent;
+  z-index: 9999;
+  .video_publicity { // Aplicamos la animación de glow directamente al contenedor o al video
+    border-radius: 25px;
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.473);
+    animation: glow 2s infinite alternate;
+  }
+}
+/* Animación de parpadeo */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.205);
+  }
+  50% {
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.466);
+  }
+  100% {
+    box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.315);
+  }
+}
+/* Animaciones */
+@keyframes dropDown {
+  0% {
+    transform: translateY(-120%);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(10%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes moveUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120%);
+    opacity: 0;
+  }
+}
+.animate_fall {
+  animation: dropDown 1s ease-out forwards;
+}
+.animate_up {
+  animation: moveUp 0.5s ease-in forwards;
+}
+/* Spinner y botón */
+.video_controls {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+  border-radius: 50%;
+}
+.spinner_publicity {
+  width: 28px; // mantiene tamaño original
+  height: 28px;
+  border-top: 2px solid #ff0036; // línea más fina
+  border-radius: 100%;
+  position: relative;
+  animation: spin 0.6s linear infinite; // velocidad adaptada a tu spinner
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+  }
+  &::after {
+    width: 26px; // mismo tamaño que el contenedor
+    height: 26px;
+    top: 0;
+    left: 0;
+    border-radius: 100%;
+    border-right: 2px solid #ffe500; // color amarillo
+    animation: spin 2s linear infinite; // velocidad adaptada
+  }
+  &::before {
+    width: 24px; // mismo tamaño que el contenedor
+    height: 24px;
+    top: 0;
+    left: 0;
+    border-radius: 100%;
+    border-left: 2px solid #00defa; // color azul
+    animation: spin 1.7s linear infinite; // velocidad adaptada
+  }
+}
+/* Animación de rotación */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.close_btn {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+  &:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+}
+
+.text-piramide {
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+
+  .word {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: appear .5s ease forwards;
+
+    &.word1 { animation-delay: 3s; }
+    &.word2 { animation-delay: 4s; }
+    &.word3 { animation-delay: 5s; }
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,6 +1,6 @@
 import "@/assets/sass/_body-section.scss";
 import Categories from "@/components/categories";
-import ContainerVideo from "@/components/containerVideo";
+import ContainerPublicity from "@/components/containerPublicity";
 
 function BodySections() {
   return (
@@ -26,7 +26,7 @@ function BodySections() {
         <div className="section-content has-diagonal"></div>
         <div className="section-mask bg-option-2 has-parallax">
           <div>
-            <ContainerVideo />
+            <ContainerPublicity />
           </div>
         </div>
       </section>
