@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
 .video_overlay { /* Overlay oscuro */
   position: fixed;
   inset: 0;
@@ -133,10 +135,24 @@
 
 .text-piramide {
   position: relative;
-  text-align: center;
-  color: #ffffff;
-  font-family: "Poppins", sans-serif;
+   text-align: center;
+  font-family: 'Oswald', Helvetica, sans-serif;
   font-size: 2rem;
+  transform: skewY(-10deg);
+  letter-spacing: 4px;
+  word-spacing: -8px;
+  color: rgb(255, 255, 255);
+  text-shadow: 
+    -1px -1px 0 rgba(6, 41, 87, 0.678),
+    -2px -2px 0 rgba(6, 41, 87, 0.678),
+    -3px -3px 0 rgba(6, 41, 87, 0.678),
+    -4px -4px 0 rgba(6, 41, 87, 0.678),
+    -5px -5px 0 rgba(6, 41, 87, 0.678),
+    -6px -6px 0 rgba(6, 41, 87, 0.678),
+    -7px -7px 0 rgba(6, 41, 87, 0.678),
+    -8px -8px 0 rgba(6, 41, 87, 0.678),
+    -20px 15px 20px rgb(61, 64, 75);
+
   font-weight: 500;
   line-height: 1.1;
   display: flex;
@@ -144,19 +160,17 @@
   align-items: center;
   justify-content: center;
   gap: 0.7rem;
-
-  .word {
+    .word {
     opacity: 0;
     transform: translateY(10px);
-    animation: appear .5s ease forwards;
-
-    &.word1 { animation-delay: 3s; }
-    &.word2 { animation-delay: 4s; }
-    &.word3 { animation-delay: 5s; }
+    animation-fill-mode: 5s forwards;
+    &.word1 { animation: fadeIn 0.6s ease forwards 3s, fadeOut 0.6s ease forwards 8s; }
+    &.word2 { animation: fadeIn 0.6s ease forwards 4s, fadeOut 0.6s ease forwards 7s; }
+    &.word3 { animation: fadeIn 0.6s ease forwards 5s, fadeOut 0.6s ease forwards 6s; }
   }
 }
-
-@keyframes appear {
+/* Aparece */
+@keyframes fadeIn {
   from {
     opacity: 0;
     transform: translateY(10px);
@@ -164,5 +178,17 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Desaparece */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
   }
 }

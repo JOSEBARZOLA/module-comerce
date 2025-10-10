@@ -36,8 +36,8 @@ function ContainerPublicity() {
   const handleVideoPlay = () => {
     // Cuando el video comienza a reproducirse
     const closeTimer = setTimeout(() => {
-      setShowClose(true); // Inicia el temporizador de 4s para mostrar la X
-    }, 4000);
+      setShowClose(true); // Inicia el temporizador de 5s para mostrar la X
+    }, 5000);
     return () => clearTimeout(closeTimer);
   };
   const handleClose = () => {
