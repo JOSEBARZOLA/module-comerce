@@ -3,8 +3,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 100%;
-  height: 859px;
+  max-width: 1800px;
+  max-height: 1200px;
   background: url("/src/assets/img/portalverse/bg-universe1.png") center/contain no-repeat;
   overflow: hidden;
   padding: 0;
@@ -15,7 +15,7 @@
     max-width: 1800px;
     aspect-ratio: 3 / 2;
     background: url("/src/assets/img/portalverse/portalverse1.png") center/contain no-repeat;
-    transition: transform 1.6s ease;
+    transition: transform 2s ease;
   }
 
   .portalgate-container {
@@ -29,8 +29,8 @@
   }
 
   .portal-sphere {
-    width: 500px;
-    height: 500px;
+    width: 450px;
+    height: 450px;
     border-radius: 50%;
     background: rgba(60, 118, 228, 0.247);
     backdrop-filter: blur(2px);
