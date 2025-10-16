@@ -6,115 +6,75 @@ function HeroCarouselVideo() {
   const scrollInterval = useRef<NodeJS.Timeout | null>(null);
   const isUserInteracting = useRef(false);
   const [videoList, setVideoList] = useState<string[]>([]);
+  const observerRef = useRef<IntersectionObserver | null>(null);
+
+  const isMobile =
+    typeof window !== "undefined"
+      ? window.matchMedia("(max-width: 991px)").matches
+      : false;
 
   useEffect(() => {
-    // Cargar videos
-    const modules = import.meta.glob("/src/assets/vid/kim_activa/*.mp4", {
-      eager: true,
-    });
-    const vids: string[] = Object.values(modules).map(
-      (mod: any) => mod.default ?? mod
-    );
-    setVideoList(vids);
+    const modules = import.meta.glob("/src/assets/vid/kim_activa/*.mp4", { eager: true });
+    setVideoList(Object.values(modules).map((mod: any) => mod.default ?? mod));
   }, []);
 
   useEffect(() => {
     const carousel = carouselRef.current;
     if (!carousel || videoList.length === 0) return;
 
+    let isDown = false;
+    let startX = 0;
+    let scrollLeft = 0;
+
     const startAutoScroll = () => {
       if (scrollInterval.current) return;
       scrollInterval.current = setInterval(() => {
-        if (!isUserInteracting.current) {
+        if (!isUserInteracting.current && !isMobile) {
           carousel.scrollLeft -= 1;
-          if (carousel.scrollLeft <= 0) {
-            carousel.scrollLeft = carousel.scrollWidth / 2;
-          }
+          if (carousel.scrollLeft <= 0) carousel.scrollLeft = carousel.scrollWidth / 2;
         }
-      }, 32);
+      }, 46);
     };
+    const stopAutoScroll = () => scrollInterval.current && (clearInterval(scrollInterval.current), scrollInterval.current = null);
 
-    const stopAutoScroll = () => {
-      if (scrollInterval.current) {
-        clearInterval(scrollInterval.current);
-        scrollInterval.current = null;
-      }
-    };
+    // === Drag genérico ===
+    const startDrag = (pageX: number) => { isDown = true; isUserInteracting.current = true; startX = pageX - carousel.offsetLeft; scrollLeft = carousel.scrollLeft; stopAutoScroll(); };
+    const moveDrag = (pageX: number) => { if (!isDown) return; carousel.scrollLeft = scrollLeft - (pageX - startX) * 0.2; };
+    const endDrag = () => { isDown = false; isUserInteracting.current = false; startAutoScroll(); };
 
-    // === Drag scroll ===
-    let isDown = false;
-    let startX: number;
-    let scrollLeft: number;
+    // Eventos mouse
+    carousel.addEventListener("mousedown", e => startDrag(e.pageX));
+    carousel.addEventListener("mousemove", e => moveDrag(e.pageX));
+    ["mouseup", "mouseleave"].forEach(ev => carousel.addEventListener(ev, endDrag));
 
-    const handleMouseDown = (e: MouseEvent) => {
-      isDown = true;
-      isUserInteracting.current = true;
-      startX = e.pageX - carousel.offsetLeft;
-      scrollLeft = carousel.scrollLeft;
-      stopAutoScroll();
-    };
-
-    const handleMouseLeave = () => {
-      isDown = false;
-    };
-
-    const handleMouseUp = () => {
-      isDown = false;
-      isUserInteracting.current = false;
-      startAutoScroll();
-    };
-
-    const handleMouseMove = (e: MouseEvent) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - carousel.offsetLeft;
-      const walk = (x - startX) * 0.2;
-      carousel.scrollLeft = scrollLeft - walk;
-    };
-
-    carousel.addEventListener("mousedown", handleMouseDown);
-    carousel.addEventListener("mouseleave", handleMouseLeave);
-    carousel.addEventListener("mouseup", handleMouseUp);
-    carousel.addEventListener("mousemove", handleMouseMove);
+    // Eventos touch
+    carousel.addEventListener("touchstart", e => startDrag(e.touches[0].pageX));
+    carousel.addEventListener("touchmove", e => moveDrag(e.touches[0].pageX));
+    carousel.addEventListener("touchend", endDrag);
 
     startAutoScroll();
 
-    const handleTouchStart = (e: TouchEvent) => {
-      isDown = true;
-      isUserInteracting.current = true;
-      startX = e.touches[0].pageX - carousel.offsetLeft;
-      scrollLeft = carousel.scrollLeft;
-      stopAutoScroll();
-    };
-
-    const handleTouchMove = (e: TouchEvent) => {
-      if (!isDown) return;
-      const x = e.touches[0].pageX - carousel.offsetLeft;
-      const walk = (x - startX) * 0.2;
-      carousel.scrollLeft = scrollLeft - walk;
-    };
-
-    const handleTouchEnd = () => {
-      isDown = false;
-      isUserInteracting.current = false;
-      startAutoScroll();
-    };
-
-    carousel.addEventListener("touchstart", handleTouchStart);
-    carousel.addEventListener("touchmove", handleTouchMove);
-    carousel.addEventListener("touchend", handleTouchEnd);
+    // IntersectionObserver mobile/tablet
+    if (isMobile) {
+      const videos = carousel.querySelectorAll("video");
+      observerRef.current = new IntersectionObserver(
+        entries => {
+          let maxRatio = 0, centralVideo: HTMLVideoElement | null = null;
+          entries.forEach(entry => { if (entry.intersectionRatio > maxRatio) { maxRatio = entry.intersectionRatio; centralVideo = entry.target as HTMLVideoElement; } });
+          videos.forEach(v => v === centralVideo ? v.play().catch(() => {}) : v.pause());
+        },
+        { root: carousel, threshold: Array.from({ length: 101 }, (_, i) => i / 100) }
+      );
+      videos.forEach(v => observerRef.current?.observe(v));
+    }
 
     return () => {
       stopAutoScroll();
-      carousel.removeEventListener("mousedown", handleMouseDown);
-      carousel.removeEventListener("mouseleave", handleMouseLeave);
-      carousel.removeEventListener("mouseup", handleMouseUp);
-      carousel.removeEventListener("mousemove", handleMouseMove);
-      carousel.removeEventListener("touchstart", handleTouchStart);
-      carousel.removeEventListener("touchmove", handleTouchMove);
-      carousel.removeEventListener("touchend", handleTouchEnd);
+      ["mousedown","mousemove","mouseup","mouseleave","touchstart","touchmove","touchend"].forEach(ev => carousel.removeEventListener(ev as any, ev.includes("move") || ev.includes("start") ? moveDrag : endDrag));
+      observerRef.current?.disconnect();
     };
-  }, [videoList]);
+  }, [videoList, isMobile]);
+
   return (
     <section className="hero">
       <div className="hero__video-wrapper">
@@ -129,12 +89,8 @@ function HeroCarouselVideo() {
                   playsInline
                   preload="metadata"
                   className="hero__video"
-                  onMouseEnter={(e) => {
-                    e.currentTarget.play(); // se reproduce desde donde estaba
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.pause(); // se pausa en el frame actual
-                  }}
+                  onMouseEnter={e => !isMobile && e.currentTarget.play()}
+                  onMouseLeave={e => !isMobile && e.currentTarget.pause()}
                 />
               </div>
             ))}
@@ -145,4 +101,5 @@ function HeroCarouselVideo() {
     </section>
   );
 }
+
 export default HeroCarouselVideo;
