@@ -56,8 +56,8 @@ function ProductsListPage() {
       <SidebarFilter onFilterChange={setFilters} />   {/* Sidebar a la izquierda */}
       <div className="pt-5" id="main-demo"> {/* Body con cards */}
         <section className="my-1 my-md-2">
-          <Container>
-            <Row className="gy-3 row_card">
+          <Container className="container_row">
+            <Row className="row_card">
               {displayProducts.map((product) => (
                 <Col
                   key={product.id}

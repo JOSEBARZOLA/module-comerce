@@ -1,10 +1,10 @@
 import "@/assets/sass/_home-page.scss"
-import ContainerPublicity from "@/components/containerPublicity";
+import HeroCarouselVideo from "@/components/heroCarouselVideo"
 
 function HomePage () {
 return (
 <>
-<ContainerPublicity/>
+<HeroCarouselVideo/>
 </>
 );
 }

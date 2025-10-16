@@ -1,25 +1,31 @@
 #main-demo * {
   box-sizing: border-box;
 }
-
-.row_card {
+.container_row{
+  display: flex;
   justify-content: center;
+  max-width: 850px;
+}
+.row_card {
+  justify-content: center !important;
+  margin-top: 10px;
+  max-width: 800px;
 }
 
 #col-product {
-  width: 220px; // más angosta, similar a ML
-  height: 350px;
+  width: 173px; // más angosta, similar a ML
+  height: 390px;
   box-sizing: initial !important;
 }
 #col-product .product-card {
-  width: 220px;
+  width: 173px;
   margin: 0 auto; // centra la card dentro de la columna
 }
 
 @media (min-width: 1200px) {
   .col-xl-2 {
     flex: 0 0 auto;
-    width: 16.66666667%;
-    margin-top: 30px;
+    width: 13.66666667%;
+    margin-top: 10px;
   }
 }

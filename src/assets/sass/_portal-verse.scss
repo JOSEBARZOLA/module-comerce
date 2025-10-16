@@ -1,0 +1,61 @@
+.background-portal {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  height: 859px;
+  background: url("/src/assets/img/portalverse/bg-universe1.png") center/contain no-repeat;
+  overflow: hidden;
+  padding: 0;
+
+  .img-background {
+    position: relative;
+    width: 100%;
+    max-width: 1800px;
+    aspect-ratio: 3 / 2;
+    background: url("/src/assets/img/portalverse/portalverse1.png") center/contain no-repeat;
+  }
+
+  .portalgate-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  }
+
+  .portal-sphere {
+    width: 510px;
+    height: 510px;
+    border-radius: 50%;
+    background: rgba(219, 215, 215, 0.247);
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .portal-btn {
+    width: 160px;
+    height: 45px;
+    border: none;
+    border-radius: 40px;
+    background: linear-gradient(90deg, #00e6b3 0%, #00aaff 100%);
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.3);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 30px rgba(0, 255, 255, 0.6);
+    }
+  }
+}
+

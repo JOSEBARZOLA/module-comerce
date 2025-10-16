@@ -26,7 +26,7 @@ function HeroCarouselVideo() {
       if (scrollInterval.current) return;
       scrollInterval.current = setInterval(() => {
         if (!isUserInteracting.current) {
-          carousel.scrollLeft -= 1; // 👈 al revés que las imágenes
+          carousel.scrollLeft -= 1;
           if (carousel.scrollLeft <= 0) {
             carousel.scrollLeft = carousel.scrollWidth / 2;
           }
@@ -79,15 +79,42 @@ function HeroCarouselVideo() {
 
     startAutoScroll();
 
+    const handleTouchStart = (e: TouchEvent) => {
+      isDown = true;
+      isUserInteracting.current = true;
+      startX = e.touches[0].pageX - carousel.offsetLeft;
+      scrollLeft = carousel.scrollLeft;
+      stopAutoScroll();
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+      if (!isDown) return;
+      const x = e.touches[0].pageX - carousel.offsetLeft;
+      const walk = (x - startX) * 0.2;
+      carousel.scrollLeft = scrollLeft - walk;
+    };
+
+    const handleTouchEnd = () => {
+      isDown = false;
+      isUserInteracting.current = false;
+      startAutoScroll();
+    };
+
+    carousel.addEventListener("touchstart", handleTouchStart);
+    carousel.addEventListener("touchmove", handleTouchMove);
+    carousel.addEventListener("touchend", handleTouchEnd);
+
     return () => {
       stopAutoScroll();
       carousel.removeEventListener("mousedown", handleMouseDown);
       carousel.removeEventListener("mouseleave", handleMouseLeave);
       carousel.removeEventListener("mouseup", handleMouseUp);
       carousel.removeEventListener("mousemove", handleMouseMove);
+      carousel.removeEventListener("touchstart", handleTouchStart);
+      carousel.removeEventListener("touchmove", handleTouchMove);
+      carousel.removeEventListener("touchend", handleTouchEnd);
     };
   }, [videoList]);
-
   return (
     <section className="hero">
       <div className="hero__video-wrapper">
@@ -118,5 +145,4 @@ function HeroCarouselVideo() {
     </section>
   );
 }
-
 export default HeroCarouselVideo;
