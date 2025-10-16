@@ -1,10 +1,10 @@
 import "@/assets/sass/_home-page.scss"
-import HeroCarouselVideo from "@/components/heroCarouselVideo"
+import PortalverseHome from "@/components/portalverseHome";
 
 function HomePage () {
 return (
 <>
-<HeroCarouselVideo/>
+<PortalverseHome/>
 </>
 );
 }

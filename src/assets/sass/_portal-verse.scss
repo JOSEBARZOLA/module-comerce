@@ -1,4 +1,4 @@
-.background-portal {
+.background-universe {
   position: relative;
   display: flex;
   align-items: center;
@@ -9,12 +9,13 @@
   overflow: hidden;
   padding: 0;
 
-  .img-background {
+  .background-portal {
     position: relative;
     width: 100%;
     max-width: 1800px;
     aspect-ratio: 3 / 2;
     background: url("/src/assets/img/portalverse/portalverse1.png") center/contain no-repeat;
+    transition: transform 1.6s ease;
   }
 
   .portalgate-container {
@@ -25,18 +26,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  
   }
 
   .portal-sphere {
-    width: 510px;
-    height: 510px;
+    width: 500px;
+    height: 500px;
     border-radius: 50%;
-    background: rgba(219, 215, 215, 0.247);
+    background: rgba(60, 118, 228, 0.247);
     backdrop-filter: blur(2px);
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 1.2s ease, opacity 1.2s ease;
   }
 
   .portal-btn {
@@ -57,5 +58,16 @@
       box-shadow: 0 4px 30px rgba(0, 255, 255, 0.6);
     }
   }
-}
 
+  // === ANIMACIÓN DE ENTRADA AL PORTAL ===
+  &.entering {
+    .background-portal {
+      transform: scale(5); // Zoom hacia adelante
+    }
+
+    .portal-sphere {
+      transform: scale(0.2);
+      opacity: 0;
+    }
+  }
+}
