@@ -26,17 +26,27 @@ function HowItWorks() {
   ];
 
   const [value, setValue] = useState(0);
+  const [visible, setVisible] = useState(true);
+   const [reachedEnd, setReachedEnd] = useState(false); // 👈 nuevo estado
 
   // Maneja los textos
   const [title, setTitle] = useState(progress[0][0]);
   const [text, setText] = useState(progress[0][1]);
+ 
 
   // Actualiza texto según el valor actual
   useEffect(() => {
     setTitle(progress[value][0]);
     setText(progress[value][1]);
+
+    // 👇 si llegamos al último paso, marcamos que ya se alcanzó el final
+    if (value === progress.length - 1) {
+      setReachedEnd(true);
+    }
   }, [value]);
 
+
+  
   // Función para obtener las clases de cada burbuja
   const getBubbleClass = (index: number) => {
     return index <= value ? "bubble bubble-fill" : "bubble";
@@ -49,36 +59,48 @@ function HowItWorks() {
   const handleBack = () => {
     if (value > 0) setValue(value - 1);
   };
-  return (
-    <div id="container_how-works" className="container">
-      <div className="card">
-        <div className="box">
-          <h1 id="title">{title}</h1>
-          <p id="text">{text}</p>
-          <div className="bottom-element">
-            <div id="footer-card">
-              <div id="back" onClick={handleBack}>
-                Back
-              </div>
-              <div id="progress">
-                {progress.map((_, i) => (
-                  <>
-                    <span
-                      key={i}
-                      className={`${getBubbleClass(i)}${
-                        i === progress.length - 1 ? " tap" : ""
-                      }`}
-                      id={`bubble-${i + 1}`}
-                    />
-                    {i < progress.length - 1 && (
-                      <div className="connector" aria-hidden="true" />
-                    )}
-                  </>
-                ))}
-              </div>
+  const handleClose = () => {
+    setVisible(false);
+  };
+  if (!visible) return null;
 
-              <div id="next" onClick={handleNext}>
-                Next
+  return (
+    <div className="how-overlay fade-in">
+      <div id="container_how-works" className="container">
+        <div className="card">
+          {reachedEnd && (
+            <button className="close-btn" onClick={handleClose}>
+              ×
+            </button>
+          )}
+          <div className="box">
+            <h1 id="title">{title}</h1>
+            <p id="text">{text}</p>
+            <div className="bottom-element">
+              <div id="footer-card">
+                <div id="back" onClick={handleBack}>
+                  Back
+                </div>
+                <div id="progress">
+                  {progress.map((_, i) => (
+                    <>
+                      <span
+                        key={i}
+                        className={`${getBubbleClass(i)}${
+                          i === progress.length - 1 ? " tap" : ""
+                        }`}
+                        id={`bubble-${i + 1}`}
+                      />
+                      {i < progress.length - 1 && (
+                        <div className="connector" aria-hidden="true" />
+                      )}
+                    </>
+                  ))}
+                </div>
+
+                <div id="next" onClick={handleNext}>
+                  Next
+                </div>
               </div>
             </div>
           </div>
