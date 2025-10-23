@@ -3,19 +3,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 1800px;
-  max-height: 1200px;
-  background: url("/src/assets/img/portalverse/bg-universe1.png") center/contain no-repeat;
+  width: 100vw;
+  height: 100vh; // 👈 ocupa toda la pantalla
+  background: url("/src/assets/img/portalverse/bg-universe-edit.png")
+    center/cover no-repeat;
   overflow: hidden;
   padding: 0;
+  margin: 0;
 
   .background-portal {
+    height: 100%;
     position: relative;
-    width: 100%;
-    max-width: 1800px;
+    
     aspect-ratio: 3 / 2;
-    background: url("/src/assets/img/portalverse/portalverse1.png") center/contain no-repeat;
+    background: url("/src/assets/img/portalverse/portalverse-edit.png")
+      center/cover no-repeat;
     transition: transform 2s ease;
+    margin: 0;
+    padding: 0;
   }
 
   .portalgate-container {
@@ -26,29 +31,30 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
   }
 
   .portal-sphere {
-    width: 450px;
-    height: 450px;
+    width: clamp(180px, 25vw, 480px); // 👈 escala según el viewport
+    height: clamp(180px, 25vw, 480px);
     border-radius: 50%;
     background: rgba(60, 118, 228, 0.247);
     backdrop-filter: blur(2px);
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 1.2s ease, opacity 1.2s ease;
+    transition: transform 2s ease, opacity 3s ease;
   }
 
   .portal-btn {
-    width: 160px;
-    height: 45px;
+    width: clamp(100px, 10vw, 160px); // 👈 botón responsivo
+    height: clamp(35px, 4vh, 45px);
     border: none;
     border-radius: 40px;
     background: linear-gradient(90deg, #00e6b3 0%, #00aaff 100%);
     color: #fff;
     font-weight: 600;
-    font-size: 16px;
+    font-size: clamp(12px, 1.2vw, 16px); // 👈 texto adaptable
     cursor: pointer;
     box-shadow: 0 4px 20px rgba(0, 255, 255, 0.3);
     transition: all 0.3s ease;
@@ -62,12 +68,32 @@
   // === ANIMACIÓN DE ENTRADA AL PORTAL ===
   &.entering {
     .background-portal {
-      transform: scale(5); // Zoom hacia adelante
+      transform: scale(5);
     }
 
     .portal-sphere {
       transform: scale(0.2);
       opacity: 0;
+    }
+  }
+
+  // === MEDIA QUERIES opcionales ===
+  @media (max-width: 768px) {
+    .background-portal {
+      aspect-ratio: 1 / 1; // 👈 cuadrado para pantallas más pequeñas
+      max-width: 768px;
+    }
+  }
+
+  @media (max-width: 480px) {
+.background-portal {
+      aspect-ratio: 1 / 2; // 👈 cuadrado para pantallas más pequeñas
+      
+    }
+
+    .portal-sphere {
+      width: clamp(120px, 35vw, 250px);
+      height: clamp(120px, 35vw, 250px);
     }
   }
 }

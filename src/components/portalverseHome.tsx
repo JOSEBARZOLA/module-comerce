@@ -11,7 +11,7 @@ function PortalverseHome() {
     setTimeout(() => {
       alert("Has ingresado con éxito");
       setEntering(false); // Opcional: reset para volver al estado inicial
-    }, 5000); // 2 segundos de animación
+    }, 5000); // 5 segundos de animación
   };
 
   return (
