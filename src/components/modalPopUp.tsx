@@ -17,7 +17,7 @@ const ModalPopUp: React.FC<ModalPopUpProps> = ({
   return (
     <>
       <div
-        className="pcooModal modal fade modal-lg "
+        className="popUp-Modal modal fade modal-lg "
         id={id}
         aria-labelledby={`${id}Label`}
         aria-hidden="true"
@@ -26,7 +26,7 @@ const ModalPopUp: React.FC<ModalPopUpProps> = ({
           <div className="modal-content">
             {title && (
               <div className="modal-header mw-100">
-                <h1 className="textPolCoo modal-title " id={`${id}Label`}>
+                <h1 className="textModal modal-title " id={`${id}Label`}>
                   {title}
                 </h1>
               </div>
@@ -35,7 +35,8 @@ const ModalPopUp: React.FC<ModalPopUpProps> = ({
             <div className="modal-footer">
               <button
                 type="button"
-                className="btn btn-dark"
+                className="btn btn-primary"
+                id="btn-close"
                 data-bs-dismiss="modal"
               >
                 Close
@@ -44,10 +45,9 @@ const ModalPopUp: React.FC<ModalPopUpProps> = ({
           </div>
         </div>
       </div>
-
       <button
         type="button"
-        className="btn btn-dark"
+        className="btn btn-primary"
         data-bs-toggle="modal"
         data-bs-target={`#${id}`}
       >
@@ -56,5 +56,4 @@ const ModalPopUp: React.FC<ModalPopUpProps> = ({
     </>
   );
 };
-
 export default ModalPopUp;

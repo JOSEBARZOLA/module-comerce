@@ -1,14 +1,47 @@
-.pcooModal {
-  .modal-dialog {
-    max-width: 800px !important;
-   
+.popUp-Modal {
+  *,
+  *::before,
+  *::after {
+    box-sizing: content-box !important;
   }
-
-  .textPolCoo {
+  .modal-dialog {
+    align-items: center;
+    margin: auto;
+    margin-top: 2%;
+  }
+  .textModal {
     background-color: #0870a2;
     color: white;
     padding: 3%;
     width: 100%;
+    font-size: 2vh;
     text-align: center;
+  }
+  .modal-footer {
+    justify-content: center;
+    #btn-close {
+      background-color: #0870a2;
+      align-items: center;
+      width: 100px;
+    }
+  }
+  /* 📱 Móviles pequeños */
+  @media (max-width: 480px) {
+    .modal-dialog {
+      width: 80%; // por si el viewport es menor que 300px
+      max-width: 300px;
+    }
+  }
+  /* 📱 Tablets y pantallas medianas */
+  @media (min-width: 500px) and (max-width: 768px) {
+    .modal-dialog {
+      width: 450px;
+    }
+  }
+  /* 💻 Pantallas grandes */
+  @media (min-width: 769px) {
+    .modal-dialog {
+      width: 600px;
+    }
   }
 }
