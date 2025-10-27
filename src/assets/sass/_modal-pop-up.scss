@@ -1,47 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Montserrat:wght@500;600;700&display=swap");
+
 .popUp-Modal {
   *,
   *::before,
   *::after {
     box-sizing: content-box !important;
   }
+
   .modal-dialog {
     align-items: center;
     margin: auto;
-    margin-top: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
   }
+
+  .modal-content {
+    max-height: 500px; // 🔹 Altura total del modal
+    display: flex;
+    flex-direction: column; // Asegura que header, body y footer se distribuyan correctamente
+  }
+  .modal-header {
+    border-color: rgb(255, 255, 255);
+  }
+  .modal-body {
+    overflow-y: auto; // 🔹 Scroll solo dentro del body
+    flex-grow: 1; // 🔹 Hace que el body ocupe el espacio restante
+    padding-right: 1rem; // Evita que el texto quede pegado al borde con el scrollbar
+    h5,
+    h6 {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600; // o 700 si querés más contraste
+      letter-spacing: 0.5px;
+    }
+    font-family: "Poppins", sans-serif;
+  }
+
   .textModal {
-    background-color: #0870a2;
+    background: #0a2400;
+    background: linear-gradient(
+      90deg,
+      rgba(10, 36, 0, 1) 0%,
+      rgba(11, 121, 9, 1) 35%,
+      rgba(0, 135, 0, 1) 59%,
+      rgba(0, 209, 0, 1) 80%,
+      rgba(0, 232, 0, 1) 100%
+    );
     color: white;
     padding: 3%;
     width: 100%;
     font-size: 2vh;
     text-align: center;
+    border-color: rgb(255, 255, 255);
+    font-family: "Poppins", sans-serif;
+    
   }
+
   .modal-footer {
     justify-content: center;
+    border-color: rgb(255, 255, 255);
     #btn-close {
-      background-color: #0870a2;
+      background: #37bf22;
+      background: radial-gradient(
+        circle,
+        rgba(55, 191, 34, 1) 0%,
+        rgb(59, 88, 18) 100%
+      );
+
       align-items: center;
       width: 100px;
     }
   }
+
   /* 📱 Móviles pequeños */
   @media (max-width: 480px) {
     .modal-dialog {
       width: 80%; // por si el viewport es menor que 300px
       max-width: 300px;
+      .textModal{
+        font-size: 1.5vh;
+      }
+    }
+    .modal-body {
+      font-size: 1.2vh;
+      h5,
+    h6 {
+      font-size: 1.5vh;
+    }
+    }
+
+    .modal-footer #btn-close {
+      align-items: center;
+      width: 50px;
+      font-size: 12px;
     }
   }
+
   /* 📱 Tablets y pantallas medianas */
   @media (min-width: 500px) and (max-width: 768px) {
     .modal-dialog {
       width: 450px;
+      .textModal{
+        font-size: 1.7vh;
+      }
+    }
+    .modal-body {
+      font-size: 1.4vh;
+       h5,
+    h6 {
+      font-size: 1.8vh;
+    }
+    }
+
+    .modal-footer #btn-close {
+      align-items: center;
+      width: 60px;
     }
   }
+
   /* 💻 Pantallas grandes */
   @media (min-width: 769px) {
     .modal-dialog {
       width: 600px;
+      .textModal{
+        font-size: 2vh;
+      }
+    }
+    .modal-body {
+      font-size: 1.6vh;
+        h5,
+    h6 {
+      font-size: 2vh;
+    }
     }
   }
 }
