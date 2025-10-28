@@ -40,7 +40,6 @@ const InfoPlans: React.FC<InfoPlansProps> = ({ onCheckChange }) => {
 <ul>
   <li className="fw-light fst-italic">2 clases por semana</li>
   <li className="fw-light fst-italic">3 clases por semana</li>
-  <li className="fw-light fst-italic">5 clases por semana</li>
 </ul>
 
 <h5 className="fw-bolder fst-italic">Pagos:</h5>

@@ -28,7 +28,7 @@ function SidebarFilter({ onFilterChange }: SidebarFilterProps) {
   return (
     <section>
       <aside
-        className="bsb-sidebar-1 offcanvas offcanvas-start"
+        className="bsb-sidebarFilter offcanvas offcanvas-start"
         tabIndex={-1}
         id="bsbSidebar1"
         aria-labelledby="bsbSidebarLabel1"
